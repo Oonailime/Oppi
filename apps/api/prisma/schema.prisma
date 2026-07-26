@@ -1,0 +1,130 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum StudyStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum AttemptMode {
+  FULL
+  DISCIPLINE
+}
+
+model Exam {
+  id                      String     @id
+  name                    String
+  organization            String
+  year                    Int
+  role                    String?
+  answerOptions           String[]   @default(["A", "B", "C", "D", "E"])
+  defaultDurationMinutes  Int
+  extendedDurationMinutes Int
+  createdAt               DateTime   @default(now())
+  questions               Question[]
+  attempts                Attempt[]
+
+  @@index([year])
+}
+
+model StudyTopic {
+  id                 Int           @id
+  module             String
+  discipline         String
+  syllabusItem       String
+  subject            String
+  detail             String?
+  page               String
+  suggestedPriority  String
+  status             StudyStatus   @default(NOT_STARTED)
+  progress           Int           @default(0)
+  questionsCompleted Int           @default(0)
+  correctAnswers     Int           @default(0)
+  startedAt          DateTime?
+  completedAt        DateTime?
+  notes              String?
+  questions          Question[]
+
+  @@index([discipline])
+  @@index([status])
+}
+
+model Question {
+  id               Int             @id @default(autoincrement())
+  examId           String
+  number           Int
+  discipline       String
+  subject          String
+  weight           Decimal         @db.Decimal(3, 1)
+  sourcePage       Int
+  sourceImage      String
+  contextImage     String?
+  correctAnswer    String?
+  annulled         Boolean         @default(false)
+  studyTopicId     Int?
+  exam             Exam            @relation(fields: [examId], references: [id])
+  studyTopic       StudyTopic?     @relation(fields: [studyTopicId], references: [id])
+  attemptAnswers   AttemptAnswer[]
+
+  @@unique([examId, number])
+  @@index([examId, discipline])
+  @@index([discipline])
+  @@index([studyTopicId])
+}
+
+model Attempt {
+  id                  String          @id @default(uuid())
+  examId              String
+  mode                AttemptMode
+  discipline          String?
+  startedAt           DateTime        @default(now())
+  completedAt         DateTime?
+  durationSeconds     Int?
+  timeLimitSeconds    Int
+  targetSecondsPerQuestion Int
+  totalQuestions      Int
+  answeredQuestions   Int             @default(0)
+  correctAnswers      Int             @default(0)
+  annulledQuestions   Int             @default(0)
+  rawPercentage       Decimal?        @db.Decimal(5, 2)
+  weightedScore       Decimal?        @db.Decimal(6, 2)
+  maxWeightedScore    Decimal?        @db.Decimal(6, 2)
+  weightedPercentage  Decimal?        @db.Decimal(5, 2)
+  exam                Exam            @relation(fields: [examId], references: [id])
+  answers             AttemptAnswer[]
+
+  @@index([examId])
+  @@index([completedAt])
+  @@index([discipline])
+}
+
+model AttemptAnswer {
+  id             String   @id @default(uuid())
+  attemptId      String
+  questionId     Int
+  selectedAnswer String?
+  isCorrect      Boolean
+  awardedPoints  Decimal  @db.Decimal(3, 1)
+  timeSpentSeconds Int    @default(0)
+  attempt        Attempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question       Question @relation(fields: [questionId], references: [id])
+
+  @@unique([attemptId, questionId])
+  @@index([questionId])
+}
+
+model StudySession {
+  id        String    @id @default(uuid())
+  startedAt DateTime  @default(now())
+  endedAt   DateTime?
+
+  @@index([startedAt])
+  @@index([endedAt])
+}

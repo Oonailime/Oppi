@@ -1,0 +1,81 @@
+PERFIL 2: ARQUITETURA, ENGENHARIA E SUSTENTAÇÃO TECNOLÓGICA
+REDES DE COMPUTADORES: 1 Conceitos de redes de computadores: meios de transmissão, classificação,
+topologia de redes, redes de longa distância, redes locais e redes sem fio. 2 Elementos de interconexão de
+redes de computadores (hubs repetidores, switches, roteadores). VLANs. Cabeamento estruturado. 3 Noções
+dos modelos de referência OSI (Open System Interconnection Reference Model). 4 Noções dos padrões IEEE
+802.1, IEEE 802.3, IEEE 802.11 a/b/g/n/ac. 5 Arquitetura e pilhas de protocolos TCP/IP: camada de rede (IPv4,
+IPv6 e IPsec), conceitos básicos de endereçamento e roteamento; camada de transporte (TCP e UDP); camada
+de aplicação (FTP, SSH, DNS, SMTP, POP, IMAP, HTTP, HTTPS, SSL, DNS, RDP, DHCP). Sistemas de nomes.
+BANCO DE DADOS: 1 Banco de dados. 2 Conceitos básicos. 3 Arquitetura. 4 Estrutura de dados. 5 Modelagem
+e normalização de dados. 6 Noções de administração de dados e de banco de dados. 7 SQL (ANSI). 7.1 Oracle
+19C, MySql, Postgresql, MongoDB e MS-SQLSERVER 2019. 8 Arquitetura e políticas de armazenamento,
+backup, restauração, segurança e monitoração de dados. 9 Engenharia de dados – ingestão e armazenamento
+de grande quantidade de dados (Big Data). 10 Noções para Otimização de Performance em Larga Escala.
+ARQUITETURA TECNOLÓGICA: 1 Ciclo de vida do software. 2 Metodologias de desenvolvimento de software.
+3 Metodologias ágeis. 4 Qualidade de software. 5 Gestão de Configuração: Controle de versão, controle de
+mudança e integração contínua. 6 Engenharia de requisitos. 7 Técnicas de Elicitação de requisitos. 8
+Gerenciamento de requisitos. 9 Especificação de requisitos. 10 Técnicas de validação de requisitos. 11
+Prototipação. 12 Engenharia de usabilidade. 13 Análise de requisitos de usabilidade. 14 Métodos para
+avaliação de usabilidade. 15 Orientação a objetos: classes e objetos; relacionamentos; herança e polimorfismo;
+encapsulamento. 16 SOLID. 17 35 GRASP. 18 TDD. 19 BDD. 20 Padrões de projeto. 21 Análise e projeto
+orientados a objetos. 22 UML: visão geral, modelos e diagramas. 23 Interoperabilidade de sistemas e padrões
+de integração: APIs, Gateway de APIs e Web Services; padrões XML, JSON e REST, 24 Engenharia de
+desempenho: técnicas de análise de desempenho; DEVSECOPS.
+COMPUTAÇÃO EM NUVEM E VIRTUALIZAÇÃO: 1 Conceitos de computação em nuvem: conceitos básicos;
+tipologia (IaaS, PaaS, SaaS). 2 Modelo: privada, pública, híbrida. 3 Benefícios, alta disponibilidade,
+escalabilidade, elasticidade, agilidade, recuperação de desastres. 4 Componentes centrais da arquitetura em
+nuvem: distribuição geográfica, regiões, zonas de disponibilidade, subscrições, grupos de gestão, recursos. 5
+Características gerais de identidade, privacidade, conformidade e segurança na nuvem. 6 Infrastructure as
+Code (IaC). 7 Automação. 8 Red Hat Clair, 9 Docker, Harbor, Kubernetes, VMware NSX, VMware vCenter Server,
+DATAPREV | CONCURSO PÚBLICO 2026
+28
+VMware vCloud Director, VMware vRealize Automation, VMware vRealize Log Insight, VMware vRealize
+Operations, VMware vRealize Orchestrator.
+LINGUAGEM DE PROGRAMAÇÃO, FRAMEWORKS E VERSIONAMENTO DE SOFTWARE: Gitlab, HTML5, CSS3,
+Java e Javascript React.js; Java EE (EJB, JPA, JMS); Spring Boot; Spring Cloud; Confluent Kafka.
+SEGURANÇA DA INFORMAÇÃO: 1 Políticas de segurança da informação. 2 Procedimentos de segurança,
+conceitos gerais de gerenciamento. 3 Segurança de redes de computadores, inclusive redes sem fio. 4
+Vulnerabilidades e ataques a sistemas computacionais. 5 Criptografia. 6 Proteção contra softwares maliciosos.
+7 Certificação digital. 8 Conceitos básicos Lei nº 13.709/2018 e suas alterações (Lei Geral de Proteção de Dados
+Pessoais – LGPD). 9 Conceitos: 9.1 IDS (Intrusion Detection System). 9.2 IPS (Intrusion Prevention System), 9.3
+SIEM (Security Information and Event Management) 10 NIST Cybersecurity Framework version 1.1.
+PLATAFORMA BÁSICA: 1 Arquitetura dos Computadores: Hardware: Conceitos e Funcionamento. 2 Sistemas
+de Proteção de Dados: Backups: Conceitos, Fundamentos, Tipos e Políticas de Backup. 3 Sistemas de
+Armazenamento de Dados: Storages Físicos, Virtualizados e Baseados em Software (storage de bloco, storage
+objeto, NAS, CIFS, NFS), Gestão e Segurança de Dados e LGPD. 4 Arquitetura de Sistemas Operacionais:
+Processamento, uso de memória, acesso a discos e sistemas de arquivos (conceitos de inodes e blocos). 5
+Monitoramento: Servidores Físicos e Virtuais, Aplicações.
+AUTOMAÇÃO: 1 Infraestrutura como código e automação da infraestrutura de TI. 2 Conceitos e princípios de
+DevOps e DevSecOps. 3 Conceitos de computação na nuvem (Cloud Computing). 4 Ferramentas de
+infraestrutura ágil, automatização, gerenciamento de configuração, integração contínua e entrega contínua
+(Puppet, Ansible, Gitlab, Jenkins e Rundeck). 5 Ferramentas de Gestão centralizada de Logs. 6 Gerenciamento
+de configuração de servidores, aprovisionamento, orquestração e automação de infraestrutura de TI. 7
+Conceitos de Contêineres e Orquestração de Contêineres. (Docker, Kubernetes, Rancher). 8 Fundamentos,
+operação e configuração de Sistemas Operacionais: Linux RedHat. 9 Programação em linguagens: Shell Script
+(bash), Python, Ruby, Groovy e Javascript. 10 Observabilidade, coleta e análise de logs e métricas.
+FERRAMENTAS ANALYTICS: 1 Conceito de ETL (extração, transformação e carga de dados), Business
+Intelligence, Analitycs, Big Data, Machine Learning, Inteligência Artificial. 2 Conhecimento de Linguagens de
+Consulta. 3 Bancos de Dados Distribuídos. 4 Mineração de Dados. 5 Administração das ferramentas: Sap Bods,
+Sas Miner, Sas 9.4, Sas Viya, Webfocus, HyperStage, Qlikview, Hadoop (HDP), Hadoop (CDP). 6 Conceitos do
+processo de MDM (master data management). 7 Administração das Ferramentas: EBX, Trillium, DMX. 8
+Conhecimento das Linguagens Python, R, SAS. 9 Conhecimento HIVE, HBASE. 10 Conhecimento das
+ferramentas de programação, Zeppelin, Sas Guide, Qlikview Designer, Dataservices.
+PLATAFORMA BAIXA: 1 Sistemas Operacionais: Conceito de Processo. Gerência de Processos/Processador.
+Comunicação, Concorrência e Sincronização de Processos. 2 Gerenciamento de Memória: Memória Virtual,
+Paginação, Segmentação e “Swap”. 3 Gerenciamento de Sistemas Arquivos. 4 Gerenciamento de Dispositivos
+de Entrada/Saída. 5 Sistemas operacionais Windows, Linux, Unix: instalação, operação, monitoração,
+administração e suporte (troubleshooting). 6 Serviços de gerenciamento de redes, pacotes, discos, LVM,
+servidor FTP, NFS (Network File System), Samba, OpenLDAP, Active Directory, SSH, Postfix; 7 Virtualização:
+conceitos, operação e administração de VMware vSphere, vCenter, vCloud, vROPs, XEN, KVM; conceitos e
+implementação de alta disponibilidade e recuperação de desastre. Linguagens de script: Powershell, Shell
+Script. 8 Conformidade e automação de TI: Puppet, Ansible.
+APLICAÇÕES: 1 Desenvolvimento Java EE. 2 Conceito de servidor de aplicação Container WEB e EJB. 3 Padrões
+e antipadrões de projeto Java EE. 4 Uso da linguagem Java. 5 Software para versionamento e guarda de fontes.
+6 Arquitetura de aplicações: cliente/servidor, N camadas, arquitetura orientada a serviços (SOA), distribuída,
+peer to peer, barramento de mensagens. 7 Conceitos de Arquitetura Monolítica e MicroServiços. 8 Linguagens
+DATAPREV | CONCURSO PÚBLICO 2026
+29
+de Programação: Java, Python, Shell Script. 9 Servidores de Aplicação: Jboss, Weblogic e framework Spring:
+operação, monitoração, administração, ajustes de desempenho. 10 Máquinas virtuais Java: estrutura da JVM,
+heap memory, garbage collection e monitoramento (Jconsole, Jps e Jstack). 11 Servidores HTTP e proxy reverso:
+Apache, NGINX, Oracle HTTP Server.

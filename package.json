@@ -1,0 +1,33 @@
+{
+  "name": "dataprev-2026-study",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @dataprev/api && npm run build --workspace @dataprev/web",
+    "dev": "concurrently -n api,web -c blue,green \"npm run start:dev --workspace @dataprev/api\" \"npm run dev --workspace @dataprev/web\"",
+    "dev:estuda": "node scripts/start-estuda.mjs",
+    "lint": "npm run lint --workspace @dataprev/api && npm run lint --workspace @dataprev/web",
+    "test": "npm run test --workspace @dataprev/api",
+    "db:generate": "npm run db:generate --workspace @dataprev/api",
+    "db:migrate": "npm run db:migrate --workspace @dataprev/api",
+    "db:seed": "npm run db:seed --workspace @dataprev/api",
+    "setup": "npm run db:generate && npm run db:migrate && npm run db:seed",
+    "source:extract": "node scripts/extract-source-data.mjs",
+    "source:extract:stn": "node scripts/extract-stn-2024.mjs",
+    "source:extract:added": "node scripts/extract-added-exams.mjs"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "1.0.2",
+    "@swc/cli": "^0.7.10",
+    "@swc/core": "^1.15.8",
+    "concurrently": "10.0.4",
+    "pdfjs-dist": "6.1.200",
+    "xlsx": "0.18.5"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

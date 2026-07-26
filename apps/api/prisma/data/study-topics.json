@@ -1,0 +1,4092 @@
+[
+  {
+    "id": 1,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "1",
+    "subject": "Compreensão e interpretação de textos",
+    "detail": "Textos de gêneros variados",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 2,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "2",
+    "subject": "Tipos e gêneros textuais",
+    "detail": "Reconhecimento e características",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 3,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "3",
+    "subject": "Ortografia oficial",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 4,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "4",
+    "subject": "Coesão textual",
+    "detail": "Mecanismos de coesão",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 5,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "4.1",
+    "subject": "Referenciação, substituição e repetição",
+    "detail": "Elementos de referenciação, substituição e repetição",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 6,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "4.1",
+    "subject": "Conectores e sequenciação textual",
+    "detail": "Conectores e outros elementos de sequenciação",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 7,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "4.2",
+    "subject": "Tempos e modos verbais",
+    "detail": "Emprego no texto",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 8,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5",
+    "subject": "Estrutura morfossintática do período",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 9,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5.1",
+    "subject": "Classes de palavras",
+    "detail": "Emprego das classes de palavras",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5.2",
+    "subject": "Coordenação",
+    "detail": "Relações entre orações e entre termos da oração",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5.3",
+    "subject": "Subordinação",
+    "detail": "Relações entre orações e entre termos da oração",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 12,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5.4",
+    "subject": "Pontuação",
+    "detail": "Emprego dos sinais de pontuação",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 13,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5.5",
+    "subject": "Concordância verbal e nominal",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 14,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5.6",
+    "subject": "Regência verbal e nominal",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 15,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5.7",
+    "subject": "Crase",
+    "detail": "Emprego do sinal indicativo de crase",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 16,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "5.8",
+    "subject": "Colocação pronominal",
+    "detail": "Pronomes átonos",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 17,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "6",
+    "subject": "Reescrita de frases e parágrafos",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 18,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "6.1",
+    "subject": "Significação das palavras",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 19,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "6.2",
+    "subject": "Substituição de palavras ou trechos",
+    "detail": "Preservação de sentido e correção",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 20,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "6.3",
+    "subject": "Reorganização de orações e períodos",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 21,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "6.4",
+    "subject": "Reescrita de textos",
+    "detail": "Diferentes gêneros e níveis de formalidade",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 22,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Inglesa",
+    "syllabusItem": "1",
+    "subject": "Compreensão de textos em língua inglesa",
+    "detail": "Leitura, interpretação e inferência",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 23,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Língua Inglesa",
+    "syllabusItem": "1",
+    "subject": "Gramática aplicada à compreensão textual",
+    "detail": "Itens gramaticais relevantes para o entendimento dos sentidos",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 24,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "1",
+    "subject": "Estruturas lógicas",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 25,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "2",
+    "subject": "Lógica de argumentação",
+    "detail": "Conceitos gerais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 26,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "2",
+    "subject": "Analogias",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 27,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "2",
+    "subject": "Inferências",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 28,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "2",
+    "subject": "Deduções",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 29,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "2",
+    "subject": "Conclusões",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 30,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "3",
+    "subject": "Lógica sentencial ou proposicional",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 31,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "3.1",
+    "subject": "Proposições simples e compostas",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 32,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "3.2",
+    "subject": "Tabelas-verdade",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 33,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "3.3",
+    "subject": "Equivalências lógicas",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 34,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "3.4",
+    "subject": "Diagramas lógicos",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 35,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "4",
+    "subject": "Lógica de primeira ordem",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 36,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "5",
+    "subject": "Problemas aritméticos",
+    "detail": "Raciocínio lógico aplicado",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 37,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "5",
+    "subject": "Problemas geométricos",
+    "detail": "Raciocínio lógico aplicado",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 38,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Raciocínio Lógico",
+    "syllabusItem": "5",
+    "subject": "Problemas matriciais",
+    "detail": "Raciocínio lógico aplicado",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 39,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Segurança",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 40,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Transportes",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 41,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Política",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 42,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Economia",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 43,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Sociedade",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 44,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Educação",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 45,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Saúde",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 46,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Cultura",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 47,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Tecnologia",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 48,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Energia",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 49,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Relações internacionais",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 50,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Desenvolvimento sustentável",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 51,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "1",
+    "subject": "Ecologia",
+    "detail": "Tópicos relevantes e atuais",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 52,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "2",
+    "subject": "Fundamentos de inteligência artificial",
+    "detail": "Conceitos de IA",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 53,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "2",
+    "subject": "Aprendizado de máquina",
+    "detail": "Fundamentos e aplicações",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 54,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "2",
+    "subject": "Modelos generativos",
+    "detail": "Introdução",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 55,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "2",
+    "subject": "Modelos de linguagem",
+    "detail": "Introdução",
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 56,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "2",
+    "subject": "Ética em IA",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 57,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "2",
+    "subject": "Governança de IA",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 58,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Atualidades e Inteligência Artificial",
+    "syllabusItem": "2",
+    "subject": "Privacidade em IA",
+    "detail": null,
+    "page": "26",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 59,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Legislação de Segurança da Informação e Proteção de Dados",
+    "syllabusItem": "1",
+    "subject": "Lei nº 12.527/2011 — Lei de Acesso à Informação",
+    "detail": "Capítulos I, II, III, IV e V",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 60,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Legislação de Segurança da Informação e Proteção de Dados",
+    "syllabusItem": "1",
+    "subject": "Decreto nº 7.724/2012",
+    "detail": "Regulamentação da Lei de Acesso à Informação",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 61,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Legislação de Segurança da Informação e Proteção de Dados",
+    "syllabusItem": "1",
+    "subject": "Decreto nº 7.845/2012",
+    "detail": "Tratamento de informação classificada",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 62,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Legislação de Segurança da Informação e Proteção de Dados",
+    "syllabusItem": "2",
+    "subject": "Lei nº 12.737/2012 — Delitos Informáticos",
+    "detail": "Artigo 2º",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 63,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Legislação de Segurança da Informação e Proteção de Dados",
+    "syllabusItem": "3",
+    "subject": "Lei nº 12.965/2014 — Marco Civil da Internet",
+    "detail": "Capítulo II, Seção I; Capítulo III, Seções I e II",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 64,
+    "module": "Módulo I — Conhecimentos Gerais",
+    "discipline": "Legislação de Segurança da Informação e Proteção de Dados",
+    "syllabusItem": "4",
+    "subject": "Lei nº 13.709/2018 — LGPD",
+    "detail": "Capítulos I, II, III, IV, VII, VIII e IX",
+    "page": "26",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 65,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "1",
+    "subject": "Meios de transmissão",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 66,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "1",
+    "subject": "Classificação de redes",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 67,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "1",
+    "subject": "Topologias de rede",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 68,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "1",
+    "subject": "Redes de longa distância (WAN)",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 69,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "1",
+    "subject": "Redes locais (LAN)",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 70,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "1",
+    "subject": "Redes sem fio (WLAN)",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 71,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "2",
+    "subject": "Hubs",
+    "detail": "Elementos de interconexão",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 72,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "2",
+    "subject": "Repetidores",
+    "detail": "Elementos de interconexão",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 73,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "2",
+    "subject": "Switches",
+    "detail": "Elementos de interconexão",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 74,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "2",
+    "subject": "Roteadores",
+    "detail": "Elementos de interconexão",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 75,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "2",
+    "subject": "VLANs",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 76,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "2",
+    "subject": "Cabeamento estruturado",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 77,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "3",
+    "subject": "Modelo de referência OSI",
+    "detail": "Camadas e funções",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 78,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "4",
+    "subject": "IEEE 802.1",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 79,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "4",
+    "subject": "IEEE 802.3",
+    "detail": "Ethernet",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 80,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "4",
+    "subject": "IEEE 802.11 a/b/g/n/ac",
+    "detail": "Redes sem fio",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 81,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "Arquitetura e pilha TCP/IP",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 82,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "IPv4",
+    "detail": "Camada de rede",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 83,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "IPv6",
+    "detail": "Camada de rede",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 84,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "IPsec",
+    "detail": "Camada de rede",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 85,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "Endereçamento IP",
+    "detail": "Conceitos básicos",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 86,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "Roteamento IP",
+    "detail": "Conceitos básicos",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 87,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "TCP",
+    "detail": "Camada de transporte",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 88,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "UDP",
+    "detail": "Camada de transporte",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 89,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "FTP",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 90,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "SSH",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 91,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "DNS",
+    "detail": "Camada de aplicação e sistemas de nomes",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 92,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "SMTP",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 93,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "POP",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 94,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "IMAP",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 95,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "HTTP",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 96,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "HTTPS",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 97,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "SSL/TLS",
+    "detail": "Camada de aplicação e segurança de transporte",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 98,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "RDP",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 99,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "DHCP",
+    "detail": "Camada de aplicação",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 100,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Redes de Computadores",
+    "syllabusItem": "5",
+    "subject": "Sistemas de nomes",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 101,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "1",
+    "subject": "Banco de dados",
+    "detail": "Fundamentos",
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 102,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "2",
+    "subject": "Conceitos básicos de bancos de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 103,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "3",
+    "subject": "Arquitetura de bancos de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 104,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "4",
+    "subject": "Estruturas de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 105,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "5",
+    "subject": "Modelagem de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 106,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "5",
+    "subject": "Normalização de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 107,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "6",
+    "subject": "Administração de dados",
+    "detail": "Noções",
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 108,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "6",
+    "subject": "Administração de bancos de dados",
+    "detail": "Noções",
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 109,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "7",
+    "subject": "SQL ANSI",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 110,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "7.1",
+    "subject": "Oracle 19c",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 111,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "7.1",
+    "subject": "MySQL",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 112,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "7.1",
+    "subject": "PostgreSQL",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 113,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "7.1",
+    "subject": "MongoDB",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 114,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "7.1",
+    "subject": "Microsoft SQL Server 2019",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 115,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "8",
+    "subject": "Arquitetura de armazenamento de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 116,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "8",
+    "subject": "Políticas de armazenamento",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 117,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "8",
+    "subject": "Backup de bancos de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 118,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "8",
+    "subject": "Restauração de bancos de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 119,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "8",
+    "subject": "Segurança de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 120,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "8",
+    "subject": "Monitoração de bancos de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 121,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "9",
+    "subject": "Engenharia de dados",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 122,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "9",
+    "subject": "Ingestão de grandes volumes de dados",
+    "detail": "Big Data",
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 123,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "9",
+    "subject": "Armazenamento de grandes volumes de dados",
+    "detail": "Big Data",
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 124,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Banco de Dados",
+    "syllabusItem": "10",
+    "subject": "Otimização de performance em larga escala",
+    "detail": "Noções",
+    "page": "27",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 125,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "1",
+    "subject": "Ciclo de vida do software",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 126,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "2",
+    "subject": "Metodologias de desenvolvimento de software",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 127,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "3",
+    "subject": "Metodologias ágeis",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 128,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "4",
+    "subject": "Qualidade de software",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 129,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "5",
+    "subject": "Gestão de configuração",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 130,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "5",
+    "subject": "Controle de versão",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 131,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "5",
+    "subject": "Controle de mudança",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 132,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "5",
+    "subject": "Integração contínua",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 133,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "6",
+    "subject": "Engenharia de requisitos",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 134,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "7",
+    "subject": "Técnicas de elicitação de requisitos",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 135,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "8",
+    "subject": "Gerenciamento de requisitos",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 136,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "9",
+    "subject": "Especificação de requisitos",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 137,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "10",
+    "subject": "Validação de requisitos",
+    "detail": "Técnicas",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 138,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "11",
+    "subject": "Prototipação",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 139,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "12",
+    "subject": "Engenharia de usabilidade",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 140,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "13",
+    "subject": "Análise de requisitos de usabilidade",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 141,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "14",
+    "subject": "Métodos de avaliação de usabilidade",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 142,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "15",
+    "subject": "Orientação a objetos: classes e objetos",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 143,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "15",
+    "subject": "Relacionamentos entre objetos",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 144,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "15",
+    "subject": "Herança",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 145,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "15",
+    "subject": "Polimorfismo",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 146,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "15",
+    "subject": "Encapsulamento",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 147,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "16",
+    "subject": "Princípios SOLID",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 148,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "17",
+    "subject": "GRASP",
+    "detail": "Princípios e padrões de atribuição de responsabilidades",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 149,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "18",
+    "subject": "TDD",
+    "detail": "Test-Driven Development",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 150,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "19",
+    "subject": "BDD",
+    "detail": "Behavior-Driven Development",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 151,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "20",
+    "subject": "Padrões de projeto",
+    "detail": "Design Patterns",
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 152,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "21",
+    "subject": "Análise e projeto orientados a objetos",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 153,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "22",
+    "subject": "UML — visão geral",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 154,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "22",
+    "subject": "UML — modelos",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 155,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "22",
+    "subject": "UML — diagramas",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 156,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "23",
+    "subject": "Interoperabilidade de sistemas",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 157,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "23",
+    "subject": "APIs",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 158,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "23",
+    "subject": "Gateway de APIs",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 159,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "23",
+    "subject": "Web Services",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 160,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "23",
+    "subject": "XML",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 161,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "23",
+    "subject": "JSON",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 162,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "23",
+    "subject": "REST",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 163,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "24",
+    "subject": "Engenharia de desempenho",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 164,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "24",
+    "subject": "Técnicas de análise de desempenho",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 165,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Arquitetura Tecnológica",
+    "syllabusItem": "24",
+    "subject": "DevSecOps",
+    "detail": null,
+    "page": "27",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 166,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "1",
+    "subject": "Conceitos básicos de computação em nuvem",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 167,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "1",
+    "subject": "IaaS",
+    "detail": "Infrastructure as a Service",
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 168,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "1",
+    "subject": "PaaS",
+    "detail": "Platform as a Service",
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 169,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "1",
+    "subject": "SaaS",
+    "detail": "Software as a Service",
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 170,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "2",
+    "subject": "Nuvem privada",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 171,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "2",
+    "subject": "Nuvem pública",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 172,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "2",
+    "subject": "Nuvem híbrida",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 173,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "3",
+    "subject": "Benefícios da computação em nuvem",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 174,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "3",
+    "subject": "Alta disponibilidade",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 175,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "3",
+    "subject": "Escalabilidade",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 176,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "3",
+    "subject": "Elasticidade",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 177,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "3",
+    "subject": "Agilidade",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 178,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "3",
+    "subject": "Recuperação de desastres",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 179,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "4",
+    "subject": "Distribuição geográfica",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 180,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "4",
+    "subject": "Regiões",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 181,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "4",
+    "subject": "Zonas de disponibilidade",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 182,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "4",
+    "subject": "Subscrições",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 183,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "4",
+    "subject": "Grupos de gestão",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 184,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "4",
+    "subject": "Recursos de nuvem",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 185,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "5",
+    "subject": "Identidade na nuvem",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 186,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "5",
+    "subject": "Privacidade na nuvem",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 187,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "5",
+    "subject": "Conformidade na nuvem",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 188,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "5",
+    "subject": "Segurança na nuvem",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 189,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "6",
+    "subject": "Infrastructure as Code (IaC)",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 190,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "7",
+    "subject": "Automação em nuvem",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 191,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "8",
+    "subject": "Red Hat Clair",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 192,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "Docker",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 193,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "Harbor",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 194,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "Kubernetes",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 195,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "VMware NSX",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 196,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "VMware vCenter Server",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 197,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "VMware vCloud Director",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 198,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "VMware vRealize Automation",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 199,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "VMware vRealize Log Insight",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 200,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "VMware vRealize Operations",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 201,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Computação em Nuvem e Virtualização",
+    "syllabusItem": "9",
+    "subject": "VMware vRealize Orchestrator",
+    "detail": null,
+    "page": "27–28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 202,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "GitLab",
+    "detail": "Versionamento e plataforma DevOps",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 203,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "HTML5",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 204,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "CSS3",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 205,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "Java",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 206,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "JavaScript",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 207,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "React.js",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 208,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "Java EE",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 209,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "EJB",
+    "detail": "Enterprise JavaBeans",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 210,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "JPA",
+    "detail": "Java Persistence API",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 211,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "JMS",
+    "detail": "Java Message Service",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 212,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "Spring Boot",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 213,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "Spring Cloud",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 214,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Linguagens, Frameworks e Versionamento",
+    "syllabusItem": "—",
+    "subject": "Confluent Kafka",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 215,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "1",
+    "subject": "Políticas de segurança da informação",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 216,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "2",
+    "subject": "Procedimentos de segurança",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 217,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "2",
+    "subject": "Conceitos gerais de gerenciamento de segurança",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 218,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "3",
+    "subject": "Segurança de redes de computadores",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 219,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "3",
+    "subject": "Segurança de redes sem fio",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 220,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "4",
+    "subject": "Vulnerabilidades de sistemas computacionais",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 221,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "4",
+    "subject": "Ataques a sistemas computacionais",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 222,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "5",
+    "subject": "Criptografia",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 223,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "6",
+    "subject": "Proteção contra softwares maliciosos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 224,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "7",
+    "subject": "Certificação digital",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 225,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "8",
+    "subject": "LGPD — conceitos básicos",
+    "detail": "Lei nº 13.709/2018 e alterações",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 226,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "9.1",
+    "subject": "IDS",
+    "detail": "Intrusion Detection System",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 227,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "9.2",
+    "subject": "IPS",
+    "detail": "Intrusion Prevention System",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 228,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "9.3",
+    "subject": "SIEM",
+    "detail": "Security Information and Event Management",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 229,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Segurança da Informação",
+    "syllabusItem": "10",
+    "subject": "NIST Cybersecurity Framework v1.1",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 230,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "1",
+    "subject": "Arquitetura de computadores",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 231,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "1",
+    "subject": "Hardware — conceitos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 232,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "1",
+    "subject": "Hardware — funcionamento",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 233,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "2",
+    "subject": "Sistemas de proteção de dados",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 234,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "2",
+    "subject": "Backup — conceitos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 235,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "2",
+    "subject": "Backup — fundamentos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 236,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "2",
+    "subject": "Tipos de backup",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 237,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "2",
+    "subject": "Políticas de backup",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 238,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "Storages físicos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 239,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "Storages virtualizados",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 240,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "Storage baseado em software",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 241,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "Storage de bloco",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 242,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "Storage de objeto",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 243,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "NAS",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 244,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "CIFS",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 245,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "NFS",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 246,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "Gestão de dados",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 247,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "Segurança de dados",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 248,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "3",
+    "subject": "LGPD aplicada à gestão e armazenamento de dados",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 249,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "4",
+    "subject": "Arquitetura de sistemas operacionais",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 250,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "4",
+    "subject": "Processamento",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 251,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "4",
+    "subject": "Uso de memória",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 252,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "4",
+    "subject": "Acesso a discos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 253,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "4",
+    "subject": "Sistemas de arquivos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 254,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "4",
+    "subject": "Inodes",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 255,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "4",
+    "subject": "Blocos de sistemas de arquivos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 256,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "5",
+    "subject": "Monitoramento de servidores físicos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 257,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "5",
+    "subject": "Monitoramento de servidores virtuais",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 258,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Básica",
+    "syllabusItem": "5",
+    "subject": "Monitoramento de aplicações",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 259,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "1",
+    "subject": "Infraestrutura como código",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 260,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "1",
+    "subject": "Automação da infraestrutura de TI",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 261,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "2",
+    "subject": "DevOps — conceitos e princípios",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 262,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "2",
+    "subject": "DevSecOps — conceitos e princípios",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 263,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "3",
+    "subject": "Cloud Computing — conceitos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 264,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Infraestrutura ágil",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 265,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Automatização de infraestrutura",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 266,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Gerenciamento de configuração",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 267,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Integração contínua",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 268,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Entrega contínua",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 269,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Puppet",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 270,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Ansible",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 271,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "GitLab",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 272,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Jenkins",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 273,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "4",
+    "subject": "Rundeck",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 274,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "5",
+    "subject": "Gestão centralizada de logs",
+    "detail": "Ferramentas",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 275,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "6",
+    "subject": "Gerenciamento de configuração de servidores",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 276,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "6",
+    "subject": "Aprovisionamento",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 277,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "6",
+    "subject": "Orquestração de infraestrutura",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 278,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "6",
+    "subject": "Automação de infraestrutura de TI",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 279,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "7",
+    "subject": "Conceitos de contêineres",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 280,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "7",
+    "subject": "Orquestração de contêineres",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 281,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "7",
+    "subject": "Docker",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 282,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "7",
+    "subject": "Kubernetes",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 283,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "7",
+    "subject": "Rancher",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 284,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "8",
+    "subject": "Linux Red Hat — fundamentos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 285,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "8",
+    "subject": "Linux Red Hat — operação",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 286,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "8",
+    "subject": "Linux Red Hat — configuração",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 287,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "9",
+    "subject": "Shell Script (bash)",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 288,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "9",
+    "subject": "Python",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 289,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "9",
+    "subject": "Ruby",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 290,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "9",
+    "subject": "Groovy",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 291,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "9",
+    "subject": "JavaScript",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 292,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "10",
+    "subject": "Observabilidade",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 293,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "10",
+    "subject": "Coleta e análise de logs",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 294,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Automação",
+    "syllabusItem": "10",
+    "subject": "Coleta e análise de métricas",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 295,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "1",
+    "subject": "ETL",
+    "detail": "Extração, transformação e carga de dados",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 296,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "1",
+    "subject": "Business Intelligence",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 297,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "1",
+    "subject": "Analytics",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 298,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "1",
+    "subject": "Big Data",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 299,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "1",
+    "subject": "Machine Learning",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 300,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "1",
+    "subject": "Inteligência Artificial",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 301,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "2",
+    "subject": "Linguagens de consulta",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 302,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "3",
+    "subject": "Bancos de dados distribuídos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 303,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "4",
+    "subject": "Mineração de dados",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 304,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "SAP BODS",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 305,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "SAS Miner",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 306,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "SAS 9.4",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 307,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "SAS Viya",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 308,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "WebFOCUS",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 309,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "HyperStage",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 310,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "QlikView",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 311,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "Hadoop HDP",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 312,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "5",
+    "subject": "Hadoop CDP",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 313,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "6",
+    "subject": "Master Data Management (MDM)",
+    "detail": "Conceitos do processo",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 314,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "7",
+    "subject": "EBX",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 315,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "7",
+    "subject": "Trillium",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 316,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "7",
+    "subject": "DMX",
+    "detail": "Administração",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 317,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "8",
+    "subject": "Python para Analytics",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 318,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "8",
+    "subject": "R",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 319,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "8",
+    "subject": "SAS — linguagem",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 320,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "9",
+    "subject": "Hive",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 321,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "9",
+    "subject": "HBase",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 322,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "10",
+    "subject": "Zeppelin",
+    "detail": "Ferramenta de programação",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 323,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "10",
+    "subject": "SAS Guide",
+    "detail": "Ferramenta de programação",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 324,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "10",
+    "subject": "QlikView Designer",
+    "detail": "Ferramenta de programação",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 325,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Ferramentas Analytics",
+    "syllabusItem": "10",
+    "subject": "Data Services",
+    "detail": "Ferramenta de programação",
+    "page": "28",
+    "suggestedPriority": "Média"
+  },
+  {
+    "id": 326,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "1",
+    "subject": "Conceito de processo",
+    "detail": "Sistemas operacionais",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 327,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "1",
+    "subject": "Gerência de processos e processador",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 328,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "1",
+    "subject": "Comunicação entre processos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 329,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "1",
+    "subject": "Concorrência de processos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 330,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "1",
+    "subject": "Sincronização de processos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 331,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "2",
+    "subject": "Memória virtual",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 332,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "2",
+    "subject": "Paginação",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 333,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "2",
+    "subject": "Segmentação",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 334,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "2",
+    "subject": "Swap",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 335,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "3",
+    "subject": "Gerenciamento de sistemas de arquivos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 336,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "4",
+    "subject": "Gerenciamento de dispositivos de entrada e saída",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 337,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Windows — instalação",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 338,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Windows — operação e monitoramento",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 339,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Windows — administração e suporte",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 340,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Windows — troubleshooting",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 341,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Linux — instalação",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 342,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Linux — operação e monitoramento",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 343,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Linux — administração e suporte",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 344,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Linux — troubleshooting",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 345,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Unix — instalação",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 346,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Unix — operação e monitoramento",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 347,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Unix — administração e suporte",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 348,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "5",
+    "subject": "Unix — troubleshooting",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 349,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "Gerenciamento de redes",
+    "detail": "Serviços",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 350,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "Gerenciamento de pacotes",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 351,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "Gerenciamento de discos",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 352,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "LVM",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 353,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "Servidor FTP",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 354,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "NFS",
+    "detail": "Network File System",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 355,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "Samba",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 356,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "OpenLDAP",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 357,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "Active Directory",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 358,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "SSH",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 359,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "6",
+    "subject": "Postfix",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 360,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "Conceitos de virtualização",
+    "detail": null,
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 361,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "VMware vSphere",
+    "detail": "Operação e administração",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 362,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "VMware vCenter",
+    "detail": "Operação e administração",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 363,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "VMware vCloud",
+    "detail": "Operação e administração",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 364,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "VMware vROPs",
+    "detail": "Operação e administração",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 365,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "XEN",
+    "detail": "Operação e administração",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 366,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "KVM",
+    "detail": "Operação e administração",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 367,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "Alta disponibilidade",
+    "detail": "Conceitos e implementação",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 368,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "Recuperação de desastre",
+    "detail": "Conceitos e implementação",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 369,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "PowerShell",
+    "detail": "Linguagem de script",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 370,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "7",
+    "subject": "Shell Script",
+    "detail": "Linguagem de script",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 371,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "8",
+    "subject": "Puppet",
+    "detail": "Conformidade e automação de TI",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 372,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Plataforma Baixa",
+    "syllabusItem": "8",
+    "subject": "Ansible",
+    "detail": "Conformidade e automação de TI",
+    "page": "28",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 373,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "1",
+    "subject": "Desenvolvimento Java EE",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 374,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "2",
+    "subject": "Servidor de aplicação",
+    "detail": "Conceitos",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 375,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "2",
+    "subject": "Container Web",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 376,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "2",
+    "subject": "Container EJB",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 377,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "3",
+    "subject": "Padrões de projeto Java EE",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 378,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "3",
+    "subject": "Antipadrões de projeto Java EE",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 379,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "4",
+    "subject": "Linguagem Java",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 380,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "5",
+    "subject": "Versionamento e guarda de fontes",
+    "detail": "Software e práticas",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 381,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "6",
+    "subject": "Arquitetura cliente/servidor",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 382,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "6",
+    "subject": "Arquitetura em N camadas",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 383,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "6",
+    "subject": "Arquitetura orientada a serviços (SOA)",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 384,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "6",
+    "subject": "Arquitetura distribuída",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 385,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "6",
+    "subject": "Arquitetura peer-to-peer",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 386,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "6",
+    "subject": "Barramento de mensagens",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 387,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "7",
+    "subject": "Arquitetura monolítica",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 388,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "7",
+    "subject": "Arquitetura de microsserviços",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 389,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "8",
+    "subject": "Java",
+    "detail": "Linguagem de programação",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 390,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "8",
+    "subject": "Python",
+    "detail": "Linguagem de programação",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 391,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "8",
+    "subject": "Shell Script",
+    "detail": "Linguagem de programação",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 392,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "9",
+    "subject": "JBoss",
+    "detail": "Operação, monitoramento, administração e desempenho",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 393,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "9",
+    "subject": "WebLogic",
+    "detail": "Operação, monitoramento, administração e desempenho",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 394,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "9",
+    "subject": "Spring",
+    "detail": "Operação, monitoramento, administração e desempenho",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 395,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "9",
+    "subject": "Operação de servidores de aplicação",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 396,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "9",
+    "subject": "Monitoramento de servidores de aplicação",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 397,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "9",
+    "subject": "Administração de servidores de aplicação",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 398,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "9",
+    "subject": "Ajustes de desempenho em servidores de aplicação",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 399,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "10",
+    "subject": "Estrutura da JVM",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 400,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "10",
+    "subject": "Heap memory",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 401,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "10",
+    "subject": "Garbage collection",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 402,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "10",
+    "subject": "JConsole",
+    "detail": "Monitoramento da JVM",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 403,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "10",
+    "subject": "Jps",
+    "detail": "Monitoramento da JVM",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 404,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "10",
+    "subject": "Jstack",
+    "detail": "Monitoramento da JVM",
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 405,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "11",
+    "subject": "Servidores HTTP",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 406,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "11",
+    "subject": "Proxy reverso",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 407,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "11",
+    "subject": "Apache HTTP Server",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 408,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "11",
+    "subject": "NGINX",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 409,
+    "module": "Módulo II — Conhecimentos Específicos",
+    "discipline": "Aplicações",
+    "syllabusItem": "11",
+    "subject": "Oracle HTTP Server",
+    "detail": null,
+    "page": "28–29",
+    "suggestedPriority": "Alta"
+  }
+]

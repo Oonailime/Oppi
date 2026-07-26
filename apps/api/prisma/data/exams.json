@@ -1,0 +1,68 @@
+[
+  {
+    "id": "dataprev-2024",
+    "name": "DATAPREV 2024",
+    "organization": "DATAPREV",
+    "year": 2024,
+    "role": "Analista de Tecnologia da Informação",
+    "answerOptions": ["A", "B", "C", "D", "E"],
+    "defaultDurationMinutes": 210,
+    "extendedDurationMinutes": 270,
+    "questionsFile": "questions.json"
+  },
+  {
+    "id": "stn-2024",
+    "name": "STN 2024",
+    "organization": "Secretaria do Tesouro Nacional",
+    "year": 2024,
+    "role": "Tecnologia da Informação - Operação e Infraestrutura",
+    "answerOptions": ["A", "B", "C", "D", "E"],
+    "defaultDurationMinutes": 210,
+    "extendedDurationMinutes": 270,
+    "questionsFile": "stn-2024-questions.json"
+  },
+  {
+    "id": "ebserh-2024",
+    "name": "EBSERH 2024",
+    "organization": "Empresa Brasileira de Serviços Hospitalares",
+    "year": 2024,
+    "role": "Analista de Tecnologia da Informação",
+    "answerOptions": ["A", "B", "C", "D", "E"],
+    "defaultDurationMinutes": 210,
+    "extendedDurationMinutes": 270,
+    "questionsFile": "ebserh-2024-questions.json"
+  },
+  {
+    "id": "serpro-2023",
+    "name": "SERPRO 2023",
+    "organization": "Serviço Federal de Processamento de Dados",
+    "year": 2023,
+    "role": "Analista - Tecnologia",
+    "answerOptions": ["C", "E"],
+    "defaultDurationMinutes": 180,
+    "extendedDurationMinutes": 240,
+    "questionsFile": "serpro-2023-questions.json"
+  },
+  {
+    "id": "bacen-2024",
+    "name": "BACEN 2024",
+    "organization": "Banco Central do Brasil",
+    "year": 2024,
+    "role": "Analista - Tecnologia da Informação",
+    "answerOptions": ["C", "E"],
+    "defaultDurationMinutes": 180,
+    "extendedDurationMinutes": 240,
+    "questionsFile": "bacen-2024-questions.json"
+  },
+  {
+    "id": "bndes-2024",
+    "name": "BNDES 2024",
+    "organization": "Banco Nacional de Desenvolvimento Econômico e Social",
+    "year": 2024,
+    "role": "Análise de Sistemas - Suporte",
+    "answerOptions": ["A", "B", "C", "D", "E"],
+    "defaultDurationMinutes": 210,
+    "extendedDurationMinutes": 270,
+    "questionsFile": "bndes-2024-questions.json"
+  }
+]

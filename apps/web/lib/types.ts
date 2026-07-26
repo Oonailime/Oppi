@@ -1,0 +1,181 @@
+export type AttemptMode = "FULL" | "DISCIPLINE";
+export type StudyStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED";
+export type Option = "A" | "B" | "C" | "D" | "E";
+
+export interface Exam {
+  id: string;
+  name: string;
+  organization: string;
+  year: number;
+  role: string | null;
+  answerOptions: Option[];
+  defaultDurationMinutes: number;
+  extendedDurationMinutes: number;
+}
+
+export interface ExamOption extends Exam {
+  questionCount: number;
+  maxWeightedScore: number;
+  durationOptions: Array<{
+    minutes: number;
+    label: string;
+    extended: boolean;
+  }>;
+}
+
+export interface DisciplineOption {
+  name: string;
+  questionCount: number;
+  bestPercentage: number | null;
+  progressStatus: "NOT_STARTED" | "MASTERED" | "GOOD" | "REVIEW";
+}
+
+export interface Question {
+  id: number;
+  number: number;
+  discipline: string;
+  subject: string;
+  weight: number;
+  sourcePage: number;
+  sourceImage: string;
+  contextImage: string | null;
+  options: Option[];
+}
+
+export interface StartedAttempt {
+  attemptId: string;
+  exam: Exam;
+  mode: AttemptMode;
+  discipline: string | null;
+  startedAt: string;
+  timeLimitSeconds: number;
+  targetSecondsPerQuestion: number;
+  totalQuestions: number;
+  questions: Question[];
+}
+
+export interface DisciplineResult {
+  name: string;
+  total: number;
+  correct: number;
+  points: number;
+  maxPoints: number;
+  percentage: number;
+}
+
+export interface Recommendation {
+  id: number;
+  discipline: string;
+  subject: string;
+  detail: string | null;
+  misses: number;
+}
+
+export interface AttemptResult {
+  id: string;
+  completed: boolean;
+  exam: Exam;
+  mode: AttemptMode;
+  discipline: string | null;
+  startedAt: string;
+  completedAt: string;
+  durationSeconds: number;
+  timeLimitSeconds: number;
+  targetSecondsPerQuestion: number;
+  timingAvailable: boolean;
+  timedQuestionCount: number;
+  fasterQuestionCount: number;
+  timeBalanceSeconds: number;
+  totalQuestions: number;
+  answeredQuestions: number;
+  correctAnswers: number;
+  annulledQuestions: number;
+  rawPercentage: number;
+  weightedScore: number;
+  maxWeightedScore: number;
+  weightedPercentage: number;
+  disciplines: DisciplineResult[];
+  recommendations: Recommendation[];
+  answers: Array<{
+    questionId: number;
+    questionNumber: number;
+    selectedAnswer: Option | null;
+    correctAnswer: Option | null;
+    isCorrect: boolean;
+    annulled: boolean;
+    discipline: string;
+    subject: string;
+    sourceImage: string;
+    timeSpentSeconds: number;
+    exceededTarget: boolean;
+  }>;
+}
+
+export interface StudyTopic {
+  id: number;
+  module: string;
+  discipline: string;
+  syllabusItem: string;
+  subject: string;
+  detail: string | null;
+  page: string;
+  suggestedPriority: string;
+  status: StudyStatus;
+  progress: number;
+  questionsCompleted: number;
+  correctAnswers: number;
+  notes: string | null;
+  videoLessons: Array<{
+    label: string;
+    url: string;
+  }>;
+}
+
+export interface StudySummary {
+  total: number;
+  notStarted: number;
+  inProgress: number;
+  completed: number;
+  progress: number;
+  disciplines: Array<{ name: string; total: number; progress: number }>;
+}
+
+export interface DashboardData {
+  attempts: number;
+  averageScore: number;
+  bestScore: number;
+  lastScore: number;
+  studyProgress: number;
+  completedTopics: number;
+  totalTopics: number;
+  trend: Array<{ label: string; score: number; completedAt: string }>;
+  disciplines: Array<{ name: string; attempts: number; accuracy: number }>;
+  nextTopics: StudyTopic[];
+  studyTime: StudyTimeSummary;
+}
+
+export interface StudyTimeSummary {
+  calculatedAt: string;
+  todaySeconds: number;
+  totalSeconds: number;
+  questionTodaySeconds: number;
+  manualTodaySeconds: number;
+  manualRunning: boolean;
+  manualStartedAt: string | null;
+}
+
+export interface HistoryItem {
+  id: string;
+  exam: Exam;
+  mode: AttemptMode;
+  discipline: string | null;
+  completedAt: string;
+  totalQuestions: number;
+  correctAnswers: number;
+  weightedScore: number;
+  maxWeightedScore: number;
+  weightedPercentage: number;
+  durationSeconds: number;
+  timeLimitSeconds: number;
+  targetSecondsPerQuestion: number;
+}
