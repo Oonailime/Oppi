@@ -35,25 +35,74 @@ model Exam {
 }
 
 model StudyTopic {
-  id                 Int           @id
-  module             String
-  discipline         String
-  syllabusItem       String
-  subject            String
-  detail             String?
-  page               String
-  suggestedPriority  String
-  status             StudyStatus   @default(NOT_STARTED)
-  progress           Int           @default(0)
-  questionsCompleted Int           @default(0)
-  correctAnswers     Int           @default(0)
+  id                Int                 @id
+  module            String
+  discipline        String
+  syllabusItem      String
+  subject           String
+  detail            String?
+  page              String
+  suggestedPriority String
+  questions         Question[]
+  contestProgress   ContestStudyTopic[]
+
+  @@index([discipline])
+}
+
+model User {
+  id           String        @id @default(uuid())
+  username     String        @unique
+  displayName  String
+  passwordHash String
+  createdAt    DateTime      @default(now())
+  contests     Contest[]
+  sessions     AuthSession[]
+}
+
+model AuthSession {
+  id        String   @id @default(uuid())
+  tokenHash String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model Contest {
+  id            String              @id @default(uuid())
+  userId        String
+  name          String
+  targetDate    DateTime?           @db.Date
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  user          User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attempts      Attempt[]
+  studySessions StudySession[]
+  studyTopics   ContestStudyTopic[]
+
+  @@index([userId])
+  @@index([targetDate])
+}
+
+model ContestStudyTopic {
+  contestId          String
+  studyTopicId       Int
+  status             StudyStatus @default(NOT_STARTED)
+  progress           Int         @default(0)
+  questionsCompleted Int         @default(0)
+  correctAnswers     Int         @default(0)
   startedAt          DateTime?
   completedAt        DateTime?
   notes              String?
-  questions          Question[]
+  contest            Contest     @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  studyTopic         StudyTopic  @relation(fields: [studyTopicId], references: [id], onDelete: Cascade)
 
-  @@index([discipline])
-  @@index([status])
+  @@id([contestId, studyTopicId])
+  @@index([contestId, status])
+  @@index([studyTopicId])
 }
 
 model Question {
@@ -81,6 +130,7 @@ model Question {
 
 model Attempt {
   id                  String          @id @default(uuid())
+  contestId           String
   examId              String
   mode                AttemptMode
   discipline          String?
@@ -97,9 +147,12 @@ model Attempt {
   weightedScore       Decimal?        @db.Decimal(6, 2)
   maxWeightedScore    Decimal?        @db.Decimal(6, 2)
   weightedPercentage  Decimal?        @db.Decimal(5, 2)
+  contest             Contest         @relation(fields: [contestId], references: [id], onDelete: Cascade)
   exam                Exam            @relation(fields: [examId], references: [id])
   answers             AttemptAnswer[]
 
+  @@index([contestId])
+  @@index([contestId, completedAt])
   @@index([examId])
   @@index([completedAt])
   @@index([discipline])
@@ -121,10 +174,14 @@ model AttemptAnswer {
 }
 
 model StudySession {
-  id        String    @id @default(uuid())
-  startedAt DateTime  @default(now())
+  id        String   @id @default(uuid())
+  contestId String
+  startedAt DateTime @default(now())
   endedAt   DateTime?
+  contest   Contest  @relation(fields: [contestId], references: [id], onDelete: Cascade)
 
+  @@index([contestId])
+  @@index([contestId, endedAt])
   @@index([startedAt])
   @@index([endedAt])
 }

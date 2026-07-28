@@ -69,7 +69,7 @@ export class QuestionsService {
     }));
   }
 
-  async listDisciplines(examId: string) {
+  async listDisciplines(examId: string, contestId: string) {
     await this.getExam(examId);
     const [rows, answerHistory] = await Promise.all([
       this.prisma.question.groupBy({
@@ -81,6 +81,7 @@ export class QuestionsService {
       this.prisma.attemptAnswer.findMany({
         where: {
           attempt: {
+            contestId,
             examId,
             completedAt: { not: null },
           },
@@ -150,7 +151,7 @@ export class QuestionsService {
     });
   }
 
-  async start(dto: StartAttemptDto) {
+  async start(dto: StartAttemptDto, contestId: string) {
     if (dto.mode === AttemptMode.DISCIPLINE && !dto.discipline) {
       throw new BadRequestException(
         "A disciplina é obrigatória para o treino por disciplina.",
@@ -187,6 +188,7 @@ export class QuestionsService {
 
     const attempt = await this.prisma.attempt.create({
       data: {
+        contestId,
         examId: exam.id,
         mode: dto.mode,
         discipline: dto.discipline,
@@ -216,9 +218,13 @@ export class QuestionsService {
     };
   }
 
-  async submit(attemptId: string, dto: SubmitAttemptDto) {
-    const attempt = await this.prisma.attempt.findUnique({
-      where: { id: attemptId },
+  async submit(
+    attemptId: string,
+    dto: SubmitAttemptDto,
+    contestId: string,
+  ) {
+    const attempt = await this.prisma.attempt.findFirst({
+      where: { id: attemptId, contestId },
       include: { exam: true },
     });
 
@@ -306,31 +312,50 @@ export class QuestionsService {
         const question = questions.find((item) => item.id === row.questionId);
         if (!question?.studyTopicId || question.annulled) continue;
 
-        await tx.studyTopic.update({
-          where: { id: question.studyTopicId },
+        const topicProgress = await tx.contestStudyTopic.upsert({
+          where: {
+            contestId_studyTopicId: {
+              contestId,
+              studyTopicId: question.studyTopicId,
+            },
+          },
+          create: {
+            contestId,
+            studyTopicId: question.studyTopicId,
+          },
+          update: {},
+        });
+
+        await tx.contestStudyTopic.update({
+          where: {
+            contestId_studyTopicId: {
+              contestId,
+              studyTopicId: question.studyTopicId,
+            },
+          },
           data: {
             questionsCompleted: { increment: 1 },
             correctAnswers: row.isCorrect ? { increment: 1 } : undefined,
             status:
-              question.studyTopic?.status === StudyStatus.NOT_STARTED
+              topicProgress.status === StudyStatus.NOT_STARTED
                 ? StudyStatus.IN_PROGRESS
                 : undefined,
             progress:
-              question.studyTopic?.status === StudyStatus.NOT_STARTED
+              topicProgress.status === StudyStatus.NOT_STARTED
                 ? 50
                 : undefined,
-            startedAt: question.studyTopic?.startedAt ?? new Date(),
+            startedAt: topicProgress.startedAt ?? new Date(),
           },
         });
       }
     });
 
-    return this.getResult(attemptId);
+    return this.getResult(attemptId, contestId);
   }
 
-  async getResult(attemptId: string) {
-    const attempt = await this.prisma.attempt.findUnique({
-      where: { id: attemptId },
+  async getResult(attemptId: string, contestId: string) {
+    const attempt = await this.prisma.attempt.findFirst({
+      where: { id: attemptId, contestId },
       include: {
         exam: true,
         answers: {
@@ -480,12 +505,12 @@ export class QuestionsService {
     };
   }
 
-  async listHistory(requestedLimit: number) {
+  async listHistory(requestedLimit: number, contestId: string) {
     const limit = Number.isFinite(requestedLimit)
       ? Math.min(Math.max(requestedLimit, 1), 50)
       : 12;
     const attempts = await this.prisma.attempt.findMany({
-      where: { completedAt: { not: null } },
+      where: { contestId, completedAt: { not: null } },
       include: { exam: true },
       orderBy: { completedAt: "desc" },
       take: limit,

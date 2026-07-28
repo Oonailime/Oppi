@@ -5,9 +5,9 @@ import { AppShell } from "@/components/app-shell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rota DATAPREV 2026",
+  title: "Estuda",
   description:
-    "Plano de estudos, simulados e estatísticas para o Perfil 2 da DATAPREV.",
+    "Plano de estudos, simulados e estatísticas para concursos.",
 };
 
 export default function RootLayout({

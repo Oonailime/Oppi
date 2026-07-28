@@ -7,20 +7,24 @@ import {
   Check,
   ClipboardCheck,
   LayoutDashboard,
+  LogOut,
   Menu,
   Pencil,
+  Repeat2,
+  UserRound,
   X,
 } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState, useTransition } from "react";
 import {
+  AppProvider,
   countdownLabel,
   daysUntilExam,
   examDateLabel,
-  ExamTargetProvider,
-  useExamTarget,
-} from "@/components/exam-target-context";
+  useApp,
+} from "@/components/app-context";
+import { LoadingState } from "@/components/loading-state";
 
 const links = [
   { href: "/", label: "Visão geral", icon: LayoutDashboard },
@@ -31,34 +35,65 @@ const links = [
 
 function AppShellContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const router = useRouter();
+  const {
+    user,
+    selectedContest,
+    updateContest,
+    logout,
+  } = useApp();
   const [menuOpen, setMenuOpen] = useState(false);
   const [editingTarget, setEditingTarget] = useState(false);
-  const { target, updateTarget } = useExamTarget();
-  const [draftName, setDraftName] = useState(target.name);
-  const [draftDate, setDraftDate] = useState(target.date);
-  const daysLeft = daysUntilExam(target.date);
+  const [draftName, setDraftName] = useState(selectedContest?.name ?? "");
+  const [draftDate, setDraftDate] = useState(
+    selectedContest?.targetDate ?? "",
+  );
+  const [targetError, setTargetError] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
+
+  if (!selectedContest || !user) return null;
+  const daysLeft = daysUntilExam(selectedContest.targetDate);
 
   function startEditingTarget() {
-    setDraftName(target.name);
-    setDraftDate(target.date);
+    setDraftName(selectedContest?.name ?? "");
+    setDraftDate(selectedContest?.targetDate ?? "");
+    setTargetError(null);
     setEditingTarget(true);
   }
 
   function saveTarget(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!draftName.trim() || !draftDate) return;
-    updateTarget({ name: draftName, date: draftDate });
-    setEditingTarget(false);
+    if (!draftName.trim() || !selectedContest) return;
+    startTransition(async () => {
+      try {
+        await updateContest(selectedContest.id, {
+          name: draftName,
+          targetDate: draftDate || undefined,
+        });
+        setEditingTarget(false);
+      } catch (reason) {
+        setTargetError(
+          reason instanceof Error
+            ? reason.message
+            : "Não foi possível salvar o concurso.",
+        );
+      }
+    });
+  }
+
+  async function exit() {
+    await logout();
+    router.replace("/login");
   }
 
   return (
     <div className="app-frame">
       <aside className={`sidebar ${menuOpen ? "is-open" : ""}`}>
         <div className="brand">
-          <span className="brand-mark">DP</span>
+          <span className="brand-mark">E</span>
           <span>
-            <strong>Rota DATAPREV</strong>
-            <small>Perfil 2 · 2026</small>
+            <strong>Estuda</strong>
+            <small>{selectedContest.name}</small>
           </span>
         </div>
         <button
@@ -89,9 +124,9 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
         <div className={`exam-date ${editingTarget ? "is-editing" : ""}`}>
           {editingTarget ? (
             <form onSubmit={saveTarget}>
-              <span>Meta da prova</span>
+              <span>Concurso atual</span>
               <label>
-                <small>Prova</small>
+                <small>Concurso</small>
                 <input
                   required
                   value={draftName}
@@ -99,18 +134,18 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
                 />
               </label>
               <label>
-                <small>Data</small>
+                <small>Data da prova</small>
                 <input
-                  required
                   type="date"
                   value={draftDate}
                   onChange={(event) => setDraftDate(event.target.value)}
                 />
               </label>
+              {targetError && <small className="form-error">{targetError}</small>}
               <div className="exam-date-actions">
-                <button type="submit">
+                <button type="submit" disabled={isPending}>
                   <Check size={14} />
-                  Salvar
+                  {isPending ? "Salvando..." : "Salvar"}
                 </button>
                 <button type="button" onClick={() => setEditingTarget(false)}>
                   Cancelar
@@ -119,23 +154,41 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
             </form>
           ) : (
             <>
-              <span>Próxima prova</span>
-              <strong>{target.name}</strong>
+              <span>Concurso atual</span>
+              <strong>{selectedContest.name}</strong>
               <small className="exam-countdown">
                 <CalendarDays size={14} />
                 {countdownLabel(daysLeft)}
               </small>
-              <small>{examDateLabel(target.date)}</small>
+              <small>{examDateLabel(selectedContest.targetDate)}</small>
               <button
                 className="exam-date-edit"
                 type="button"
                 onClick={startEditingTarget}
               >
                 <Pencil size={13} />
-                Alterar prova e data
+                Alterar nome e data
               </button>
+              <Link
+                className="exam-date-edit"
+                href="/concursos"
+                onClick={() => setMenuOpen(false)}
+              >
+                <Repeat2 size={13} />
+                Trocar concurso
+              </Link>
             </>
           )}
+        </div>
+        <div className="sidebar-user">
+          <span><UserRound size={16} /></span>
+          <div>
+            <strong>{user.displayName}</strong>
+            <small>@{user.username}</small>
+          </div>
+          <button type="button" onClick={exit} aria-label="Sair">
+            <LogOut size={16} />
+          </button>
         </div>
       </aside>
       {menuOpen && (
@@ -156,8 +209,8 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
             <Menu size={22} />
           </button>
           <div className="brand compact">
-            <span className="brand-mark">DP</span>
-            <strong>Rota DATAPREV</strong>
+            <span className="brand-mark">E</span>
+            <strong>Estuda</strong>
           </div>
         </header>
         <main className="page-content">{children}</main>
@@ -166,10 +219,55 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
   );
 }
 
+function AppGate({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const router = useRouter();
+  const { loading, user, selectedContest } = useApp();
+  const accessPage = pathname === "/login";
+  const contestPage = pathname === "/concursos";
+
+  useEffect(() => {
+    if (loading) return;
+    if (!user && !accessPage) {
+      router.replace("/login");
+      return;
+    }
+    if (user && accessPage) {
+      router.replace("/concursos");
+      return;
+    }
+    if (user && !selectedContest && !contestPage) {
+      router.replace("/concursos");
+    }
+  }, [
+    accessPage,
+    contestPage,
+    loading,
+    router,
+    selectedContest,
+    user,
+  ]);
+
+  if (loading) {
+    return (
+      <div className="standalone-loading">
+        <LoadingState label="Abrindo seu espaço de estudos" />
+      </div>
+    );
+  }
+  if (!user) {
+    return accessPage ? children : null;
+  }
+  if (accessPage) return null;
+  if (contestPage) return <main className="standalone-page">{children}</main>;
+  if (!selectedContest) return null;
+  return <AppShellContent>{children}</AppShellContent>;
+}
+
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
-    <ExamTargetProvider>
-      <AppShellContent>{children}</AppShellContent>
-    </ExamTargetProvider>
+    <AppProvider>
+      <AppGate>{children}</AppGate>
+    </AppProvider>
   );
 }

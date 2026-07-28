@@ -19,6 +19,7 @@ import {
 } from "react";
 import { useSearchParams } from "next/navigation";
 import { CustomSelect } from "@/components/custom-select";
+import { useApp } from "@/components/app-context";
 import { ErrorState } from "@/components/error-state";
 import { LoadingState } from "@/components/loading-state";
 import { apiFetch } from "@/lib/api";
@@ -42,6 +43,7 @@ const statusIcons = {
 
 function StudyPlanContent() {
   const searchParams = useSearchParams();
+  const { selectedContest } = useApp();
   const [summary, setSummary] = useState<StudySummary | null>(null);
   const [topics, setTopics] = useState<StudyTopic[]>([]);
   const [discipline, setDiscipline] = useState("");
@@ -130,11 +132,11 @@ function StudyPlanContent() {
     <div className="page-stack study-page">
       <header className="page-heading split">
         <div>
-          <span className="eyebrow">Plano DATAPREV 2026</span>
+          <span className="eyebrow">Plano · {selectedContest?.name}</span>
           <h1>Todo o edital, sem pontos cegos.</h1>
           <p>
-            Os 409 tópicos da planilha estão organizados por disciplina,
-            prioridade e progresso.
+            {summary?.total ?? 0} tópicos organizados por disciplina,
+            prioridade e progresso neste concurso.
           </p>
         </div>
         <div className="plan-progress-card">

@@ -19,8 +19,8 @@ import {
   countdownLabel,
   daysUntilExam,
   examDateLabel,
-  useExamTarget,
-} from "@/components/exam-target-context";
+  useApp,
+} from "@/components/app-context";
 import { LoadingState } from "@/components/loading-state";
 import { apiFetch } from "@/lib/api";
 import type { DashboardData, StudyTimeSummary } from "@/lib/types";
@@ -50,7 +50,7 @@ export default function DashboardPage() {
   const [reload, setReload] = useState(0);
   const [clockTick, setClockTick] = useState(() => Date.now());
   const [timerPending, startTimerTransition] = useTransition();
-  const { target } = useExamTarget();
+  const { selectedContest } = useApp();
 
   useEffect(() => {
     let active = true;
@@ -99,7 +99,7 @@ export default function DashboardPage() {
     });
   }
 
-  const daysLeft = daysUntilExam(target.date);
+  const daysLeft = daysUntilExam(selectedContest?.targetDate ?? null);
 
   if (error) {
     return (
@@ -140,7 +140,10 @@ export default function DashboardPage() {
         <div className="date-chip">
           <CalendarDays size={19} />
           <span>
-            <small>{target.name} · {examDateLabel(target.date)}</small>
+            <small>
+              {selectedContest?.name} ·{" "}
+              {examDateLabel(selectedContest?.targetDate ?? null)}
+            </small>
             <strong>{countdownLabel(daysLeft)}</strong>
           </span>
         </div>

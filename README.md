@@ -1,10 +1,30 @@
-# DATAPREV 2026 Study
+# Estuda
 
-Aplicacao local com:
+Aplicação de preparação para concursos com:
 
 - `apps/web`: frontend Next.js
 - `apps/api`: API NestJS
 - `postgres`: banco usado pela API
+- autenticação por usuário e senha;
+- espaços de estudo separados por concurso.
+
+## Acesso inicial
+
+Os dados que já existiam foram migrados para:
+
+```text
+Usuário: Emiliano
+Senha: 123
+```
+
+A senha é armazenada somente como hash. Depois do login, o sistema exige a
+escolha de um concurso antes de abrir a visão geral. O concurso inicial é
+`DATAPREV 2026`; tentativas, progresso do plano e tempo estudado pertencem a
+esse concurso e ao seu usuário.
+
+Na tela de escolha também é possível criar outros concursos. Um concurso novo
+começa com histórico e tempo zerados. Os conteúdos específicos de um novo
+edital podem ser carregados posteriormente sem misturar o progresso existente.
 
 ## Pre-requisitos
 
@@ -66,6 +86,10 @@ Gera o client do Prisma, aplica migracoes e carrega os dados iniciais.
 ```bash
 npm run setup
 ```
+
+Esse comando também cria ou atualiza o usuário inicial `Emiliano`, associa os
+409 tópicos do plano ao concurso DATAPREV 2026 e mantém tentativas já
+existentes durante a migração.
 
 ## Rodar em desenvolvimento
 

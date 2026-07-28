@@ -14,6 +14,7 @@ const cebraspeExam = {
   extendedDurationMinutes: 240,
   createdAt: new Date(),
 };
+const contestId = "contest-1";
 
 describe("QuestionsService", () => {
   it("formata as durações oficial e adicional de uma prova", async () => {
@@ -88,6 +89,7 @@ describe("QuestionsService", () => {
 
     const result = await new QuestionsService(prisma).listDisciplines(
       cebraspeExam.id,
+      contestId,
     );
 
     expect(result).toEqual([
@@ -154,7 +156,7 @@ describe("QuestionsService", () => {
       examId: cebraspeExam.id,
       mode: AttemptMode.FULL,
       durationMinutes: 180,
-    });
+    }, contestId);
 
     expect(result.questions).toHaveLength(1);
     expect(result.questions.at(0)?.options).toEqual(["C", "E"]);
@@ -163,7 +165,7 @@ describe("QuestionsService", () => {
   it("rejeita alternativa que não pertence à prova", async () => {
     const prisma = {
       attempt: {
-        findUnique: jest.fn().mockResolvedValue({
+        findFirst: jest.fn().mockResolvedValue({
           id: "attempt-1",
           examId: cebraspeExam.id,
           mode: AttemptMode.FULL,
@@ -189,16 +191,20 @@ describe("QuestionsService", () => {
       },
     } as unknown as PrismaService;
 
-    const submission = new QuestionsService(prisma).submit("attempt-1", {
-      answers: [
-        {
-          questionId: 141,
-          selectedAnswer: "A",
-          timeSpentSeconds: 30,
-        },
-      ],
-      durationSeconds: 30,
-    });
+    const submission = new QuestionsService(prisma).submit(
+      "attempt-1",
+      {
+        answers: [
+          {
+            questionId: 141,
+            selectedAnswer: "A",
+            timeSpentSeconds: 30,
+          },
+        ],
+        durationSeconds: 30,
+      },
+      contestId,
+    );
 
     await expect(submission).rejects.toBeInstanceOf(BadRequestException);
   });

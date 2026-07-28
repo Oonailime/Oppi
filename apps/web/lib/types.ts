@@ -2,6 +2,22 @@ export type AttemptMode = "FULL" | "DISCIPLINE";
 export type StudyStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED";
 export type Option = "A" | "B" | "C" | "D" | "E";
 
+export interface User {
+  id: string;
+  username: string;
+  displayName: string;
+  createdAt: string;
+}
+
+export interface Contest {
+  id: string;
+  userId: string;
+  name: string;
+  targetDate: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface Exam {
   id: string;
   name: string;

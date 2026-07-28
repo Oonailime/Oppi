@@ -13,7 +13,9 @@ function youtubeSearchLink(query: string) {
   return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
 }
 
-function withVideoLessons<T extends { subject: string; discipline: string; detail: string | null }>(
+function withVideoLessons<
+  T extends { subject: string; discipline: string; detail: string | null },
+>(
   topic: T,
 ) {
   const links = [
@@ -39,49 +41,74 @@ function withVideoLessons<T extends { subject: string; discipline: string; detai
 export class StudyPlanService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async list(filters: StudyPlanFilters) {
+  async list(contestId: string, filters: StudyPlanFilters) {
     const status =
       filters.status &&
       Object.values(StudyStatus).includes(filters.status as StudyStatus)
         ? (filters.status as StudyStatus)
         : undefined;
     const search = filters.search?.trim();
-    const where: Prisma.StudyTopicWhereInput = {
-      discipline: filters.discipline || undefined,
+    const where: Prisma.ContestStudyTopicWhereInput = {
+      contestId,
       status,
-      OR: search
-        ? [
-            { subject: { contains: search, mode: "insensitive" } },
-            { detail: { contains: search, mode: "insensitive" } },
-          ]
-        : undefined,
+      studyTopic: {
+        discipline: filters.discipline || undefined,
+        OR: search
+          ? [
+              { subject: { contains: search, mode: "insensitive" } },
+              { detail: { contains: search, mode: "insensitive" } },
+            ]
+          : undefined,
+      },
     };
 
-    const topics = await this.prisma.studyTopic.findMany({
+    const topics = await this.prisma.contestStudyTopic.findMany({
       where,
-      orderBy: [{ discipline: "asc" }, { id: "asc" }],
+      include: { studyTopic: true },
+      orderBy: [
+        { studyTopic: { discipline: "asc" } },
+        { studyTopicId: "asc" },
+      ],
     });
 
-    return topics.map(withVideoLessons);
+    return topics.map(({ studyTopic, ...progress }) =>
+      withVideoLessons({ ...studyTopic, ...progress }),
+    );
   }
 
-  async summary() {
-    const [total, statusCounts, disciplines] = await Promise.all([
-      this.prisma.studyTopic.count(),
-      this.prisma.studyTopic.groupBy({
+  async summary(contestId: string) {
+    const [total, statusCounts, topics] = await Promise.all([
+      this.prisma.contestStudyTopic.count({ where: { contestId } }),
+      this.prisma.contestStudyTopic.groupBy({
         by: ["status"],
-        _count: { id: true },
+        where: { contestId },
+        _count: { _all: true },
       }),
-      this.prisma.studyTopic.groupBy({
-        by: ["discipline"],
-        _count: { id: true },
-        _avg: { progress: true },
-        orderBy: { discipline: "asc" },
+      this.prisma.contestStudyTopic.findMany({
+        where: { contestId },
+        select: {
+          progress: true,
+          studyTopic: { select: { discipline: true } },
+        },
       }),
     ]);
     const counts = Object.fromEntries(
-      statusCounts.map((row) => [row.status, row._count.id]),
+      statusCounts.map((row) => [row.status, row._count._all]),
     ) as Partial<Record<StudyStatus, number>>;
+
+    const disciplineMap = new Map<
+      string,
+      { total: number; progress: number }
+    >();
+    for (const topic of topics) {
+      const item = disciplineMap.get(topic.studyTopic.discipline) ?? {
+        total: 0,
+        progress: 0,
+      };
+      item.total += 1;
+      item.progress += topic.progress;
+      disciplineMap.set(topic.studyTopic.discipline, item);
+    }
 
     return {
       total,
@@ -90,15 +117,17 @@ export class StudyPlanService {
       completed: counts.COMPLETED ?? 0,
       progress:
         total === 0 ? 0 : ((counts.COMPLETED ?? 0) / total) * 100,
-      disciplines: disciplines.map((row) => ({
-        name: row.discipline,
-        total: row._count.id,
-        progress: row._avg.progress ?? 0,
-      })),
+      disciplines: [...disciplineMap.entries()]
+        .map(([name, item]) => ({
+          name,
+          total: item.total,
+          progress: item.total === 0 ? 0 : item.progress / item.total,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name, "pt-BR")),
     };
   }
 
-  async update(id: number, dto: UpdateStudyTopicDto) {
+  async update(contestId: string, id: number, dto: UpdateStudyTopicDto) {
     if (!Number.isInteger(id) || id < 1) {
       throw new BadRequestException("Tópico inválido.");
     }
@@ -112,8 +141,21 @@ export class StudyPlanService {
             ? 0
             : undefined;
 
-    const topic = await this.prisma.studyTopic.update({
-      where: { id },
+    const current = await this.prisma.contestStudyTopic.findUnique({
+      where: {
+        contestId_studyTopicId: { contestId, studyTopicId: id },
+      },
+    });
+    if (!current) {
+      throw new BadRequestException(
+        "Este tópico não pertence ao concurso selecionado.",
+      );
+    }
+
+    const topic = await this.prisma.contestStudyTopic.update({
+      where: {
+        contestId_studyTopicId: { contestId, studyTopicId: id },
+      },
       data: {
         status: dto.status,
         progress,
@@ -127,8 +169,10 @@ export class StudyPlanService {
               ? null
               : undefined,
       },
+      include: { studyTopic: true },
     });
 
-    return withVideoLessons(topic);
+    const { studyTopic, ...topicProgress } = topic;
+    return withVideoLessons({ ...studyTopic, ...topicProgress });
   }
 }

@@ -3046,3 +3046,596 @@ h2 {
     gap: 10px;
   }
 }
+
+/* Account and contest workspace */
+
+.standalone-loading,
+.standalone-page {
+  min-height: 100vh;
+}
+
+.standalone-loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-user {
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 9px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  margin-top: 17px;
+  padding: 17px 4px 0;
+}
+
+.sidebar-user > span {
+  align-items: center;
+  background: rgba(216, 239, 98, 0.12);
+  border-radius: 10px;
+  color: var(--lime);
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.sidebar-user strong,
+.sidebar-user small {
+  display: block;
+}
+
+.sidebar-user strong {
+  color: #f4f7ef;
+  font-size: 0.78rem;
+}
+
+.sidebar-user small {
+  color: #8fa9a4;
+  font-size: 0.67rem;
+  margin-top: 2px;
+}
+
+.sidebar-user button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: #9fb1ad;
+  cursor: pointer;
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.sidebar-user button:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--lime);
+}
+
+.form-error {
+  color: #ff9f8d !important;
+  line-height: 1.35;
+}
+
+.auth-page {
+  background: var(--paper);
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(430px, 0.92fr);
+  min-height: 100vh;
+}
+
+.auth-intro {
+  background:
+    radial-gradient(circle at 80% 16%, rgba(104, 184, 213, 0.24), transparent 20rem),
+    radial-gradient(circle at 18% 82%, rgba(216, 239, 98, 0.14), transparent 20rem),
+    var(--ink);
+  color: #f3f6ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: clamp(34px, 6vw, 82px);
+  position: relative;
+}
+
+.auth-intro::after {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+  content: "";
+  height: 430px;
+  position: absolute;
+  right: -190px;
+  top: 24%;
+  width: 430px;
+}
+
+.auth-brand {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-intro h1 {
+  font-size: clamp(3.2rem, 6.6vw, 6.4rem);
+  margin-top: 13px;
+  max-width: 760px;
+}
+
+.auth-intro p {
+  color: #b6c6c2;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+.auth-feature {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  display: flex;
+  gap: 14px;
+  max-width: 470px;
+  padding: 17px 19px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-feature > svg {
+  color: var(--lime);
+  flex: 0 0 auto;
+}
+
+.auth-feature strong,
+.auth-feature small {
+  display: block;
+}
+
+.auth-feature strong {
+  font-size: 0.82rem;
+}
+
+.auth-feature small {
+  color: #9eb1ac;
+  font-size: 0.72rem;
+  margin-top: 4px;
+}
+
+.auth-form-column {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: clamp(28px, 6vw, 80px);
+}
+
+.auth-card {
+  max-width: 450px;
+  width: 100%;
+}
+
+.auth-card header {
+  margin-bottom: 35px;
+}
+
+.auth-card h2 {
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  margin: 10px 0 8px;
+}
+
+.auth-card header p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.auth-field {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.auth-field > span,
+.contest-dialog label > span {
+  color: var(--ink-2);
+  font-size: 0.73rem;
+  font-weight: 720;
+}
+
+.auth-field > div {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  display: flex;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 14px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.auth-field > div:focus-within {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(104, 184, 213, 0.12);
+}
+
+.auth-field svg {
+  color: #849390;
+  flex: 0 0 auto;
+}
+
+.auth-field input {
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  min-width: 0;
+  outline: none;
+  width: 100%;
+}
+
+.auth-field button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+}
+
+.auth-submit {
+  justify-content: center;
+  margin-top: 25px;
+  min-height: 52px;
+  width: 100%;
+}
+
+.auth-error {
+  background: rgba(198, 79, 67, 0.09);
+  border: 1px solid rgba(198, 79, 67, 0.22);
+  border-radius: 10px;
+  color: var(--danger);
+  font-size: 0.76rem;
+  line-height: 1.45;
+  margin: 17px 0 0;
+  padding: 10px 12px;
+}
+
+.auth-security-note {
+  color: var(--muted);
+  display: block;
+  font-size: 0.67rem;
+  line-height: 1.5;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.contest-picker-page {
+  min-height: 100vh;
+}
+
+.contest-picker-topbar {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  padding: 22px clamp(22px, 5vw, 72px);
+}
+
+.contest-account,
+.contest-account span,
+.contest-account button {
+  align-items: center;
+  display: flex;
+}
+
+.contest-account {
+  gap: 18px;
+}
+
+.contest-account span {
+  color: var(--ink-2);
+  font-size: 0.77rem;
+  font-weight: 650;
+  gap: 7px;
+}
+
+.contest-account button {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.72rem;
+  gap: 6px;
+  padding: 8px 11px;
+}
+
+.contest-account button:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.contest-picker-content {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: clamp(55px, 8vw, 105px) clamp(20px, 5vw, 64px);
+}
+
+.contest-picker-heading {
+  margin-bottom: 42px;
+}
+
+.contest-picker-heading h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  margin-top: 12px;
+  max-width: 920px;
+}
+
+.contest-picker-heading p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 630px;
+}
+
+.contest-card-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contest-card {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  min-height: 145px;
+  padding: 24px;
+  text-align: left;
+  transition: transform 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
+}
+
+.contest-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.contest-card.selected {
+  border-color: var(--lime-deep);
+}
+
+.contest-card-icon {
+  align-items: center;
+  background: rgba(104, 184, 213, 0.15);
+  border-radius: 14px;
+  color: var(--ink-2);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
+
+.contest-card-copy,
+.contest-card-copy > small,
+.contest-card-copy > strong,
+.contest-card-copy > span {
+  display: block;
+}
+
+.contest-card-copy > small {
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-weight: 740;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contest-card-copy > strong {
+  font-family: "Newsreader Variable", serif;
+  font-size: 1.65rem;
+  line-height: 1.05;
+  margin: 5px 0 10px;
+}
+
+.contest-card-copy > span {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 0.72rem;
+  gap: 6px;
+}
+
+.contest-card-countdown {
+  background: rgba(216, 239, 98, 0.3);
+  border-radius: 999px;
+  color: var(--ink-2);
+  font-size: 0.66rem;
+  font-weight: 760;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+
+.new-contest-card {
+  background: transparent;
+  border-style: dashed;
+}
+
+.new-contest-card .contest-card-icon {
+  background: rgba(216, 239, 98, 0.3);
+}
+
+.contest-dialog-backdrop {
+  align-items: center;
+  background: rgba(9, 26, 30, 0.58);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 20px;
+  position: fixed;
+  z-index: 80;
+}
+
+.contest-dialog {
+  background: var(--white);
+  border-radius: 23px;
+  box-shadow: 0 30px 90px rgba(9, 26, 30, 0.25);
+  display: grid;
+  gap: 18px;
+  max-width: 480px;
+  padding: 28px;
+  width: 100%;
+}
+
+.contest-dialog header {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contest-dialog h2 {
+  font-size: 2.2rem;
+  margin-top: 7px;
+}
+
+.contest-dialog header button {
+  align-items: center;
+  background: var(--paper-2);
+  border: 0;
+  border-radius: 9px;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  width: 35px;
+}
+
+.contest-dialog label {
+  display: grid;
+  gap: 8px;
+}
+
+.contest-dialog input {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--ink);
+  min-height: 48px;
+  outline: none;
+  padding: 0 13px;
+  width: 100%;
+}
+
+.contest-dialog input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(104, 184, 213, 0.12);
+}
+
+.contest-dialog > p:not(.auth-error) {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contest-dialog .button {
+  justify-content: center;
+  margin-top: 3px;
+}
+
+@media (max-width: 900px) {
+  .auth-page {
+    display: block;
+  }
+
+  .auth-intro {
+    min-height: auto;
+    padding: 34px 28px 50px;
+  }
+
+  .auth-intro > div:nth-child(2) {
+    margin: 70px 0 55px;
+  }
+
+  .auth-intro h1 {
+    font-size: clamp(3rem, 12vw, 5.3rem);
+  }
+
+  .auth-form-column {
+    min-height: 620px;
+  }
+
+  .contest-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .auth-intro {
+    padding-inline: 21px;
+  }
+
+  .auth-intro > div:nth-child(2) {
+    margin-block: 55px 45px;
+  }
+
+  .auth-feature {
+    align-items: start;
+  }
+
+  .auth-form-column {
+    min-height: 590px;
+    padding: 50px 20px;
+  }
+
+  .contest-picker-topbar {
+    padding-inline: 17px;
+  }
+
+  .contest-account span {
+    display: none;
+  }
+
+  .contest-account button {
+    font-size: 0;
+    gap: 0;
+    padding: 9px;
+  }
+
+  .contest-picker-content {
+    padding-top: 52px;
+  }
+
+  .contest-picker-heading h1 {
+    font-size: 3.2rem;
+  }
+
+  .contest-card {
+    gap: 12px;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    padding: 18px;
+  }
+
+  .contest-card-countdown {
+    display: none;
+  }
+
+  .contest-card-copy > strong {
+    font-size: 1.35rem;
+  }
+
+  .contest-card-icon {
+    height: 44px;
+    width: 44px;
+  }
+
+  .contest-dialog {
+    padding: 22px;
+  }
+}

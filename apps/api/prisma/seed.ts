@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { hashPassword } from "../src/auth/password";
 
 interface TopicSeed {
   id: number;
@@ -40,6 +41,8 @@ interface ExamSeed {
 
 const prisma = new PrismaClient();
 const dataDirectory = path.join(__dirname, "data");
+const EMILIANO_USER_ID = "00000000-0000-0000-0000-000000000001";
+const DATAPREV_CONTEST_ID = "dataprev-2026-emiliano";
 
 function readJson<T>(fileName: string): T {
   return JSON.parse(
@@ -50,6 +53,34 @@ function readJson<T>(fileName: string): T {
 async function main() {
   const topics = readJson<TopicSeed[]>("study-topics.json");
   const exams = readJson<ExamSeed[]>("exams.json");
+  const passwordHash = hashPassword("123");
+
+  await prisma.user.upsert({
+    where: { username: "Emiliano" },
+    create: {
+      id: EMILIANO_USER_ID,
+      username: "Emiliano",
+      displayName: "Emiliano",
+      passwordHash,
+    },
+    update: {
+      displayName: "Emiliano",
+      passwordHash,
+    },
+  });
+
+  await prisma.contest.upsert({
+    where: { id: DATAPREV_CONTEST_ID },
+    create: {
+      id: DATAPREV_CONTEST_ID,
+      userId: EMILIANO_USER_ID,
+      name: "DATAPREV 2026",
+      targetDate: new Date("2026-11-10T00:00:00.000Z"),
+    },
+    update: {
+      userId: EMILIANO_USER_ID,
+    },
+  });
 
   for (const topic of topics) {
     await prisma.studyTopic.upsert({
@@ -66,6 +97,14 @@ async function main() {
       },
     });
   }
+
+  await prisma.contestStudyTopic.createMany({
+    data: topics.map((topic) => ({
+      contestId: DATAPREV_CONTEST_ID,
+      studyTopicId: topic.id,
+    })),
+    skipDuplicates: true,
+  });
 
   let questionCount = 0;
   for (const exam of exams) {
@@ -108,7 +147,7 @@ async function main() {
   `;
 
   console.log(
-    `Seed concluído: ${topics.length} tópicos, ${exams.length} provas e ${questionCount} questões.`,
+    `Seed concluído para Emiliano: ${topics.length} tópicos, ${exams.length} provas e ${questionCount} questões.`,
   );
 }
 

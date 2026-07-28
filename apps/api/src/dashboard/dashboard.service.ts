@@ -64,7 +64,7 @@ export function summarizeStudyTime(
 export class DashboardService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async getDashboard() {
+  async getDashboard(contestId: string) {
     const [
       attempts,
       answers,
@@ -74,25 +74,31 @@ export class DashboardService {
       studySessions,
     ] = await Promise.all([
         this.prisma.attempt.findMany({
-          where: { completedAt: { not: null } },
+          where: { contestId, completedAt: { not: null } },
           orderBy: { completedAt: "asc" },
         }),
         this.prisma.attemptAnswer.findMany({
-          where: { attempt: { completedAt: { not: null } } },
+          where: {
+            attempt: { contestId, completedAt: { not: null } },
+          },
           include: { question: true },
         }),
-        this.prisma.studyTopic.count(),
-        this.prisma.studyTopic.count({ where: { status: "COMPLETED" } }),
-        this.prisma.studyTopic.findMany({
-          where: { status: { not: "COMPLETED" } },
+        this.prisma.contestStudyTopic.count({ where: { contestId } }),
+        this.prisma.contestStudyTopic.count({
+          where: { contestId, status: "COMPLETED" },
+        }),
+        this.prisma.contestStudyTopic.findMany({
+          where: { contestId, status: { not: "COMPLETED" } },
+          include: { studyTopic: true },
           orderBy: [
             { questionsCompleted: "desc" },
-            { suggestedPriority: "asc" },
-            { id: "asc" },
+            { studyTopic: { suggestedPriority: "asc" } },
+            { studyTopicId: "asc" },
           ],
           take: 5,
         }),
         this.prisma.studySession.findMany({
+          where: { contestId },
           orderBy: { startedAt: "asc" },
         }),
       ]);
@@ -142,36 +148,40 @@ export class DashboardService {
             value.total === 0 ? 0 : (value.correct / value.total) * 100,
         }))
         .sort((a, b) => a.accuracy - b.accuracy),
-      nextTopics,
+      nextTopics: nextTopics.map(({ studyTopic, ...progress }) => ({
+        ...studyTopic,
+        ...progress,
+      })),
       studyTime: summarizeStudyTime(attempts, studySessions),
     };
   }
 
-  async startStudyTimer() {
+  async startStudyTimer(contestId: string) {
     const runningSession = await this.prisma.studySession.findFirst({
-      where: { endedAt: null },
+      where: { contestId, endedAt: null },
     });
     if (!runningSession) {
-      await this.prisma.studySession.create({ data: {} });
+      await this.prisma.studySession.create({ data: { contestId } });
     }
-    return this.getStudyTime();
+    return this.getStudyTime(contestId);
   }
 
-  async pauseStudyTimer() {
+  async pauseStudyTimer(contestId: string) {
     await this.prisma.studySession.updateMany({
-      where: { endedAt: null },
+      where: { contestId, endedAt: null },
       data: { endedAt: new Date() },
     });
-    return this.getStudyTime();
+    return this.getStudyTime(contestId);
   }
 
-  private async getStudyTime() {
+  private async getStudyTime(contestId: string) {
     const [attempts, sessions] = await Promise.all([
       this.prisma.attempt.findMany({
-        where: { completedAt: { not: null } },
+        where: { contestId, completedAt: { not: null } },
         select: { completedAt: true, durationSeconds: true },
       }),
       this.prisma.studySession.findMany({
+        where: { contestId },
         orderBy: { startedAt: "asc" },
       }),
     ]);
