@@ -22,9 +22,20 @@ escolha de um concurso antes de abrir a visão geral. O concurso inicial é
 `DATAPREV 2026`; tentativas, progresso do plano e tempo estudado pertencem a
 esse concurso e ao seu usuário.
 
-Na tela de escolha também é possível criar outros concursos. Um concurso novo
-começa com histórico e tempo zerados. Os conteúdos específicos de um novo
-edital podem ser carregados posteriormente sem misturar o progresso existente.
+Na tela de escolha, `Solicitar concurso` coleta nome, data, área, descrição,
+três PDFs obrigatórios e as provas internas que o usuário gostaria de
+reaproveitar. A tela prepara uma mensagem para
+`emilianocalado@hotmail.com`; por segurança do navegador, os PDFs precisam ser
+anexados manualmente no aplicativo de e-mail antes do envio. Nenhum concurso é
+criado automaticamente e o endpoint de criação direta permanece desativado
+até a implementação da próxima versão.
+
+O seed também cria o `ENEM`, do tipo `ConcursoRecorrente`, com as edições de
+2016 a 2025. Em `Prova por ano`, o usuário escolhe Dia 1 ou Dia 2 e resolve as
+90 questões objetivas correspondentes. O `Treino por disciplina` reúne apenas
+a matéria escolhida nas dez edições. As 1.850 linhas armazenadas — incluindo
+as duas variantes de idioma — estão relacionadas a 17 disciplinas e a 99
+tópicos do plano oficial de 2026.
 
 ## Pre-requisitos
 
@@ -88,7 +99,8 @@ npm run setup
 ```
 
 Esse comando também cria ou atualiza o usuário inicial `Emiliano`, associa os
-409 tópicos do plano ao concurso DATAPREV 2026 e mantém tentativas já
+409 tópicos do plano ao concurso DATAPREV 2026, associa os 99 tópicos da Matriz
+de Referência do ENEM 2026 ao concurso recorrente e mantém tentativas já
 existentes durante a migração.
 
 ## Rodar em desenvolvimento
@@ -155,6 +167,7 @@ As provas atualmente cadastradas sao:
 - SERPRO 2023 - Analista de Tecnologia: 120 itens;
 - BACEN 2024 - Analista de Tecnologia da Informacao: 120 itens;
 - BNDES 2024 - Analise de Sistemas (Suporte): 70 questoes.
+- ENEM 2016 a 2025 - caderno azul: dois dias com 90 questoes efetivas cada.
 
 O cadastro fica na entidade `Exam`, e cada questao usa uma numeracao propria
 dentro da prova. Isso permite adicionar outros concursos com questoes de
@@ -167,12 +180,51 @@ Ao iniciar um simulado, escolha no site:
 - o modo completo ou por disciplina;
 - o tempo oficial da prova ou esse tempo acrescido de uma hora.
 
+No `ConcursoRecorrente` ENEM, os modos são `Prova por ano` e
+`Treino por disciplina`. No primeiro, a edição abre as opções Dia 1 e Dia 2,
+cada uma com exatamente 90 questões. O sistema preserva a distribuição
+histórica: em 2016 a redação estava no Dia 2; de 2017 em diante, está no Dia 1.
+No dia com redação, uma hora do tempo oficial é reservada para a produção
+textual e retirada do cronômetro das questões objetivas.
+
+Os tempos objetivos configurados são:
+
+- 2016: Dia 1 `4h30`; Dia 2 `4h30` após reservar `1h` para a redação;
+- 2017: Dia 1 `4h30` após a reserva; Dia 2 `4h30`;
+- 2018 a 2025: Dia 1 `4h30` após a reserva; Dia 2 `5h`.
+
+Cada opção de tempo adicional acrescenta uma hora ao cronômetro objetivo. A
+distribuição atual e os totais oficiais de `5h30` no Dia 1 e `5h` no Dia 2
+seguem as orientações do Inep:
+`https://www.gov.br/inep/pt-br/acesso-a-informacao/perguntas-frequentes/exame-nacional-do-ensino-medio-enem/no-dia-do-exame-orientacoes/em-que-horario-serao-aplicadas`.
+
+O `Treino por disciplina` reúne questões da mesma matéria entre 2016 e 2025,
+oferece ritmos de três ou quatro minutos por questão e persiste a lista e a
+ordem exatas da tentativa.
+
 EBSERH e BNDES usam `4h/5h`; SERPRO e BACEN usam `3h30/4h30`.
 DATAPREV e STN permanecem configuradas com `4h/5h`.
 
 O sistema calcula a media permitida por questao com base no tempo escolhido,
 registra quanto tempo cada questao ficou aberta e sinaliza as que ultrapassaram
 essa media. O tempo nao avanca enquanto a aba do navegador estiver oculta.
+
+## Rascunhos e problemas nas questões
+
+Tentativas ainda não finalizadas aparecem em `Simulados em andamento`. Durante
+a resolução, respostas marcadas, questão atual, tempo total e tempo por questão
+são preservados no navegador e sincronizados com o PostgreSQL a cada cinco
+segundos. O botão `Continuar depois` força uma última sincronização antes de
+voltar à central de treino. Ao retomar, o cronômetro parte do tempo acumulado e
+não inclui o período em que o simulado permaneceu fechado.
+
+Cada questão possui a ação `Reportar problema`, disponível durante a resolução
+e na revisão do resultado. As categorias incluem imagem cortada ou ilegível,
+categoria incorreta, erro de gabarito, texto ou alternativas incompletos,
+duplicidade, numeração incorreta e outros erros. A ação prepara uma mensagem
+para `emilianocalado@hotmail.com` com ID, prova, ano, dia, número, disciplina,
+assunto, página, imagem, tentativa e usuário. O envio é confirmado pelo usuário
+no aplicativo de e-mail.
 
 O plano de estudos tambem gera, para cada assunto, links especificos de
 videoaulas gratuitas no YouTube. Quando ha um detalhamento do topico, um
@@ -186,6 +238,9 @@ Os arquivos-fonte ficam em `provas/`. Para regenerar os dados e as imagens:
 npm run source:extract
 npm run source:extract:stn
 npm run source:extract:added
+npm run source:extract:enem
+npm run source:categorize:enem
+npm run source:study-plan:enem
 ```
 
 O extrator da STN le diretamente o caderno CNS104 tipo 1 e a secao
@@ -200,6 +255,29 @@ EBSERH 2024, SERPRO 2023, BACEN 2024 e BNDES 2024. Ele gera os quatro arquivos
 JSON em `apps/api/prisma/data/`, os recortes individuais em
 `apps/web/public/questions/<prova>/` e as imagens de contexto compartilhado.
 Provas discursivas nao sao importadas.
+
+O comando `source:extract:enem` processa prova e gabarito azuis dos dois dias,
+separa as alternativas de inglês e espanhol, identifica anuladas, categoriza
+as questões por disciplina e preserva o leiaute original em imagens. As fontes ficam em
+`enem/<ano>/`, os 1.850 registros em
+`apps/api/prisma/data/enem-<ano>-questions.json`, e os recortes em
+`apps/web/public/questions/enem-<ano>/`. O relatório reproduzível de validação
+fica em `enem/extraction-validation.json`.
+
+`source:categorize:enem` reaplica a taxonomia às dez edições sem renderizar as
+imagens novamente. `source:study-plan:enem` gera os 99 tópicos de Linguagens,
+Redação, Matemática, Ciências da Natureza e Ciências Humanas a partir dos
+objetos de conhecimento da Matriz de Referência publicada pelo Inep em 2026.
+O edital disciplina a edição do exame, enquanto a Matriz é a publicação
+oficial que enumera competências, habilidades e objetos de conhecimento:
+
+- edital e retificações:
+  `https://www.gov.br/inep/pt-br/centrais-de-conteudo/legislacao/enem`;
+- Matriz de Referência ENEM 2026:
+  `https://www.gov.br/inep/pt-br/centrais-de-conteudo/acervo-linha-editorial/publicacoes-institucionais/avaliacoes-e-exames-da-educacao-basica/matrizes-de-referencia-enem`.
+
+Enquanto a criação direta estiver desativada, os PDFs selecionados na
+solicitação não são armazenados pelo sistema nem entram no Git.
 
 O manifesto `apps/api/prisma/data/exams.json` define quais provas e arquivos de
 questoes sao carregados pelo seed.

@@ -1,0 +1,992 @@
+[
+  {
+    "id": 10001,
+    "module": "Linguagens",
+    "discipline": "Língua Inglesa",
+    "syllabusItem": "Língua estrangeira moderna",
+    "subject": "Interpretação de texto em língua inglesa",
+    "detail": "Vocabulário e expressões, tema, estruturas linguísticas, função e uso social do texto, acesso a informações, tecnologias, culturas e diversidade cultural.",
+    "page": "Matriz de Referência ENEM 2026 · p. 2",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10002,
+    "module": "Linguagens",
+    "discipline": "Língua Espanhola",
+    "syllabusItem": "Língua estrangeira moderna",
+    "subject": "Interpretação de texto em língua espanhola",
+    "detail": "Vocabulário e expressões, tema, estruturas linguísticas, função e uso social do texto, acesso a informações, tecnologias, culturas e diversidade cultural.",
+    "page": "Matriz de Referência ENEM 2026 · p. 2",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10003,
+    "module": "Linguagens",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "Estudo do texto",
+    "subject": "Interpretação e resolução de problemas",
+    "detail": "Sequências discursivas, gêneros textuais, composição, leitura, produção e circulação de textos em diferentes esferas sociais.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10004,
+    "module": "Linguagens",
+    "discipline": "Literatura",
+    "syllabusItem": "Estudo do texto literário",
+    "subject": "Literatura",
+    "detail": "Produção literária e processo social, formação nacional, patrimônio literário, gêneros, construção, recepção, continuidade, ruptura e diálogo com outras artes.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14–15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10005,
+    "module": "Linguagens",
+    "discipline": "Artes",
+    "syllabusItem": "Produção e recepção de textos artísticos",
+    "subject": "Artes",
+    "detail": "Artes visuais, teatro, música e dança: estruturas, contextos, fontes de criação, identidade, cidadania, inclusão, diversidade e multiculturalidade.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10006,
+    "module": "Linguagens",
+    "discipline": "Educação Física",
+    "syllabusItem": "Estudo das práticas corporais",
+    "subject": "Educação Física",
+    "detail": "Linguagem corporal, identidade, lazer, saúde, expressão cultural, autonomia, condicionamento, esporte, dança, lutas, jogos e brincadeiras.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10007,
+    "module": "Linguagens",
+    "discipline": "Tecnologias da Comunicação",
+    "syllabusItem": "Estudo dos gêneros digitais",
+    "subject": "Tecnologias da comunicação",
+    "detail": "Suportes e gêneros digitais, interlocutores, recursos linguísticos, cultura de massa, impacto e função social das tecnologias da comunicação e informação.",
+    "page": "Matriz de Referência ENEM 2026 · p. 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10008,
+    "module": "Linguagens",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "Usos da língua",
+    "subject": "Variação linguística",
+    "detail": "Variações sociais, regionais e de registro; norma-padrão, oralidade, preconceito linguístico e adequação à situação comunicativa.",
+    "page": "Matriz de Referência ENEM 2026 · p. 4 e 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10009,
+    "module": "Linguagens",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "Aspectos linguísticos",
+    "subject": "Gramática e recursos linguísticos",
+    "detail": "Recursos expressivos, macroestrutura semântica, relações lógico-semânticas, seleção lexical, tempos e modos verbais, referência e coesão.",
+    "page": "Matriz de Referência ENEM 2026 · p. 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10101,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Processos históricos",
+    "subject": "História",
+    "detail": "Temporalidade, fontes, memória, cultura, poder, trabalho, cidadania, conflitos, revoluções e transformações políticas e econômicas do Brasil e do mundo.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22–23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10102,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Espaço geográfico",
+    "subject": "Geografia",
+    "detail": "Território, cartografia, população, urbanização, produção, globalização, geopolítica, natureza, ambiente e sustentabilidade.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22–24",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10103,
+    "module": "Ciências Humanas",
+    "discipline": "Filosofia",
+    "syllabusItem": "Pensamento político e ética",
+    "subject": "Filosofia",
+    "detail": "Cidadania, democracia, Estado, direitos, pensamento liberal e seus críticos, ética, argumentação e relações entre sociedade e natureza.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22–24",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10104,
+    "module": "Ciências Humanas",
+    "discipline": "Sociologia",
+    "syllabusItem": "Organização social",
+    "subject": "Sociologia",
+    "detail": "Cultura, identidade, movimentos sociais, trabalho, desigualdade, cidadania, direitos, conflitos, vida urbana e transformações produtivas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22–23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10105,
+    "module": "Ciências Humanas",
+    "discipline": "Ciências Humanas (Interdisciplinar)",
+    "syllabusItem": "Integração das Ciências Humanas",
+    "subject": "Interpretação e resolução de problemas",
+    "detail": "Leitura interdisciplinar de documentos, mapas, processos históricos, relações sociais, cultura, política, economia e ambiente.",
+    "page": "Matriz de Referência ENEM 2026 · p. 11–13",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10201,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Conhecimentos biológicos",
+    "subject": "Biologia",
+    "detail": "Seres vivos, células, genética, evolução, fisiologia, ecologia, saúde, biotecnologia e sustentabilidade em situações-problema.",
+    "page": "Matriz de Referência ENEM 2026 · p. 20–21",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10202,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Conhecimentos físicos",
+    "subject": "Física",
+    "detail": "Mecânica, energia, gravitação, eletricidade, magnetismo, ondas, óptica, radiação, calor e termodinâmica em contextos naturais e tecnológicos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 17–18",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10203,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Conhecimentos químicos",
+    "subject": "Química",
+    "detail": "Matéria, transformações, cálculos, soluções, energia, cinética, equilíbrio, química orgânica, tecnologias, ambiente e recursos energéticos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 18–19",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10204,
+    "module": "Ciências da Natureza",
+    "discipline": "Ciências da Natureza (Interdisciplinar)",
+    "syllabusItem": "Integração das Ciências da Natureza",
+    "subject": "Interpretação e resolução de problemas",
+    "detail": "Método científico e integração de modelos, gráficos, experimentos e conhecimentos físicos, químicos e biológicos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 8–10",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10301,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos geométricos",
+    "subject": "Geometria",
+    "detail": "Figuras planas e espaciais; unidades, escalas, comprimentos, áreas, volumes, ângulos, retas, simetria, congruência, semelhança, Tales, relações métricas, circunferência e trigonometria do ângulo agudo.",
+    "page": "Matriz de Referência ENEM 2026 · p. 16",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10302,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Estatística e probabilidade",
+    "subject": "Estatística e probabilidade",
+    "detail": "Representação e análise de dados, tabelas, gráficos, médias, moda, mediana, desvios, variância, amostragem e probabilidade.",
+    "page": "Matriz de Referência ENEM 2026 · p. 6–7 e 16",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10303,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos",
+    "subject": "Funções",
+    "detail": "Gráficos e funções do 1º e 2º graus, polinomiais, racionais, exponenciais e logarítmicas; ciclo e funções trigonométricas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 16",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10304,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos numéricos",
+    "subject": "Matemática financeira",
+    "detail": "Porcentagem, juros, taxas, descontos, aumentos, financiamentos e análise de situações financeiras.",
+    "page": "Matriz de Referência ENEM 2026 · p. 16",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10305,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos",
+    "subject": "Álgebra",
+    "detail": "Equações, inequações, expressões, polinômios, sequências, progressões, plano cartesiano, retas, circunferências e sistemas de equações.",
+    "page": "Matriz de Referência ENEM 2026 · p. 16",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10306,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos numéricos",
+    "subject": "Aritmética e proporcionalidade",
+    "detail": "Naturais, inteiros, racionais e reais; operações, desigualdades, divisibilidade, fatoração, razões, proporções, dependência entre grandezas e princípios de contagem.",
+    "page": "Matriz de Referência ENEM 2026 · p. 16",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 10307,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Modelagem matemática",
+    "subject": "Interpretação e resolução de problemas",
+    "detail": "Leitura matemática de situações cotidianas, modelagem, avaliação de resultados, argumentação quantitativa e integração entre números, álgebra, geometria, grandezas, gráficos e tabelas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 5–7",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11001,
+    "module": "Linguagens",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "Gêneros e sequências discursivas",
+    "subject": "Organização da composição textual",
+    "detail": "Narração, descrição, exposição, injunção e argumentação; finalidade, suporte, interlocutores e circulação social dos gêneros.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11002,
+    "module": "Linguagens",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "Aspectos linguísticos",
+    "subject": "Macroestrutura e relações lógico-semânticas",
+    "detail": "Progressão temática, articulação de ideias e proposições, causa, consequência, condição, oposição, comparação e conclusão.",
+    "page": "Matriz de Referência ENEM 2026 · p. 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11003,
+    "module": "Linguagens",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "Texto argumentativo",
+    "subject": "Pontos de vista e estratégias argumentativas",
+    "detail": "Tese, argumentos, contra-argumentos, papéis sociais, propósitos comunicativos, convencimento e público-alvo.",
+    "page": "Matriz de Referência ENEM 2026 · p. 4 e 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11004,
+    "module": "Linguagens",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "Coesão textual",
+    "subject": "Referência e articulação de sequências",
+    "detail": "Referência pessoal, temporal e espacial; conectores, retomadas, substituições, elipses e construção da microestrutura.",
+    "page": "Matriz de Referência ENEM 2026 · p. 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11005,
+    "module": "Linguagens",
+    "discipline": "Língua Portuguesa",
+    "syllabusItem": "Usos da língua",
+    "subject": "Registro, formalidade e norma-padrão",
+    "detail": "Adequação linguística ao contexto, seleção lexical, tempos e modos verbais e usos da norma-padrão.",
+    "page": "Matriz de Referência ENEM 2026 · p. 4 e 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11006,
+    "module": "Linguagens",
+    "discipline": "Literatura",
+    "syllabusItem": "Formação literária",
+    "subject": "Literatura e formação nacional",
+    "detail": "Produção literária e processo social, cosmopolitismo e localismo, patrimônio e processos de formação da literatura brasileira.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14–15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11007,
+    "module": "Linguagens",
+    "discipline": "Literatura",
+    "syllabusItem": "Gêneros literários",
+    "subject": "Narrativa, lírica e drama",
+    "detail": "Natureza, função, organização, estrutura, recursos expressivos, construção e recepção dos gêneros épico/narrativo, lírico e dramático.",
+    "page": "Matriz de Referência ENEM 2026 · p. 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11008,
+    "module": "Linguagens",
+    "discipline": "Literatura",
+    "syllabusItem": "História literária",
+    "subject": "Continuidade e ruptura na literatura brasileira",
+    "detail": "Relações entre momento histórico, concepções artísticas, procedimentos de construção e valores sociais no patrimônio literário.",
+    "page": "Matriz de Referência ENEM 2026 · p. 3 e 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11009,
+    "module": "Linguagens",
+    "discipline": "Artes",
+    "syllabusItem": "Linguagens artísticas",
+    "subject": "Artes visuais, teatro, música e dança",
+    "detail": "Estruturas morfológicas e sintáticas, contexto da obra e da comunidade, fontes de criação e inter-relações entre linguagens.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11010,
+    "module": "Linguagens",
+    "discipline": "Artes",
+    "syllabusItem": "Arte, sociedade e identidade",
+    "subject": "Diversidade estética e cultural",
+    "detail": "Funções da arte, padrões de beleza, preconceitos, minorias sociais, inclusão, multiculturalidade, identidade e cidadania.",
+    "page": "Matriz de Referência ENEM 2026 · p. 3 e 14",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11011,
+    "module": "Linguagens",
+    "discipline": "Educação Física",
+    "syllabusItem": "Cultura corporal",
+    "subject": "Corpo, identidade e sociedade",
+    "detail": "Performance, identidades juvenis, símbolos, expressão artística e cultural, autonomia e condicionamentos sociais do corpo.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11012,
+    "module": "Linguagens",
+    "discipline": "Educação Física",
+    "syllabusItem": "Saúde e lazer",
+    "subject": "Práticas corporais e qualidade de vida",
+    "detail": "Exercício, esforço e condicionamento físico; lazer crítico; esporte, dança, lutas, jogos e brincadeiras.",
+    "page": "Matriz de Referência ENEM 2026 · p. 14",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11013,
+    "module": "Linguagens",
+    "discipline": "Tecnologias da Comunicação",
+    "syllabusItem": "Sistemas de comunicação",
+    "subject": "Impactos sociais da comunicação e informação",
+    "detail": "Linguagens, recursos expressivos, funções sociais, posições críticas, produção de conhecimento e resolução de problemas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 2 e 4",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11014,
+    "module": "Linguagens",
+    "discipline": "Tecnologias da Comunicação",
+    "syllabusItem": "Gêneros digitais",
+    "subject": "Comunicação na cultura digital",
+    "detail": "Suporte, interlocutores, recursos linguísticos, texto de cultura de massa e função social das novas tecnologias.",
+    "page": "Matriz de Referência ENEM 2026 · p. 15",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11015,
+    "module": "Redação",
+    "discipline": "Redação",
+    "syllabusItem": "Competência I",
+    "subject": "Norma-padrão escrita",
+    "detail": "Convenções da escrita formal, sintaxe, pontuação, ortografia, concordância, regência e escolha vocabular.",
+    "page": "Matriz de Referência ENEM 2026 · p. 1",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11016,
+    "module": "Redação",
+    "discipline": "Redação",
+    "syllabusItem": "Competência II",
+    "subject": "Compreensão do tema e repertório",
+    "detail": "Atendimento ao recorte temático, estrutura dissertativo-argumentativa e repertório sociocultural produtivo.",
+    "page": "Matriz de Referência ENEM 2026 · p. 1",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11017,
+    "module": "Redação",
+    "discipline": "Redação",
+    "syllabusItem": "Competência III",
+    "subject": "Projeto de texto e argumentação",
+    "detail": "Seleção, relação, organização e interpretação de informações, fatos, opiniões e argumentos em defesa de um ponto de vista.",
+    "page": "Matriz de Referência ENEM 2026 · p. 1",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11018,
+    "module": "Redação",
+    "discipline": "Redação",
+    "syllabusItem": "Competência IV",
+    "subject": "Coesão e mecanismos linguísticos",
+    "detail": "Articulação entre parágrafos e períodos, referenciação, conectores e encadeamento lógico da argumentação.",
+    "page": "Matriz de Referência ENEM 2026 · p. 1",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11019,
+    "module": "Redação",
+    "discipline": "Redação",
+    "syllabusItem": "Competência V",
+    "subject": "Proposta de intervenção",
+    "detail": "Agente, ação, meio ou modo, finalidade/efeito e detalhamento, com respeito aos direitos humanos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 1",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11020,
+    "module": "Redação",
+    "discipline": "Redação",
+    "syllabusItem": "Planejamento",
+    "subject": "Introdução, desenvolvimento e conclusão",
+    "detail": "Tese clara, parágrafos argumentativos consistentes, progressão temática e conclusão integrada à proposta de intervenção.",
+    "page": "Matriz de Referência ENEM 2026 · p. 1",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11201,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Fundamentos",
+    "subject": "Grandezas, unidades, gráficos e vetores",
+    "detail": "Ordem de grandeza, notação científica, SI, investigação, observações, mensurações, grandezas escalares e vetoriais e operações com vetores.",
+    "page": "Matriz de Referência ENEM 2026 · p. 17",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11202,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Mecânica",
+    "subject": "Movimento, forças e equilíbrio",
+    "detail": "Tempo, espaço, velocidade, aceleração, inércia, referenciais, massa, momento linear, impulso, Newton, centro de massa, torque, atrito, peso, normal, tração, movimento circular e hidrostática.",
+    "page": "Matriz de Referência ENEM 2026 · p. 17",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11203,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Mecânica",
+    "subject": "Energia, trabalho e potência",
+    "detail": "Energia cinética e potencial, trabalho, potência, conservação da energia mecânica, gravidade, forças conservativas e dissipativas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 17",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11204,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Gravitação",
+    "subject": "Mecânica e funcionamento do Universo",
+    "detail": "Peso, aceleração gravitacional, gravitação universal, leis de Kepler, corpos celestes, marés, clima e concepções sobre a origem e evolução do Universo.",
+    "page": "Matriz de Referência ENEM 2026 · p. 17",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11205,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Eletromagnetismo",
+    "subject": "Fenômenos elétricos e magnéticos",
+    "detail": "Carga, corrente, Coulomb, campos e potenciais, capacitores, Joule, Ohm, resistência, tensão, potência, energia, circuitos, medidores, corrente contínua e alternada e magnetismo.",
+    "page": "Matriz de Referência ENEM 2026 · p. 17–18",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11206,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Ondulatória e óptica",
+    "subject": "Oscilações, ondas, óptica e radiação",
+    "detail": "Pulsos, ondas, período, frequência, comprimento, velocidade, propagação, reflexão, refração, lentes, espelhos, formação de imagens e instrumentos ópticos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 18",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11207,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Termologia",
+    "subject": "Calor e fenômenos térmicos",
+    "detail": "Calor, temperatura, escalas, equilíbrio e transferência térmica, capacidade, calor específico, dilatação, estados físicos, calor latente, gases ideais, máquinas, Carnot, termodinâmica e ciclo da água.",
+    "page": "Matriz de Referência ENEM 2026 · p. 18",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11301,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Química geral",
+    "subject": "Transformações químicas e estrutura da matéria",
+    "detail": "Evidências de transformações, gases, Avogadro, teoria cinética, modelo corpuscular, modelos atômicos, estrutura atômica, isótopos, elementos, tabela periódica e reações.",
+    "page": "Matriz de Referência ENEM 2026 · p. 18",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11302,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Química quantitativa",
+    "subject": "Representação e estequiometria",
+    "detail": "Fórmulas, balanceamento, leis ponderais, massa, volume, mol, massa molar, constante de Avogadro, rendimento e cálculos estequiométricos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 18",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11303,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Materiais",
+    "subject": "Propriedades, ligações e separação de misturas",
+    "detail": "Estados e mudanças, misturas e separação, substâncias, metais e ligas, ligações iônica, covalente e metálica, polaridade e forças intermoleculares.",
+    "page": "Matriz de Referência ENEM 2026 · p. 18",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11304,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Soluções",
+    "subject": "Água, soluções, ácidos, bases, sais e óxidos",
+    "detail": "Solubilidade, concentração, coloides, suspensões, propriedades coligativas, formulação, nomenclatura, indicadores, condutividade e neutralização.",
+    "page": "Matriz de Referência ENEM 2026 · p. 19",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11305,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Físico-química",
+    "subject": "Termoquímica, eletroquímica e radioatividade",
+    "detail": "Entalpia, calor de reação, Hess, oxirredução, potenciais, pilhas, eletrólise, Faraday, fissão, fusão, desintegração e radioisótopos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 19",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11306,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Cinética química",
+    "subject": "Velocidade das transformações",
+    "detail": "Velocidade, energia de ativação e efeitos de concentração, pressão, temperatura e catalisador.",
+    "page": "Matriz de Referência ENEM 2026 · p. 19",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11307,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Equilíbrio químico",
+    "subject": "Equilíbrio, pH, solubilidade e hidrólise",
+    "detail": "Constantes, produto iônico da água, equilíbrio ácido-base, pH, solubilidade, hidrólise, deslocamento do equilíbrio e aplicações cotidianas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 19",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11308,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Química orgânica",
+    "subject": "Compostos de carbono e polímeros",
+    "detail": "Funções orgânicas, hidrocarbonetos, compostos oxigenados e nitrogenados, fermentação, macromoléculas, polímeros, óleos, gorduras, sabões, proteínas e enzimas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 19",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11309,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Química, tecnologia e ambiente",
+    "subject": "Indústria, poluição e energia",
+    "detail": "Agricultura, saúde, alimentos, indústria, mineração, metalurgia, tratamento de água, atmosfera, petróleo, gás, carvão, biomassa, biocombustíveis, energia nuclear e impactos ambientais.",
+    "page": "Matriz de Referência ENEM 2026 · p. 19",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11401,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Biologia celular",
+    "subject": "Moléculas, células e tecidos",
+    "detail": "Membrana, citoplasma, núcleo, divisão, bioquímica, metabolismo, fotossíntese, respiração, informação genética, síntese proteica, diferenciação, tecidos e células-tronco.",
+    "page": "Matriz de Referência ENEM 2026 · p. 20",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11402,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Genética",
+    "subject": "Hereditariedade e diversidade da vida",
+    "detail": "Transmissão hereditária, Mendel, genética humana, antígenos, anticorpos, grupos sanguíneos, transplantes, autoimunidade, câncer, mutações, aconselhamento e diversidade genética.",
+    "page": "Matriz de Referência ENEM 2026 · p. 20",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11403,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Seres vivos",
+    "subject": "Identidade, classificação e fisiologia",
+    "detail": "Níveis de organização, vírus, procariontes, eucariontes, nutrição, ciclos de vida, sistemática, evolução, embriologia, anatomia e fisiologia humana.",
+    "page": "Matriz de Referência ENEM 2026 · p. 20",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11404,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Ecologia",
+    "subject": "Ecossistemas e ciências ambientais",
+    "detail": "Fatores, habitat, nicho, teias, sucessão, populações, interações, ciclos, energia, biogeografia, biomas, recursos, impactos, conservação, saneamento e legislação ambiental.",
+    "page": "Matriz de Referência ENEM 2026 · p. 20",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11405,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Evolução",
+    "subject": "Origem e evolução da vida",
+    "detail": "História e método da Biologia, origem do Universo, Terra e vida, teorias pré-darwinistas, Darwin, síntese evolutiva e seleção artificial.",
+    "page": "Matriz de Referência ENEM 2026 · p. 20",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11406,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Saúde",
+    "subject": "Qualidade de vida das populações",
+    "detail": "Desenvolvimento humano, indicadores, doenças brasileiras, prevenção, primeiros socorros, ISTs, drogas, gravidez, obesidade, violência, exercício, sustentabilidade e cidadania.",
+    "page": "Matriz de Referência ENEM 2026 · p. 20–21",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11407,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Biotecnologia",
+    "subject": "DNA, clonagem e aplicações biotecnológicas",
+    "detail": "DNA recombinante, alimentos, fármacos, investigação, paternidade, identificação, ética, clonagem, células-tronco e sustentabilidade.",
+    "page": "Matriz de Referência ENEM 2026 · p. 20",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11501,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Cultura e diversidade",
+    "subject": "Conquista da América e relações coloniais",
+    "detail": "Conflitos entre europeus e indígenas, escravidão e resistências indígena e africana na América.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11502,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "História do Brasil",
+    "subject": "Povos africanos, indígenas e formação brasileira",
+    "detail": "História cultural africana, luta negra, povos indígenas, diversidade cultural, patrimônio e formação sociocultural do Brasil.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11503,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "História política",
+    "subject": "Antiguidade, cidadania e democracia",
+    "detail": "Cidadania e democracia antigas; Estado, direitos e formas direta, indireta e representativa a partir da modernidade.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11504,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Idade Moderna",
+    "subject": "Revoluções modernas e independências americanas",
+    "detail": "Revoluções sociais e políticas europeias e lutas de independência das colônias da América.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11505,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Brasil Império",
+    "subject": "Construção da nação no Brasil imperial",
+    "detail": "Grupos sociais em conflito, Estado, cidadania, território, escravidão, abolição e construção nacional.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11506,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Mundo contemporâneo",
+    "subject": "Imperialismo, guerras e Guerra Fria",
+    "detail": "Ocupação da Ásia e África, Guerras Mundiais, Guerra Fria e conflitos geopolíticos dos séculos XIX e XX.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11507,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Revoluções do século XX",
+    "subject": "Revoluções Russa, Chinesa e Cubana",
+    "detail": "Grupos sociais, projetos políticos e impactos dos grandes processos revolucionários do século XX.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11508,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Autoritarismo",
+    "subject": "Totalitarismos e ditaduras latino-americanas",
+    "detail": "Nazifascismo, franquismo, salazarismo, stalinismo, Estado Novo e ditaduras na América Latina.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11509,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Economia colonial e imperial",
+    "subject": "Economia agroexportadora brasileira",
+    "detail": "Açúcar, mineração, café e borracha na organização econômica e territorial brasileira.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11510,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Industrialização",
+    "subject": "Revolução Industrial e sistemas de produção",
+    "detail": "Sistema fabril, espaço urbano-industrial, fordismo, toyotismo, técnicas produtivas e impactos sociais.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11601,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Geografia do Brasil",
+    "subject": "Formação territorial e regiões brasileiras",
+    "detail": "Formação territorial, regionalização e políticas de reordenamento territorial.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11602,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "População",
+    "subject": "Migrações, imigrações e emigrações",
+    "detail": "Políticas e fluxos populacionais no Brasil nos séculos XIX, XX e XXI.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11603,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Geopolítica",
+    "subject": "Ordem mundial e organismos multilaterais",
+    "detail": "Pós-Guerra Fria, conflitos político-culturais, reorganização internacional e organismos multilaterais.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11604,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Geografia urbana",
+    "subject": "Redes, hierarquia e segregação urbana",
+    "detail": "Vida urbana, cidades, pobreza, segregação espacial, industrialização, urbanização e transformações sociais.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11605,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Globalização",
+    "subject": "Tecnologias e economia global",
+    "detail": "Telecomunicações e consequências econômicas, políticas, culturais e sociais da globalização.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11606,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Geografia agrária",
+    "subject": "Espaço agrário e relações campo-cidade",
+    "detail": "Modernização, estruturas tradicionais, agronegócio, agricultura familiar, assalariados, lutas sociais e relação campo-cidade.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11607,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Recursos naturais",
+    "subject": "Sociedade, natureza e impactos econômicos",
+    "detail": "Apropriação de recursos, mineração, energia, recursos hídricos, bacias e impactos das atividades econômicas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11608,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Questões ambientais",
+    "subject": "Mudanças climáticas e ordem ambiental",
+    "detail": "Ilhas de calor, efeito estufa, chuva ácida, ozônio, políticas ambientais, conservação, unidades, corredores e zoneamento.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23–24",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11609,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Geologia e geomorfologia",
+    "subject": "Estrutura da Terra, solos e relevo",
+    "detail": "Estrutura interna, solos, formas de relevo e agentes internos e externos modeladores.",
+    "page": "Matriz de Referência ENEM 2026 · p. 24",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11610,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Climatologia",
+    "subject": "Atmosfera e climas",
+    "detail": "Estrutura e dinâmica atmosférica, classificação climática e características dos climas brasileiros.",
+    "page": "Matriz de Referência ENEM 2026 · p. 24",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11611,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Biogeografia",
+    "subject": "Domínios de vegetação",
+    "detail": "Grandes domínios vegetais e relações entre clima, relevo, solos e biodiversidade no Brasil e no mundo.",
+    "page": "Matriz de Referência ENEM 2026 · p. 24",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11612,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Cartografia",
+    "subject": "Representação espacial",
+    "detail": "Projeções, escalas, leitura de mapas temáticos, físicos e políticos e tecnologias modernas de cartografia.",
+    "page": "Matriz de Referência ENEM 2026 · p. 24",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11701,
+    "module": "Ciências Humanas",
+    "discipline": "Filosofia",
+    "syllabusItem": "Filosofia política",
+    "subject": "Estado, cidadania e democracia",
+    "detail": "Fundamentos e transformações da cidadania, democracia, direitos e legitimidade do Estado da Antiguidade à modernidade.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11702,
+    "module": "Ciências Humanas",
+    "discipline": "Filosofia",
+    "syllabusItem": "Pensamento político",
+    "subject": "Liberalismo e seus críticos",
+    "detail": "Desenvolvimento do pensamento liberal na sociedade capitalista e críticas dos séculos XIX e XX.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11703,
+    "module": "Ciências Humanas",
+    "discipline": "Filosofia",
+    "syllabusItem": "Ética e direitos",
+    "subject": "Direitos humanos, justiça e ação política",
+    "detail": "Direitos civis, humanos, políticos e sociais, constituições, políticas afirmativas, dilemas éticos e construção de argumentos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11704,
+    "module": "Ciências Humanas",
+    "discipline": "Filosofia",
+    "syllabusItem": "Filosofia ambiental",
+    "subject": "Ética ambiental e sustentabilidade",
+    "detail": "Relação sociedade-natureza, origem e evolução do conceito de sustentabilidade e avaliação ética de intervenções.",
+    "page": "Matriz de Referência ENEM 2026 · p. 24",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11801,
+    "module": "Ciências Humanas",
+    "discipline": "Sociologia",
+    "syllabusItem": "Cultura",
+    "subject": "Cultura, patrimônio e identidades",
+    "detail": "Cultura material e imaterial, diversidade, movimentos culturais, memória, identidades e patrimônio.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11802,
+    "module": "Ciências Humanas",
+    "discipline": "Sociologia",
+    "syllabusItem": "Movimentos sociais",
+    "subject": "Organização social e ação coletiva",
+    "detail": "Grupos sociais, conflitos, movimentos, participação política, cidadania e conquista de direitos.",
+    "page": "Matriz de Referência ENEM 2026 · p. 22–23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11803,
+    "module": "Ciências Humanas",
+    "discipline": "Sociologia",
+    "syllabusItem": "Trabalho e produção",
+    "subject": "Escravismo, feudalismo, capitalismo e socialismo",
+    "detail": "Formas históricas de organização da produção, relações de trabalho e experiências econômicas e sociais.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11804,
+    "module": "Ciências Humanas",
+    "discipline": "Sociologia",
+    "syllabusItem": "Desigualdades",
+    "subject": "Direitos, políticas afirmativas e segregação",
+    "detail": "Direitos sociais, desigualdades raciais, econômicas e territoriais, pobreza, políticas públicas e ações afirmativas.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  },
+  {
+    "id": 11805,
+    "module": "Ciências Humanas",
+    "discipline": "Sociologia",
+    "syllabusItem": "Sociologia rural e urbana",
+    "subject": "Relações sociais no campo e na cidade",
+    "detail": "Urbanização, segregação, transformações trabalhistas, agronegócio, agricultura familiar, assalariamento e lutas sociais.",
+    "page": "Matriz de Referência ENEM 2026 · p. 23",
+    "suggestedPriority": "Alta"
+  }
+]

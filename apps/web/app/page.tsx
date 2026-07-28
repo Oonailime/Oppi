@@ -142,9 +142,15 @@ export default function DashboardPage() {
           <span>
             <small>
               {selectedContest?.name} ·{" "}
-              {examDateLabel(selectedContest?.targetDate ?? null)}
+              {selectedContest?.type === "RECURRING"
+                ? "realizado todos os anos"
+                : examDateLabel(selectedContest?.targetDate ?? null)}
             </small>
-            <strong>{countdownLabel(daysLeft)}</strong>
+            <strong>
+              {selectedContest?.type === "RECURRING"
+                ? "10 edições disponíveis"
+                : countdownLabel(daysLeft)}
+            </strong>
           </span>
         </div>
       </header>

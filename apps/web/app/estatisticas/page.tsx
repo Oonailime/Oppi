@@ -153,7 +153,12 @@ export default function StatisticsPage() {
                   <span>
                     <strong>{dateLabel(item.completedAt)}</strong>
                     <small>
-                      {item.exam.name} · {item.discipline ?? "Prova completa"}
+                      {item.exam.name} ·{" "}
+                      {item.mode === "ALL_YEARS"
+                        ? `Treino por disciplina · ${item.discipline}`
+                        : item.examDay
+                          ? `Dia ${item.examDay} · prova por ano`
+                          : item.discipline ?? "Prova completa"}
                     </small>
                   </span>
                 </div>

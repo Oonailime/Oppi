@@ -1,4 +1,6 @@
-export type AttemptMode = "FULL" | "DISCIPLINE";
+export type AttemptMode = "FULL" | "DISCIPLINE" | "ALL_YEARS";
+export type ContestType = "STANDARD" | "RECURRING";
+export type ForeignLanguage = "ENGLISH" | "SPANISH";
 export type StudyStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED";
 export type Option = "A" | "B" | "C" | "D" | "E";
 
@@ -14,6 +16,11 @@ export interface Contest {
   userId: string;
   name: string;
   targetDate: string | null;
+  type: ContestType;
+  systemManaged: boolean;
+  desiredArea: string | null;
+  description: string | null;
+  storageDirectory: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -32,10 +39,31 @@ export interface Exam {
 export interface ExamOption extends Exam {
   questionCount: number;
   maxWeightedScore: number;
+  hasLanguageVariants: boolean;
+  availableLanguages: ForeignLanguage[];
   durationOptions: Array<{
     minutes: number;
     label: string;
     extended: boolean;
+  }>;
+  dayOptions: Array<{
+    day: 1 | 2;
+    label: string;
+    areas: string[];
+    includesEssay: boolean;
+    officialDurationMinutes: number;
+    essayReservedMinutes: number;
+    objectiveDurationMinutes: number;
+    extendedObjectiveDurationMinutes: number;
+    questionCount: number;
+    maxWeightedScore: number;
+    hasLanguageVariants: boolean;
+    availableLanguages: ForeignLanguage[];
+    durationOptions: Array<{
+      minutes: number;
+      label: string;
+      extended: boolean;
+    }>;
   }>;
 }
 
@@ -48,7 +76,11 @@ export interface DisciplineOption {
 
 export interface Question {
   id: number;
+  examId: string;
+  examName: string;
+  examYear: number;
   number: number;
+  examDay: number | null;
   discipline: string;
   subject: string;
   weight: number;
@@ -58,16 +90,48 @@ export interface Question {
   options: Option[];
 }
 
+export interface AttemptDraft {
+  answers: Array<{
+    questionId: number;
+    selectedAnswer: Option;
+  }>;
+  questionTimes: Array<{
+    questionId: number;
+    timeSpentSeconds: number;
+  }>;
+  currentIndex: number;
+  elapsedSeconds: number;
+  savedAt: string | null;
+}
+
 export interface StartedAttempt {
   attemptId: string;
   exam: Exam;
   mode: AttemptMode;
+  examDay: number | null;
   discipline: string | null;
+  foreignLanguage: ForeignLanguage | null;
   startedAt: string;
   timeLimitSeconds: number;
   targetSecondsPerQuestion: number;
   totalQuestions: number;
+  draft: AttemptDraft;
   questions: Question[];
+}
+
+export interface DraftAttempt {
+  id: string;
+  exam: Exam;
+  mode: AttemptMode;
+  examDay: number | null;
+  discipline: string | null;
+  foreignLanguage: ForeignLanguage | null;
+  startedAt: string;
+  lastSavedAt: string;
+  totalQuestions: number;
+  answeredQuestions: number;
+  currentIndex: number;
+  elapsedSeconds: number;
 }
 
 export interface DisciplineResult {
@@ -92,7 +156,9 @@ export interface AttemptResult {
   completed: boolean;
   exam: Exam;
   mode: AttemptMode;
+  examDay: number | null;
   discipline: string | null;
+  foreignLanguage: ForeignLanguage | null;
   startedAt: string;
   completedAt: string;
   durationSeconds: number;
@@ -115,6 +181,11 @@ export interface AttemptResult {
   answers: Array<{
     questionId: number;
     questionNumber: number;
+    examId: string;
+    examName: string;
+    examYear: number;
+    examDay: number | null;
+    sourcePage: number;
     selectedAnswer: Option | null;
     correctAnswer: Option | null;
     isCorrect: boolean;
@@ -184,7 +255,9 @@ export interface HistoryItem {
   id: string;
   exam: Exam;
   mode: AttemptMode;
+  examDay: number | null;
   discipline: string | null;
+  foreignLanguage: ForeignLanguage | null;
   completedAt: string;
   totalQuestions: number;
   correctAnswers: number;
@@ -194,4 +267,18 @@ export interface HistoryItem {
   durationSeconds: number;
   timeLimitSeconds: number;
   targetSecondsPerQuestion: number;
+}
+
+export interface ReusableExam {
+  id: string;
+  name: string;
+  organization: string;
+  year: number;
+  role: string | null;
+  questionCount: number;
+  sources: Array<{
+    id: string;
+    name: string;
+    type: ContestType;
+  }>;
 }

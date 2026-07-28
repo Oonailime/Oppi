@@ -15,11 +15,6 @@ import {
 } from "@/lib/session";
 import type { Contest, User } from "@/lib/types";
 
-type CreateContestInput = {
-  name: string;
-  targetDate?: string;
-};
-
 type UpdateContestInput = {
   name?: string;
   targetDate?: string;
@@ -33,7 +28,6 @@ type AppContextValue = {
   login: (username: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
   selectContest: (contestId: string | null) => void;
-  createContest: (input: CreateContestInput) => Promise<Contest>;
   updateContest: (
     contestId: string,
     input: UpdateContestInput,
@@ -122,15 +116,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     [],
   );
 
-  const createContest = useCallback(async (input: CreateContestInput) => {
-    const contest = await apiFetch<Contest>("/contests", {
-      method: "POST",
-      body: JSON.stringify(input),
-    });
-    setContests((current) => [...current, contest]);
-    return contest;
-  }, []);
-
   const updateContest = useCallback(
     async (contestId: string, input: UpdateContestInput) => {
       const contest = await apiFetch<Contest>(`/contests/${contestId}`, {
@@ -156,7 +141,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       login,
       logout,
       selectContest,
-      createContest,
       updateContest,
     }),
     [
@@ -167,7 +151,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       login,
       logout,
       selectContest,
-      createContest,
       updateContest,
     ],
   );

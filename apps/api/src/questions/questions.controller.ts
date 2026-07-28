@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   Param,
+  Patch,
   Post,
   Query,
   UseGuards,
@@ -10,6 +11,7 @@ import {
 import type { Contest } from "@prisma/client";
 import { ContestGuard } from "../contests/contest.guard";
 import { CurrentContest } from "../contests/current-contest.decorator";
+import { SaveAttemptDraftDto } from "./dto/save-attempt-draft.dto";
 import { StartAttemptDto } from "./dto/start-attempt.dto";
 import { SubmitAttemptDto } from "./dto/submit-attempt.dto";
 import { QuestionsService } from "./questions.service";
@@ -20,14 +22,14 @@ export class QuestionsController {
   constructor(private readonly questionsService: QuestionsService) {}
 
   @Get("exams")
-  listExams() {
-    return this.questionsService.listExams();
+  listExams(@CurrentContest() contest: Contest) {
+    return this.questionsService.listExams(contest.id);
   }
 
   @Get("disciplines")
   listDisciplines(
     @CurrentContest() contest: Contest,
-    @Query("examId") examId = "dataprev-2024",
+    @Query("examId") examId?: string,
   ) {
     return this.questionsService.listDisciplines(examId, contest.id);
   }
@@ -43,6 +45,11 @@ export class QuestionsController {
     );
   }
 
+  @Get("drafts")
+  listDrafts(@CurrentContest() contest: Contest) {
+    return this.questionsService.listDrafts(contest.id);
+  }
+
   @Post()
   start(@CurrentContest() contest: Contest, @Body() dto: StartAttemptDto) {
     return this.questionsService.start(dto, contest.id);
@@ -55,6 +62,15 @@ export class QuestionsController {
     @Body() dto: SubmitAttemptDto,
   ) {
     return this.questionsService.submit(id, dto, contest.id);
+  }
+
+  @Patch(":id/draft")
+  saveDraft(
+    @CurrentContest() contest: Contest,
+    @Param("id") id: string,
+    @Body() dto: SaveAttemptDraftDto,
+  ) {
+    return this.questionsService.saveDraft(id, dto, contest.id);
   }
 
   @Get(":id")

@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { ContestType, PrismaClient } from "@prisma/client";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { hashPassword } from "../src/auth/password";
@@ -15,7 +15,10 @@ interface TopicSeed {
 }
 
 interface QuestionSeed {
-  id: number;
+  id?: number;
+  number?: number;
+  examDay?: number;
+  variant?: string;
   discipline: string;
   subject: string;
   weight: number;
@@ -37,12 +40,14 @@ interface ExamSeed {
   defaultDurationMinutes: number;
   extendedDurationMinutes: number;
   questionsFile: string;
+  contestId?: string;
 }
 
 const prisma = new PrismaClient();
 const dataDirectory = path.join(__dirname, "data");
 const EMILIANO_USER_ID = "00000000-0000-0000-0000-000000000001";
 const DATAPREV_CONTEST_ID = "dataprev-2026-emiliano";
+const ENEM_CONTEST_ID = "enem-recorrente-emiliano";
 
 function readJson<T>(fileName: string): T {
   return JSON.parse(
@@ -51,7 +56,9 @@ function readJson<T>(fileName: string): T {
 }
 
 async function main() {
-  const topics = readJson<TopicSeed[]>("study-topics.json");
+  const dataprevTopics = readJson<TopicSeed[]>("study-topics.json");
+  const enemTopics = readJson<TopicSeed[]>("enem-study-topics.json");
+  const topics = [...dataprevTopics, ...enemTopics];
   const exams = readJson<ExamSeed[]>("exams.json");
   const passwordHash = hashPassword("123");
 
@@ -76,9 +83,29 @@ async function main() {
       userId: EMILIANO_USER_ID,
       name: "DATAPREV 2026",
       targetDate: new Date("2026-11-10T00:00:00.000Z"),
+      systemManaged: true,
     },
     update: {
       userId: EMILIANO_USER_ID,
+      systemManaged: true,
+      type: ContestType.STANDARD,
+    },
+  });
+
+  await prisma.contest.upsert({
+    where: { id: ENEM_CONTEST_ID },
+    create: {
+      id: ENEM_CONTEST_ID,
+      userId: EMILIANO_USER_ID,
+      name: "ENEM",
+      type: ContestType.RECURRING,
+      systemManaged: true,
+    },
+    update: {
+      userId: EMILIANO_USER_ID,
+      name: "ENEM",
+      type: ContestType.RECURRING,
+      systemManaged: true,
     },
   });
 
@@ -99,8 +126,16 @@ async function main() {
   }
 
   await prisma.contestStudyTopic.createMany({
-    data: topics.map((topic) => ({
+    data: dataprevTopics.map((topic) => ({
       contestId: DATAPREV_CONTEST_ID,
+      studyTopicId: topic.id,
+    })),
+    skipDuplicates: true,
+  });
+
+  await prisma.contestStudyTopic.createMany({
+    data: enemTopics.map((topic) => ({
+      contestId: ENEM_CONTEST_ID,
       studyTopicId: topic.id,
     })),
     skipDuplicates: true,
@@ -108,7 +143,11 @@ async function main() {
 
   let questionCount = 0;
   for (const exam of exams) {
-    const { questionsFile, ...examData } = exam;
+    const {
+      questionsFile,
+      contestId = DATAPREV_CONTEST_ID,
+      ...examData
+    } = exam;
     const questions = readJson<QuestionSeed[]>(questionsFile);
 
     await prisma.exam.upsert({
@@ -118,22 +157,56 @@ async function main() {
     });
 
     for (const question of questions) {
-      const { id, ...questionData } = question;
+      const {
+        id,
+        number: explicitNumber,
+        examDay: explicitExamDay,
+        variant = "",
+        ...questionData
+      } = question;
+      const number = explicitNumber ?? id;
+      if (number === undefined) {
+        throw new Error(`${exam.id}: questão sem número.`);
+      }
+      const examDay =
+        explicitExamDay ??
+        (exam.id.startsWith("enem-") ? (number <= 90 ? 1 : 2) : null);
       await prisma.question.upsert({
         where: {
-          examId_number: {
+          examId_number_variant: {
             examId: exam.id,
-            number: id,
+            number,
+            variant,
           },
         },
         create: {
           examId: exam.id,
-          number: id,
+          number,
+          examDay,
+          variant,
           ...questionData,
         },
-        update: questionData,
+        update: {
+          examDay,
+          variant,
+          ...questionData,
+        },
       });
     }
+
+    await prisma.contestExam.upsert({
+      where: {
+        contestId_examId: {
+          contestId,
+          examId: exam.id,
+        },
+      },
+      create: {
+        contestId,
+        examId: exam.id,
+      },
+      update: {},
+    });
     questionCount += questions.length;
   }
 
@@ -147,7 +220,7 @@ async function main() {
   `;
 
   console.log(
-    `Seed concluído para Emiliano: ${topics.length} tópicos, ${exams.length} provas e ${questionCount} questões.`,
+    `Seed concluído para Emiliano: ${dataprevTopics.length} tópicos DATAPREV, ${enemTopics.length} tópicos ENEM 2026, ${exams.length} provas e ${questionCount} questões.`,
   );
 }
 

@@ -17,6 +17,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ErrorState } from "@/components/error-state";
 import { LoadingState } from "@/components/loading-state";
+import { QuestionReport } from "@/components/question-report";
 import { apiFetch } from "@/lib/api";
 import type { AttemptResult } from "@/lib/types";
 
@@ -98,7 +99,10 @@ export default function ResultPage() {
           <span><strong>{roundedScore}</strong>%</span>
         </div>
         <div>
-          <span className="eyebrow light">{result.exam.name} concluída</span>
+          <span className="eyebrow light">
+            {result.exam.name}
+            {result.examDay ? ` · Dia ${result.examDay}` : ""} concluída
+          </span>
           <h1>
             {roundedScore >= 80
               ? "Ótimo domínio. Refine os detalhes."
@@ -230,11 +234,14 @@ export default function ResultPage() {
               ].join(" ")}
               key={answer.questionId}
               onClick={() => setOpenedAnswer(answer)}
-              aria-label={`Abrir questão ${answer.questionNumber}`}
+              aria-label={`Abrir questão ${answer.questionNumber} de ${answer.examYear}`}
             >
               <span className="review-number">{answer.questionNumber}</span>
               <span>
                 <strong>{answer.subject}</strong>
+                {result.mode === "ALL_YEARS" && (
+                  <small>{answer.examName}</small>
+                )}
                 <small>
                   {answer.annulled
                     ? "Questão anulada"
@@ -291,7 +298,11 @@ export default function ResultPage() {
                 <h2 id="question-review-title">
                   Questão {openedAnswer.questionNumber}
                 </h2>
-                <p>{openedAnswer.subject}</p>
+                <p>
+                  {result.mode === "ALL_YEARS"
+                    ? `${openedAnswer.examName} · treino de ${openedAnswer.discipline} · ${openedAnswer.subject}`
+                    : openedAnswer.subject}
+                </p>
               </div>
               <button
                 type="button"
@@ -332,6 +343,23 @@ export default function ResultPage() {
                 O gabarito permanece oculto nesta visualização para você
                 reconsiderar a resposta.
               </small>
+              <QuestionReport
+                attemptId={result.id}
+                question={{
+                  questionId: openedAnswer.questionId,
+                  questionNumber: openedAnswer.questionNumber,
+                  examId: openedAnswer.examId,
+                  examName: openedAnswer.examName,
+                  examYear: openedAnswer.examYear,
+                  examDay: openedAnswer.examDay,
+                  discipline: openedAnswer.discipline,
+                  subject: openedAnswer.subject,
+                  sourcePage: openedAnswer.sourcePage,
+                  sourceImage: openedAnswer.sourceImage,
+                  selectedAnswer: openedAnswer.selectedAnswer,
+                  correctAnswer: openedAnswer.correctAnswer,
+                }}
+              />
             </div>
           </section>
         </div>

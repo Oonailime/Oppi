@@ -1,0 +1,6 @@
+ALTER TABLE "Attempt"
+ADD COLUMN "draftAnswers" JSONB,
+ADD COLUMN "draftQuestionTimes" JSONB,
+ADD COLUMN "draftCurrentIndex" INTEGER NOT NULL DEFAULT 0,
+ADD COLUMN "draftElapsedSeconds" INTEGER NOT NULL DEFAULT 0,
+ADD COLUMN "draftSavedAt" TIMESTAMP(3);

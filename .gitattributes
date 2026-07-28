@@ -1,2 +1,17 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Keep source files identical on Windows, WSL, Linux and VPS environments.
+* text=auto eol=lf
+
+# Windows command files require CRLF for reliable cmd.exe execution.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Never apply line-ending conversion to binary assets and source documents.
+*.gif binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.pdf binary
+*.png binary
+*.webp binary
+*.xlsx binary
+*.zip binary

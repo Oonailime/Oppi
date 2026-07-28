@@ -133,10 +133,17 @@ function StudyPlanContent() {
       <header className="page-heading split">
         <div>
           <span className="eyebrow">Plano · {selectedContest?.name}</span>
-          <h1>Todo o edital, sem pontos cegos.</h1>
+          <h1>
+            {selectedContest?.type === "RECURRING"
+              ? "Matriz oficial do ENEM 2026, assunto por assunto."
+              : "Todo o edital, sem pontos cegos."}
+          </h1>
           <p>
             {summary?.total ?? 0} tópicos organizados por disciplina,
-            prioridade e progresso neste concurso.
+            prioridade e progresso neste concurso
+            {selectedContest?.type === "RECURRING"
+              ? ", incluindo Redação e os dois idiomas."
+              : "."}
           </p>
         </div>
         <div className="plan-progress-card">

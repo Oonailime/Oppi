@@ -16,20 +16,39 @@ enum StudyStatus {
 enum AttemptMode {
   FULL
   DISCIPLINE
+  ALL_YEARS
+}
+
+enum ContestType {
+  STANDARD
+  RECURRING
+}
+
+enum ForeignLanguage {
+  ENGLISH
+  SPANISH
+}
+
+enum ContestDocumentKind {
+  PREVIOUS_EXAM
+  ANSWER_KEY
+  NOTICE
 }
 
 model Exam {
-  id                      String     @id
+  id                      String        @id
   name                    String
   organization            String
   year                    Int
   role                    String?
-  answerOptions           String[]   @default(["A", "B", "C", "D", "E"])
+  answerOptions           String[]      @default(["A", "B", "C", "D", "E"])
   defaultDurationMinutes  Int
   extendedDurationMinutes Int
-  createdAt               DateTime   @default(now())
+  systemManaged           Boolean       @default(true)
+  createdAt               DateTime      @default(now())
   questions               Question[]
   attempts                Attempt[]
+  contestAssignments      ContestExam[]
 
   @@index([year])
 }
@@ -72,19 +91,52 @@ model AuthSession {
 }
 
 model Contest {
-  id            String              @id @default(uuid())
-  userId        String
-  name          String
-  targetDate    DateTime?           @db.Date
-  createdAt     DateTime            @default(now())
-  updatedAt     DateTime            @updatedAt
-  user          User                @relation(fields: [userId], references: [id], onDelete: Cascade)
-  attempts      Attempt[]
-  studySessions StudySession[]
-  studyTopics   ContestStudyTopic[]
+  id               String              @id @default(uuid())
+  userId           String
+  name             String
+  targetDate       DateTime?           @db.Date
+  type             ContestType         @default(STANDARD)
+  systemManaged    Boolean             @default(false)
+  desiredArea      String?
+  description      String?             @db.Text
+  storageDirectory String?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+  user             User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attempts         Attempt[]
+  documents        ContestDocument[]
+  exams            ContestExam[]
+  studySessions    StudySession[]
+  studyTopics      ContestStudyTopic[]
 
   @@index([userId])
   @@index([targetDate])
+}
+
+model ContestDocument {
+  id           String              @id @default(uuid())
+  contestId    String
+  kind         ContestDocumentKind
+  originalName String
+  storedName   String
+  mimeType     String
+  sizeBytes    Int
+  sha256       String
+  uploadedAt   DateTime            @default(now())
+  contest      Contest             @relation(fields: [contestId], references: [id], onDelete: Cascade)
+
+  @@unique([contestId, kind])
+  @@index([contestId])
+}
+
+model ContestExam {
+  contestId String
+  examId    String
+  contest   Contest @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  exam      Exam    @relation(fields: [examId], references: [id], onDelete: Cascade)
+
+  @@id([contestId, examId])
+  @@index([examId])
 }
 
 model ContestStudyTopic {
@@ -106,50 +158,62 @@ model ContestStudyTopic {
 }
 
 model Question {
-  id               Int             @id @default(autoincrement())
+  id               Int               @id @default(autoincrement())
   examId           String
   number           Int
+  examDay          Int?
+  variant          String            @default("")
   discipline       String
   subject          String
-  weight           Decimal         @db.Decimal(3, 1)
+  weight           Decimal           @db.Decimal(3, 1)
   sourcePage       Int
   sourceImage      String
   contextImage     String?
   correctAnswer    String?
-  annulled         Boolean         @default(false)
+  annulled         Boolean           @default(false)
   studyTopicId     Int?
-  exam             Exam            @relation(fields: [examId], references: [id])
-  studyTopic       StudyTopic?     @relation(fields: [studyTopicId], references: [id])
+  exam             Exam              @relation(fields: [examId], references: [id])
+  studyTopic       StudyTopic?       @relation(fields: [studyTopicId], references: [id])
   attemptAnswers   AttemptAnswer[]
+  attemptQuestions AttemptQuestion[]
 
-  @@unique([examId, number])
+  @@unique([examId, number, variant])
   @@index([examId, discipline])
+  @@index([examId, examDay])
   @@index([discipline])
   @@index([studyTopicId])
 }
 
 model Attempt {
-  id                  String          @id @default(uuid())
-  contestId           String
-  examId              String
-  mode                AttemptMode
-  discipline          String?
-  startedAt           DateTime        @default(now())
-  completedAt         DateTime?
-  durationSeconds     Int?
-  timeLimitSeconds    Int
+  id                       String            @id @default(uuid())
+  contestId                String
+  examId                   String?
+  examDay                  Int?
+  mode                     AttemptMode
+  discipline               String?
+  foreignLanguage          ForeignLanguage?
+  startedAt                DateTime          @default(now())
+  completedAt              DateTime?
+  draftAnswers             Json?
+  draftQuestionTimes       Json?
+  draftCurrentIndex        Int               @default(0)
+  draftElapsedSeconds      Int               @default(0)
+  draftSavedAt             DateTime?
+  durationSeconds          Int?
+  timeLimitSeconds         Int
   targetSecondsPerQuestion Int
-  totalQuestions      Int
-  answeredQuestions   Int             @default(0)
-  correctAnswers      Int             @default(0)
-  annulledQuestions   Int             @default(0)
-  rawPercentage       Decimal?        @db.Decimal(5, 2)
-  weightedScore       Decimal?        @db.Decimal(6, 2)
-  maxWeightedScore    Decimal?        @db.Decimal(6, 2)
-  weightedPercentage  Decimal?        @db.Decimal(5, 2)
-  contest             Contest         @relation(fields: [contestId], references: [id], onDelete: Cascade)
-  exam                Exam            @relation(fields: [examId], references: [id])
-  answers             AttemptAnswer[]
+  totalQuestions           Int
+  answeredQuestions        Int               @default(0)
+  correctAnswers           Int               @default(0)
+  annulledQuestions        Int               @default(0)
+  rawPercentage            Decimal?          @db.Decimal(5, 2)
+  weightedScore            Decimal?          @db.Decimal(6, 2)
+  maxWeightedScore         Decimal?          @db.Decimal(6, 2)
+  weightedPercentage       Decimal?          @db.Decimal(5, 2)
+  contest                  Contest           @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  exam                     Exam?             @relation(fields: [examId], references: [id])
+  answers                  AttemptAnswer[]
+  questions                AttemptQuestion[]
 
   @@index([contestId])
   @@index([contestId, completedAt])
@@ -158,27 +222,39 @@ model Attempt {
   @@index([discipline])
 }
 
+model AttemptQuestion {
+  attemptId  String
+  questionId Int
+  position   Int
+  attempt    Attempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question   Question @relation(fields: [questionId], references: [id])
+
+  @@id([attemptId, questionId])
+  @@unique([attemptId, position])
+  @@index([questionId])
+}
+
 model AttemptAnswer {
-  id             String   @id @default(uuid())
-  attemptId      String
-  questionId     Int
-  selectedAnswer String?
-  isCorrect      Boolean
-  awardedPoints  Decimal  @db.Decimal(3, 1)
-  timeSpentSeconds Int    @default(0)
-  attempt        Attempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
-  question       Question @relation(fields: [questionId], references: [id])
+  id               String   @id @default(uuid())
+  attemptId        String
+  questionId       Int
+  selectedAnswer   String?
+  isCorrect        Boolean
+  awardedPoints    Decimal  @db.Decimal(3, 1)
+  timeSpentSeconds Int      @default(0)
+  attempt          Attempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question         Question @relation(fields: [questionId], references: [id])
 
   @@unique([attemptId, questionId])
   @@index([questionId])
 }
 
 model StudySession {
-  id        String   @id @default(uuid())
+  id        String    @id @default(uuid())
   contestId String
-  startedAt DateTime @default(now())
+  startedAt DateTime  @default(now())
   endedAt   DateTime?
-  contest   Contest  @relation(fields: [contestId], references: [id], onDelete: Cascade)
+  contest   Contest   @relation(fields: [contestId], references: [id], onDelete: Cascade)
 
   @@index([contestId])
   @@index([contestId, endedAt])

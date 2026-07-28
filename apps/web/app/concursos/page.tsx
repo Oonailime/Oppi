@@ -3,20 +3,29 @@
 import {
   ArrowRight,
   CalendarDays,
+  FileUp,
   LogOut,
-  Plus,
+  Mail,
+  Repeat2,
+  Search,
   Target,
   UserRound,
   X,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState, useTransition } from "react";
+import {
+  useDeferredValue,
+  useEffect,
+  useState,
+} from "react";
 import {
   countdownLabel,
   daysUntilExam,
   examDateLabel,
   useApp,
 } from "@/components/app-context";
+import { apiFetch } from "@/lib/api";
+import type { ReusableExam } from "@/lib/types";
 
 export default function ContestsPage() {
   const router = useRouter();
@@ -25,14 +34,59 @@ export default function ContestsPage() {
     contests,
     selectedContest,
     selectContest,
-    createContest,
     logout,
   } = useApp();
-  const [creating, setCreating] = useState(false);
+  const [requesting, setRequesting] = useState(false);
   const [name, setName] = useState("");
   const [targetDate, setTargetDate] = useState("");
+  const [desiredArea, setDesiredArea] = useState("");
+  const [description, setDescription] = useState("");
+  const [previousExam, setPreviousExam] = useState<File | null>(null);
+  const [answerKey, setAnswerKey] = useState<File | null>(null);
+  const [notice, setNotice] = useState<File | null>(null);
+  const [reusableExams, setReusableExams] = useState<ReusableExam[]>([]);
+  const [selectedExams, setSelectedExams] = useState<Record<string, string>>(
+    {},
+  );
+  const [examSearch, setExamSearch] = useState("");
+  const deferredExamSearch = useDeferredValue(examSearch);
+  const [loadingExams, setLoadingExams] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [isPending, startTransition] = useTransition();
+  const [emailOpened, setEmailOpened] = useState(false);
+
+  function openRequestDialog() {
+    setLoadingExams(true);
+    setEmailOpened(false);
+    setRequesting(true);
+  }
+
+  useEffect(() => {
+    if (!requesting) return;
+    let active = true;
+    const params = new URLSearchParams();
+    if (deferredExamSearch.trim()) {
+      params.set("search", deferredExamSearch.trim());
+    }
+    apiFetch<ReusableExam[]>(`/contests/reusable-exams?${params}`)
+      .then((response) => {
+        if (active) setReusableExams(response);
+      })
+      .catch((reason: unknown) => {
+        if (active) {
+          setError(
+            reason instanceof Error
+              ? reason.message
+              : "Não foi possível listar as provas internas.",
+          );
+        }
+      })
+      .finally(() => {
+        if (active) setLoadingExams(false);
+      });
+    return () => {
+      active = false;
+    };
+  }, [requesting, deferredExamSearch]);
 
   function enter(contestId: string) {
     selectContest(contestId);
@@ -42,22 +96,50 @@ export default function ContestsPage() {
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError(null);
-    startTransition(async () => {
-      try {
-        const contest = await createContest({
-          name,
-          targetDate: targetDate || undefined,
-        });
-        selectContest(contest.id);
-        router.push("/");
-      } catch (reason) {
-        setError(
-          reason instanceof Error
-            ? reason.message
-            : "Não foi possível criar o concurso.",
-        );
-      }
-    });
+    if (!previousExam || !answerKey || !notice) {
+      setError("Envie a prova, o gabarito e o edital em PDF.");
+      return;
+    }
+    const documents = [previousExam, answerKey, notice];
+    if (
+      documents.some(
+        (document) =>
+          document.type !== "application/pdf" &&
+          !document.name.toLowerCase().endsWith(".pdf"),
+      )
+    ) {
+      setError("Os três documentos obrigatórios precisam estar em PDF.");
+      return;
+    }
+    const selectedExamNames = Object.values(selectedExams);
+    const body = [
+      "SOLICITAÇÃO DE NOVO CONCURSO",
+      "",
+      `Solicitante: ${user?.displayName ?? user?.username ?? "Não identificado"}`,
+      `Concurso: ${name}`,
+      `Data da prova: ${targetDate || "A definir"}`,
+      `Área/cargo desejado: ${desiredArea}`,
+      "",
+      "Descrição:",
+      description,
+      "",
+      "Provas internas que desejo aproveitar:",
+      selectedExamNames.length > 0
+        ? selectedExamNames.map((exam) => `- ${exam}`).join("\n")
+        : "- Nenhuma; iniciar em branco",
+      "",
+      "PDFs obrigatórios selecionados (anexar antes de enviar):",
+      `- Prova anterior ou similar: ${previousExam.name}`,
+      `- Gabarito correspondente: ${answerKey.name}`,
+      `- Edital: ${notice.name}`,
+      "",
+      "Importante: os arquivos precisam ser anexados manualmente à mensagem.",
+    ].join("\n");
+    const subject = `Solicitação de concurso — ${name}`;
+    window.location.href =
+      `mailto:emilianocalado@hotmail.com?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
+    setEmailOpened(true);
   }
 
   async function exit() {
@@ -106,17 +188,38 @@ export default function ContestsPage() {
                 key={contest.id}
                 onClick={() => enter(contest.id)}
               >
-                <span className="contest-card-icon"><Target size={23} /></span>
+                <span className="contest-card-icon">
+                  {contest.type === "RECURRING" ? (
+                    <Repeat2 size={23} />
+                  ) : (
+                    <Target size={23} />
+                  )}
+                </span>
                 <span className="contest-card-copy">
-                  <small>Concurso</small>
+                  <small>
+                    {contest.type === "RECURRING"
+                      ? "Concurso recorrente"
+                      : "Concurso"}
+                  </small>
                   <strong>{contest.name}</strong>
                   <span>
-                    <CalendarDays size={15} />
-                    {examDateLabel(contest.targetDate)}
+                    {contest.type === "RECURRING" ? (
+                      <>
+                        <Repeat2 size={15} />
+                        Realizado todos os anos
+                      </>
+                    ) : (
+                      <>
+                        <CalendarDays size={15} />
+                        {examDateLabel(contest.targetDate)}
+                      </>
+                    )}
                   </span>
                 </span>
                 <span className="contest-card-countdown">
-                  {countdownLabel(days)}
+                  {contest.type === "RECURRING"
+                    ? "10 edições"
+                    : countdownLabel(days)}
                 </span>
                 <ArrowRight size={20} />
               </button>
@@ -126,35 +229,35 @@ export default function ContestsPage() {
           <button
             className="contest-card new-contest-card"
             type="button"
-            onClick={() => setCreating(true)}
+            onClick={openRequestDialog}
           >
-            <span className="contest-card-icon"><Plus size={23} /></span>
+            <span className="contest-card-icon"><Mail size={23} /></span>
             <span className="contest-card-copy">
               <small>Novo objetivo</small>
-              <strong>Adicionar concurso</strong>
-              <span>Comece um histórico separado</span>
+              <strong>Solicitar concurso</strong>
+              <span>Envie os dados para análise por e-mail</span>
             </span>
             <ArrowRight size={20} />
           </button>
         </div>
       </section>
 
-      {creating && (
+      {requesting && (
         <div
           className="contest-dialog-backdrop"
           onMouseDown={(event) => {
-            if (event.target === event.currentTarget) setCreating(false);
+            if (event.target === event.currentTarget) setRequesting(false);
           }}
         >
           <form className="contest-dialog" onSubmit={submit}>
             <header>
               <div>
-                <span className="eyebrow">Novo objetivo</span>
-                <h2>Adicionar concurso</h2>
+                <span className="eyebrow">Funcionalidade temporária</span>
+                <h2>Solicitar concurso</h2>
               </div>
               <button
                 type="button"
-                onClick={() => setCreating(false)}
+                onClick={() => setRequesting(false)}
                 aria-label="Fechar"
               >
                 <X size={19} />
@@ -178,17 +281,146 @@ export default function ContestsPage() {
                 onChange={(event) => setTargetDate(event.target.value)}
               />
             </label>
+            <label>
+              <span>Área ou cargo desejado</span>
+              <input
+                required
+                minLength={2}
+                maxLength={120}
+                placeholder="Ex.: Analista de TI — Desenvolvimento"
+                value={desiredArea}
+                onChange={(event) => setDesiredArea(event.target.value)}
+              />
+            </label>
+            <label>
+              <span>Descrição do objetivo</span>
+              <textarea
+                required
+                minLength={3}
+                maxLength={2000}
+                placeholder="Descreva o cargo, a banca e o foco deste plano."
+                value={description}
+                onChange={(event) => setDescription(event.target.value)}
+              />
+            </label>
+            <fieldset className="contest-document-picker">
+              <legend>Documentos obrigatórios</legend>
+              <p>
+                Selecione os três PDFs para validar a solicitação. Seu
+                aplicativo de e-mail será aberto e você deverá anexá-los
+                manualmente antes de enviar.
+              </p>
+              {[
+                {
+                  id: "previous-exam",
+                  label: "Prova anterior ou similar",
+                  file: previousExam,
+                  setFile: setPreviousExam,
+                },
+                {
+                  id: "answer-key",
+                  label: "Gabarito correspondente",
+                  file: answerKey,
+                  setFile: setAnswerKey,
+                },
+                {
+                  id: "notice",
+                  label: "Edital",
+                  file: notice,
+                  setFile: setNotice,
+                },
+              ].map((document) => (
+                <label key={document.id} className={document.file ? "ready" : ""}>
+                  <FileUp size={18} />
+                  <span>
+                    <strong>{document.label}</strong>
+                    <small>
+                      {document.file?.name ?? "Selecionar arquivo PDF"}
+                    </small>
+                  </span>
+                  <input
+                    required
+                    type="file"
+                    accept="application/pdf,.pdf"
+                    onChange={(event) =>
+                      document.setFile(event.target.files?.[0] ?? null)
+                    }
+                  />
+                </label>
+              ))}
+            </fieldset>
+            <fieldset className="reusable-exam-picker">
+              <legend>Quais provas internas deseja aproveitar?</legend>
+              <p>
+                Sua preferência será incluída na solicitação. Se não selecionar
+                nenhuma, será pedido um concurso totalmente em branco.
+              </p>
+              <label className="reusable-exam-search">
+                <Search size={17} />
+                <input
+                  type="search"
+                  placeholder="Pesquisar por concurso, banca, ano ou cargo"
+                  value={examSearch}
+                  onChange={(event) => {
+                    setLoadingExams(true);
+                    setExamSearch(event.target.value);
+                  }}
+                />
+              </label>
+              {loadingExams ? (
+                <span className="muted">Carregando provas disponíveis...</span>
+              ) : (
+                <div>
+                  {reusableExams.length === 0 && (
+                    <span className="muted">
+                      Nenhuma prova interna encontrada para esta pesquisa.
+                    </span>
+                  )}
+                  {reusableExams.map((exam) => (
+                    <label key={exam.id}>
+                      <input
+                        type="checkbox"
+                        checked={exam.id in selectedExams}
+                        onChange={(event) =>
+                          setSelectedExams((current) => {
+                            if (event.target.checked) {
+                              return {
+                                ...current,
+                                [exam.id]: `${exam.name} (${exam.year})`,
+                              };
+                            }
+                            const next = { ...current };
+                            delete next[exam.id];
+                            return next;
+                          })
+                        }
+                      />
+                      <span>
+                        <strong>{exam.name}</strong>
+                        <small>
+                          {exam.questionCount} questões ·{" "}
+                          {exam.sources.map((source) => source.name).join(", ")}
+                        </small>
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </fieldset>
             <p>
-              O novo concurso começa sem tentativas e sem tempo acumulado.
+              Nenhum concurso será criado automaticamente. A criação direta
+              está desativada até a implementação da próxima versão.
             </p>
+            {emailOpened && (
+              <p className="auth-success">
+                A mensagem foi preparada para emilianocalado@hotmail.com.
+                Anexe os três PDFs no aplicativo de e-mail e confirme o envio.
+              </p>
+            )}
             {error && <p className="auth-error">{error}</p>}
-            <button
-              className="button primary"
-              type="submit"
-              disabled={isPending}
-            >
-              {isPending ? "Criando..." : "Criar e entrar"}
-              {!isPending && <ArrowRight size={18} />}
+            <button className="button primary" type="submit">
+              Abrir solicitação no e-mail
+              <ArrowRight size={18} />
             </button>
           </form>
         </div>

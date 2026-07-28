@@ -1,0 +1,499 @@
+[
+  {
+    "year": 2016,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 185,
+    "annulledQuestionCount": 0,
+    "disciplineCounts": {
+      "Artes": 5,
+      "Biologia": 17,
+      "Ciências da Natureza (Interdisciplinar)": 3,
+      "Ciências Humanas (Interdisciplinar)": 2,
+      "Educação Física": 4,
+      "Filosofia": 6,
+      "Física": 14,
+      "Geografia": 8,
+      "História": 22,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 8,
+      "Literatura": 22,
+      "Matemática": 45,
+      "Química": 11,
+      "Sociologia": 7,
+      "Tecnologias da Comunicação": 1
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 281,
+    "maximumImageHeight": 1152,
+    "continuationImageCount": 103,
+    "lowOptionConfidence": [],
+    "imageBytes": 30341229,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 90,
+        "recordCount": 90
+      },
+      {
+        "day": 2,
+        "markerCount": 95,
+        "recordCount": 95
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2017,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 185,
+    "annulledQuestionCount": 0,
+    "disciplineCounts": {
+      "Artes": 11,
+      "Biologia": 12,
+      "Ciências Humanas (Interdisciplinar)": 4,
+      "Educação Física": 6,
+      "Filosofia": 9,
+      "Física": 13,
+      "Geografia": 9,
+      "História": 20,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 5,
+      "Literatura": 15,
+      "Matemática": 45,
+      "Química": 20,
+      "Sociologia": 3,
+      "Tecnologias da Comunicação": 3
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 227,
+    "maximumImageHeight": 1457,
+    "continuationImageCount": 103,
+    "lowOptionConfidence": [],
+    "imageBytes": 31063578,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2018,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 184,
+    "annulledQuestionCount": 1,
+    "disciplineCounts": {
+      "Artes": 8,
+      "Biologia": 15,
+      "Ciências da Natureza (Interdisciplinar)": 2,
+      "Ciências Humanas (Interdisciplinar)": 3,
+      "Educação Física": 2,
+      "Filosofia": 6,
+      "Física": 15,
+      "Geografia": 13,
+      "História": 16,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 9,
+      "Literatura": 18,
+      "Matemática": 45,
+      "Química": 13,
+      "Sociologia": 7,
+      "Tecnologias da Comunicação": 3
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 269,
+    "maximumImageHeight": 1097,
+    "continuationImageCount": 103,
+    "lowOptionConfidence": [],
+    "imageBytes": 30244862,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2019,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 185,
+    "annulledQuestionCount": 0,
+    "disciplineCounts": {
+      "Artes": 6,
+      "Biologia": 12,
+      "Ciências da Natureza (Interdisciplinar)": 3,
+      "Ciências Humanas (Interdisciplinar)": 6,
+      "Educação Física": 5,
+      "Filosofia": 12,
+      "Física": 12,
+      "Geografia": 8,
+      "História": 18,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 8,
+      "Literatura": 18,
+      "Matemática": 45,
+      "Química": 18,
+      "Sociologia": 1,
+      "Tecnologias da Comunicação": 3
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 291,
+    "maximumImageHeight": 1622,
+    "continuationImageCount": 102,
+    "lowOptionConfidence": [],
+    "imageBytes": 30040407,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2020,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 183,
+    "annulledQuestionCount": 2,
+    "disciplineCounts": {
+      "Artes": 6,
+      "Biologia": 11,
+      "Ciências da Natureza (Interdisciplinar)": 4,
+      "Ciências Humanas (Interdisciplinar)": 4,
+      "Educação Física": 8,
+      "Filosofia": 7,
+      "Física": 13,
+      "Geografia": 11,
+      "História": 21,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 8,
+      "Literatura": 17,
+      "Matemática": 45,
+      "Química": 17,
+      "Sociologia": 2,
+      "Tecnologias da Comunicação": 1
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 249,
+    "maximumImageHeight": 1321,
+    "continuationImageCount": 105,
+    "lowOptionConfidence": [],
+    "imageBytes": 29326295,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2021,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 184,
+    "annulledQuestionCount": 1,
+    "disciplineCounts": {
+      "Artes": 7,
+      "Biologia": 16,
+      "Ciências da Natureza (Interdisciplinar)": 10,
+      "Ciências Humanas (Interdisciplinar)": 31,
+      "Física": 11,
+      "Geografia": 1,
+      "História": 7,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 25,
+      "Literatura": 6,
+      "Matemática": 45,
+      "Química": 8,
+      "Sociologia": 6,
+      "Tecnologias da Comunicação": 2
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 207,
+    "maximumImageHeight": 2135,
+    "continuationImageCount": 100,
+    "lowOptionConfidence": [],
+    "imageBytes": 28676034,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2022,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 184,
+    "annulledQuestionCount": 1,
+    "disciplineCounts": {
+      "Artes": 7,
+      "Biologia": 14,
+      "Ciências da Natureza (Interdisciplinar)": 1,
+      "Ciências Humanas (Interdisciplinar)": 4,
+      "Educação Física": 6,
+      "Filosofia": 3,
+      "Física": 17,
+      "Geografia": 12,
+      "História": 18,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 8,
+      "Literatura": 17,
+      "Matemática": 45,
+      "Química": 13,
+      "Sociologia": 8,
+      "Tecnologias da Comunicação": 2
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 263,
+    "maximumImageHeight": 2159,
+    "continuationImageCount": 105,
+    "lowOptionConfidence": [],
+    "imageBytes": 29522458,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2023,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 184,
+    "annulledQuestionCount": 1,
+    "disciplineCounts": {
+      "Artes": 10,
+      "Biologia": 17,
+      "Ciências da Natureza (Interdisciplinar)": 2,
+      "Ciências Humanas (Interdisciplinar)": 6,
+      "Educação Física": 5,
+      "Filosofia": 6,
+      "Física": 13,
+      "Geografia": 9,
+      "História": 20,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 6,
+      "Literatura": 15,
+      "Matemática": 45,
+      "Química": 13,
+      "Sociologia": 4,
+      "Tecnologias da Comunicação": 4
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 270,
+    "maximumImageHeight": 1590,
+    "continuationImageCount": 99,
+    "lowOptionConfidence": [],
+    "imageBytes": 27674388,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2024,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 184,
+    "annulledQuestionCount": 1,
+    "disciplineCounts": {
+      "Artes": 14,
+      "Biologia": 15,
+      "Ciências da Natureza (Interdisciplinar)": 3,
+      "Ciências Humanas (Interdisciplinar)": 3,
+      "Educação Física": 1,
+      "Filosofia": 9,
+      "Física": 14,
+      "Geografia": 8,
+      "História": 17,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 2,
+      "Literatura": 20,
+      "Matemática": 45,
+      "Química": 13,
+      "Sociologia": 8,
+      "Tecnologias da Comunicação": 3
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 271,
+    "maximumImageHeight": 1316,
+    "continuationImageCount": 107,
+    "lowOptionConfidence": [],
+    "imageBytes": 28280783,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  },
+  {
+    "year": 2025,
+    "valid": true,
+    "recordCount": 185,
+    "effectiveQuestionCountPerLanguage": 180,
+    "commonQuestionCount": 175,
+    "englishQuestionCount": 5,
+    "spanishQuestionCount": 5,
+    "answeredQuestionCount": 182,
+    "annulledQuestionCount": 3,
+    "disciplineCounts": {
+      "Artes": 6,
+      "Biologia": 15,
+      "Ciências da Natureza (Interdisciplinar)": 1,
+      "Ciências Humanas (Interdisciplinar)": 2,
+      "Educação Física": 9,
+      "Filosofia": 11,
+      "Física": 19,
+      "Geografia": 6,
+      "História": 22,
+      "Língua Espanhola": 5,
+      "Língua Inglesa": 5,
+      "Língua Portuguesa": 3,
+      "Literatura": 17,
+      "Matemática": 45,
+      "Química": 10,
+      "Sociologia": 4,
+      "Tecnologias da Comunicação": 5
+    },
+    "imageCount": 185,
+    "minimumImageHeight": 186,
+    "maximumImageHeight": 1152,
+    "continuationImageCount": 92,
+    "lowOptionConfidence": [],
+    "imageBytes": 28969125,
+    "days": [
+      {
+        "day": 1,
+        "markerCount": 95,
+        "recordCount": 95
+      },
+      {
+        "day": 2,
+        "markerCount": 90,
+        "recordCount": 90
+      }
+    ],
+    "categorizedQuestionCount": 185,
+    "studyTopicLinkedQuestionCount": 185
+  }
+]

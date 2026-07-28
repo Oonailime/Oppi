@@ -1,7 +1,8 @@
-import { AttemptMode } from "@prisma/client";
+import { AttemptMode, ForeignLanguage } from "@prisma/client";
 import {
   IsEnum,
   IsInt,
+  Max,
   Min,
   IsOptional,
   IsString,
@@ -9,8 +10,9 @@ import {
 } from "class-validator";
 
 export class StartAttemptDto {
+  @ValidateIf((input: StartAttemptDto) => input.mode !== AttemptMode.ALL_YEARS)
   @IsString()
-  examId!: string;
+  examId?: string;
 
   @IsEnum(AttemptMode)
   mode!: AttemptMode;
@@ -19,9 +21,23 @@ export class StartAttemptDto {
   @Min(1)
   durationMinutes!: number;
 
-  @ValidateIf((input: StartAttemptDto) => input.mode === AttemptMode.DISCIPLINE)
+  @IsOptional()
+  @IsInt()
+  @Min(1)
+  @Max(2)
+  examDay?: number;
+
+  @ValidateIf(
+    (input: StartAttemptDto) =>
+      input.mode === AttemptMode.DISCIPLINE ||
+      input.mode === AttemptMode.ALL_YEARS,
+  )
   @IsString()
   discipline?: string;
+
+  @IsOptional()
+  @IsEnum(ForeignLanguage)
+  foreignLanguage?: ForeignLanguage;
 
   @IsOptional()
   @IsString()

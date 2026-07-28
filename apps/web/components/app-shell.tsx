@@ -157,10 +157,23 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
               <span>Concurso atual</span>
               <strong>{selectedContest.name}</strong>
               <small className="exam-countdown">
-                <CalendarDays size={14} />
-                {countdownLabel(daysLeft)}
+                {selectedContest.type === "RECURRING" ? (
+                  <>
+                    <Repeat2 size={14} />
+                    Concurso anual
+                  </>
+                ) : (
+                  <>
+                    <CalendarDays size={14} />
+                    {countdownLabel(daysLeft)}
+                  </>
+                )}
               </small>
-              <small>{examDateLabel(selectedContest.targetDate)}</small>
+              <small>
+                {selectedContest.type === "RECURRING"
+                  ? "Edições de 2016 a 2025"
+                  : examDateLabel(selectedContest.targetDate)}
+              </small>
               <button
                 className="exam-date-edit"
                 type="button"

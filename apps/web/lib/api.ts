@@ -18,11 +18,13 @@ export async function apiFetch<T>(
   init?: RequestInit,
 ): Promise<T> {
   const contestId = getSelectedContestId();
+  const usesFormData =
+    typeof FormData !== "undefined" && init?.body instanceof FormData;
   const response = await fetch(`${API_URL}${path}`, {
     ...init,
     credentials: "include",
     headers: {
-      "Content-Type": "application/json",
+      ...(!usesFormData ? { "Content-Type": "application/json" } : {}),
       ...(contestId ? { "X-Contest-Id": contestId } : {}),
       ...init?.headers,
     },

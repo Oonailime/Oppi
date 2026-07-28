@@ -32,6 +32,6 @@ export class SubmitAttemptDto {
 
   @IsInt()
   @Min(0)
-  @Max(86400)
+  @Max(1_000_000)
   durationSeconds!: number;
 }
