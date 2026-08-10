@@ -83,12 +83,22 @@ export class DashboardService {
           },
           include: { question: true },
         }),
-        this.prisma.contestStudyTopic.count({ where: { contestId } }),
         this.prisma.contestStudyTopic.count({
-          where: { contestId, status: "COMPLETED" },
+          where: { contestId, studyTopic: { isGroup: false } },
+        }),
+        this.prisma.contestStudyTopic.count({
+          where: {
+            contestId,
+            status: "COMPLETED",
+            studyTopic: { isGroup: false },
+          },
         }),
         this.prisma.contestStudyTopic.findMany({
-          where: { contestId, status: { not: "COMPLETED" } },
+          where: {
+            contestId,
+            status: { not: "COMPLETED" },
+            studyTopic: { isGroup: false },
+          },
           include: { studyTopic: true },
           orderBy: [
             { questionsCompleted: "desc" },

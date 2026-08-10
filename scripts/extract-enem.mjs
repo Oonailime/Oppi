@@ -8,6 +8,7 @@ import {
   Path2D,
 } from "@napi-rs/canvas";
 import * as pdfjs from "pdfjs-dist/legacy/build/pdf.mjs";
+import { classifyEnemStudyTopic } from "./enem-topic-taxonomy.mjs";
 
 globalThis.DOMMatrix = DOMMatrix;
 globalThis.ImageData = ImageData;
@@ -574,39 +575,14 @@ function subjectFor(area, text) {
   return matched?.[0] ?? "Interpretação e resolução de problemas";
 }
 
-const QUESTION_TOPIC_IDS = new Map([
-  ["Língua Inglesa::Interpretação de texto em língua inglesa", 10001],
-  ["Língua Espanhola::Interpretação de texto em língua espanhola", 10002],
-  ["Língua Portuguesa::Interpretação e resolução de problemas", 10003],
-  ["Literatura::Literatura", 10004],
-  ["Artes::Artes", 10005],
-  ["Educação Física::Educação Física", 10006],
-  ["Tecnologias da Comunicação::Tecnologias da comunicação", 10007],
-  ["Língua Portuguesa::Variação linguística", 10008],
-  ["Língua Portuguesa::Gramática e recursos linguísticos", 10009],
-  ["História::História", 10101],
-  ["Geografia::Geografia", 10102],
-  ["Filosofia::Filosofia", 10103],
-  ["Sociologia::Sociologia", 10104],
-  [
-    "Ciências Humanas (Interdisciplinar)::Interpretação e resolução de problemas",
-    10105,
-  ],
-  ["Biologia::Biologia", 10201],
-  ["Física::Física", 10202],
-  ["Química::Química", 10203],
-  [
-    "Ciências da Natureza (Interdisciplinar)::Interpretação e resolução de problemas",
-    10204,
-  ],
-  ["Matemática::Geometria", 10301],
-  ["Matemática::Estatística e probabilidade", 10302],
-  ["Matemática::Funções", 10303],
-  ["Matemática::Matemática financeira", 10304],
-  ["Matemática::Álgebra", 10305],
-  ["Matemática::Aritmética e proporcionalidade", 10306],
-  ["Matemática::Interpretação e resolução de problemas", 10307],
-]);
+const ENEM_STUDY_TOPICS = new Map(
+  JSON.parse(
+    fs.readFileSync(
+      path.join(outputDataDirectory, "enem-study-topics.json"),
+      "utf8",
+    ),
+  ).map((topic) => [topic.id, topic]),
+);
 
 function questionDiscipline(area, subject) {
   if (area === "Língua Inglesa" || area === "Língua Espanhola") return area;
@@ -899,8 +875,19 @@ async function extractDay(year, day, imageDirectory) {
       marker.number,
       marker.variant,
     );
-    const subject = subjectFor(area, text);
-    const discipline = questionDiscipline(area, subject);
+    const broadSubject = subjectFor(area, text);
+    const discipline = questionDiscipline(area, broadSubject);
+    const studyTopicId = classifyEnemStudyTopic(discipline, text);
+    const studyTopic = ENEM_STUDY_TOPICS.get(studyTopicId);
+    if (
+      !studyTopic ||
+      studyTopic.isGroup ||
+      studyTopic.discipline !== discipline
+    ) {
+      throw new Error(
+        `${year}/dia ${day}/questão ${marker.number}: tópico detalhado inválido para ${discipline}.`,
+      );
+    }
     const correctAnswer = answerFor(
       answers,
       marker.number,
@@ -936,7 +923,7 @@ async function extractDay(year, day, imageDirectory) {
       examDay: day,
       variant: marker.variant,
       discipline,
-      subject,
+      subject: studyTopic.subject,
       weight: 1,
       sourcePage: marker.pageNumber,
       sourceImage: `/questions/enem-${year}/${fileName}`,
@@ -946,8 +933,7 @@ async function extractDay(year, day, imageDirectory) {
           : null,
       correctAnswer,
       annulled: correctAnswer === null,
-      studyTopicId:
-        QUESTION_TOPIC_IDS.get(`${discipline}::${subject}`) ?? null,
+      studyTopicId,
     });
     imageStats.push({
       key: `${marker.number}:${marker.variant}`,
@@ -1041,6 +1027,17 @@ function validateYear(year, records, dayStats) {
           questions.length,
         ],
       ),
+    ),
+    categorizedTopicCount: new Set(
+      records.map((record) => record.studyTopicId),
+    ).size,
+    studyTopicCounts: Object.fromEntries(
+      [...Map.groupBy(records, (record) => record.studyTopicId).entries()]
+        .sort(([left], [right]) => left - right)
+        .map(([studyTopicId, questions]) => [
+          studyTopicId,
+          questions.length,
+        ]),
     ),
     imageCount: allImages.length,
     minimumImageHeight: Math.min(

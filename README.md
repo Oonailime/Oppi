@@ -32,10 +32,12 @@ até a implementação da próxima versão.
 
 O seed também cria o `ENEM`, do tipo `ConcursoRecorrente`, com as edições de
 2016 a 2025. Em `Prova por ano`, o usuário escolhe Dia 1 ou Dia 2 e resolve as
-90 questões objetivas correspondentes. O `Treino por disciplina` reúne apenas
-a matéria escolhida nas dez edições. As 1.850 linhas armazenadas — incluindo
-as duas variantes de idioma — estão relacionadas a 17 disciplinas e a 99
-tópicos do plano oficial de 2026.
+90 questões objetivas correspondentes. O `Treino por disciplina` reúne a
+matéria escolhida nas dez edições e permite selecionar um assunto para sortear
+10 questões. As questões já acertadas ficam fora do sorteio por padrão, mas
+podem ser incluídas pelo usuário. As 1.850 linhas armazenadas — incluindo as
+duas variantes de idioma — estão relacionadas a 17 disciplinas e a 87
+assuntos treináveis.
 
 ## Pre-requisitos
 
@@ -99,9 +101,10 @@ npm run setup
 ```
 
 Esse comando também cria ou atualiza o usuário inicial `Emiliano`, associa os
-409 tópicos do plano ao concurso DATAPREV 2026, associa os 99 tópicos da Matriz
-de Referência do ENEM 2026 ao concurso recorrente e mantém tentativas já
-existentes durante a migração.
+409 tópicos do plano ao concurso DATAPREV 2026 e associa ao ENEM 129 registros
+estruturais: 21 agrupadores da Matriz e 108 assuntos estudáveis. O seed
+recalcula as estatísticas dos assuntos a partir das respostas finalizadas e
+mantém tentativas e rascunhos existentes durante a migração.
 
 ## Rodar em desenvolvimento
 
@@ -198,16 +201,22 @@ distribuição atual e os totais oficiais de `5h30` no Dia 1 e `5h` no Dia 2
 seguem as orientações do Inep:
 `https://www.gov.br/inep/pt-br/acesso-a-informacao/perguntas-frequentes/exame-nacional-do-ensino-medio-enem/no-dia-do-exame-orientacoes/em-que-horario-serao-aplicadas`.
 
-O `Treino por disciplina` reúne questões da mesma matéria entre 2016 e 2025,
-oferece ritmos de três ou quatro minutos por questão e persiste a lista e a
-ordem exatas da tentativa.
+O `Treino por disciplina` reúne questões da mesma matéria entre 2016 e 2025.
+O formato aleatório sorteia exatamente 10 questões entre todos os assuntos ou
+dentro de um assunto escolhido e oferece ritmos de três ou quatro minutos por
+questão. Um botão separado mantém a opção de resolver todas as questões da
+disciplina de uma vez. Nos sorteios gerais e por assunto, questões que o
+usuário já acertou são excluídas, salvo quando a opção de reutilizá-las é
+ativada. A lista sorteada e a ordem exata da tentativa são persistidas.
 
 EBSERH e BNDES usam `4h/5h`; SERPRO e BACEN usam `3h30/4h30`.
 DATAPREV e STN permanecem configuradas com `4h/5h`.
 
 O sistema calcula a media permitida por questao com base no tempo escolhido,
 registra quanto tempo cada questao ficou aberta e sinaliza as que ultrapassaram
-essa media. O tempo nao avanca enquanto a aba do navegador estiver oculta.
+essa media. No treino por disciplina de uma prova, o cronômetro preserva esse
+ritmo e é proporcional à quantidade de questões da matéria selecionada. O
+tempo nao avanca enquanto a aba do navegador estiver oculta.
 
 ## Rascunhos e problemas nas questões
 
@@ -238,6 +247,8 @@ Os arquivos-fonte ficam em `provas/`. Para regenerar os dados e as imagens:
 npm run source:extract
 npm run source:extract:stn
 npm run source:extract:added
+npm run source:audit:added
+npm run source:categorize:dataprev
 npm run source:extract:enem
 npm run source:categorize:enem
 npm run source:study-plan:enem
@@ -256,6 +267,19 @@ JSON em `apps/api/prisma/data/`, os recortes individuais em
 `apps/web/public/questions/<prova>/` e as imagens de contexto compartilhado.
 Provas discursivas nao sao importadas.
 
+`source:audit:added` relê o texto das provas adicionadas sem sobrescrever os
+JSONs nem renderizar novamente as imagens. Em seguida,
+`source:categorize:dataprev` associa as questões das provas externas aos 409
+tópicos do plano DATAPREV 2026. A DATAPREV 2024 e as edições do ENEM ficam
+fora desse processo. A automação preserva categorias já revisadas, aplica
+regras semânticas às novas questões e grava a auditoria completa em
+`automacoes/relatorio-categorizacao-dataprev.json`. Para apenas conferir a
+cobertura, sem alterar os arquivos de questões, use
+`npm run source:categorize:dataprev:audit`; o comando retorna erro se alguma
+questão ficar sem tópico. Casos cujo conteúdo não existe literalmente no
+edital, como ITIL e estatística, são associados ao tópico disponível mais
+próximo e aparecem com confiança `MEDIUM` no relatório.
+
 O comando `source:extract:enem` processa prova e gabarito azuis dos dois dias,
 separa as alternativas de inglês e espanhol, identifica anuladas, categoriza
 as questões por disciplina e preserva o leiaute original em imagens. As fontes ficam em
@@ -264,10 +288,12 @@ as questões por disciplina e preserva o leiaute original em imagens. As fontes 
 `apps/web/public/questions/enem-<ano>/`. O relatório reproduzível de validação
 fica em `enem/extraction-validation.json`.
 
-`source:categorize:enem` reaplica a taxonomia às dez edições sem renderizar as
-imagens novamente. `source:study-plan:enem` gera os 99 tópicos de Linguagens,
-Redação, Matemática, Ciências da Natureza e Ciências Humanas a partir dos
-objetos de conhecimento da Matriz de Referência publicada pelo Inep em 2026.
+`source:categorize:enem` reaplica a taxonomia detalhada às dez edições sem
+renderizar as imagens novamente. `source:study-plan:enem` gera 129 registros
+estruturais de Linguagens, Redação, Matemática, Ciências da Natureza e Ciências
+Humanas: 21 agrupadores e 108 assuntos. Cada assunto recebe os códigos de
+competência e habilidade relacionados, as páginas corretas da publicação e
+uma prioridade inicial.
 O edital disciplina a edição do exame, enquanto a Matriz é a publicação
 oficial que enumera competências, habilidades e objetos de conhecimento:
 

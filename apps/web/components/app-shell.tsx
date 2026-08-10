@@ -2,6 +2,7 @@
 
 import {
   BarChart3,
+  BookOpen,
   BookOpenCheck,
   CalendarDays,
   Check,
@@ -29,6 +30,7 @@ import { LoadingState } from "@/components/loading-state";
 const links = [
   { href: "/", label: "Visão geral", icon: LayoutDashboard },
   { href: "/simulado", label: "Simulado", icon: ClipboardCheck },
+  { href: "/topicos", label: "Tópicos", icon: BookOpen },
   { href: "/plano", label: "Plano de estudos", icon: BookOpenCheck },
   { href: "/estatisticas", label: "Estatísticas", icon: BarChart3 },
 ];

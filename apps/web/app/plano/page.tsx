@@ -135,7 +135,7 @@ function StudyPlanContent() {
           <span className="eyebrow">Plano · {selectedContest?.name}</span>
           <h1>
             {selectedContest?.type === "RECURRING"
-              ? "Matriz oficial do ENEM 2026, assunto por assunto."
+              ? "Plano baseado na Matriz de Referência do Enem."
               : "Todo o edital, sem pontos cegos."}
           </h1>
           <p>
@@ -243,6 +243,17 @@ function StudyPlanContent() {
                   <div>
                     <strong>{topic.subject}</strong>
                     <span>{topic.discipline}</span>
+                    {topic.topicCode && (
+                      <div className="matrix-code-list topic-row-codes">
+                        <span>{topic.topicCode}</span>
+                        {topic.competencyCodes.map((code) => (
+                          <span key={code}>{code}</span>
+                        ))}
+                        {topic.skillCodes.slice(0, 5).map((code) => (
+                          <span key={code}>{code}</span>
+                        ))}
+                      </div>
+                    )}
                     {topic.detail && <small>{topic.detail}</small>}
                     <div className="video-lessons">
                       {topic.videoLessons.map((lesson) => (

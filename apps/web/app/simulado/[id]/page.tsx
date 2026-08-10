@@ -389,7 +389,7 @@ export default function ActiveSimulationPage() {
                     {attempt.exam.name} · Dia {attempt.examDay} · caderno azul
                   </small>
                 )}
-                {attempt.mode === "ALL_YEARS" && (
+                {(attempt.mode === "ALL_YEARS" || attempt.trainingTopic) && (
                   <small className="question-edition">
                     {question.examName} · caderno azul
                   </small>
@@ -524,7 +524,7 @@ export default function ActiveSimulationPage() {
             <button
               key={item.id}
               title={
-                attempt.mode === "ALL_YEARS"
+                attempt.mode === "ALL_YEARS" || attempt.trainingTopic
                   ? `${item.examYear} · questão ${item.number}`
                   : `Questão ${item.number}`
               }

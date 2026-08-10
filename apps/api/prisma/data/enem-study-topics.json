@@ -6,8 +6,21 @@
     "syllabusItem": "Língua estrangeira moderna",
     "subject": "Interpretação de texto em língua inglesa",
     "detail": "Vocabulário e expressões, tema, estruturas linguísticas, função e uso social do texto, acesso a informações, tecnologias, culturas e diversidade cultural.",
-    "page": "Matriz de Referência ENEM 2026 · p. 2",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 9",
+    "suggestedPriority": "Alta",
+    "topicCode": "LC-C2",
+    "topicTitle": "Línguas estrangeiras modernas",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C2"
+    ],
+    "skillCodes": [
+      "LC-H5",
+      "LC-H6",
+      "LC-H7",
+      "LC-H8"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10002,
@@ -16,8 +29,21 @@
     "syllabusItem": "Língua estrangeira moderna",
     "subject": "Interpretação de texto em língua espanhola",
     "detail": "Vocabulário e expressões, tema, estruturas linguísticas, função e uso social do texto, acesso a informações, tecnologias, culturas e diversidade cultural.",
-    "page": "Matriz de Referência ENEM 2026 · p. 2",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 9",
+    "suggestedPriority": "Alta",
+    "topicCode": "LC-C2",
+    "topicTitle": "Línguas estrangeiras modernas",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C2"
+    ],
+    "skillCodes": [
+      "LC-H5",
+      "LC-H6",
+      "LC-H7",
+      "LC-H8"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 10003,
@@ -26,8 +52,25 @@
     "syllabusItem": "Estudo do texto",
     "subject": "Interpretação e resolução de problemas",
     "detail": "Sequências discursivas, gêneros textuais, composição, leitura, produção e circulação de textos em diferentes esferas sociais.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 11 e 31",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC1",
+    "topicTitle": "Estudo do texto",
+    "isGroup": true,
+    "competencyCodes": [
+      "LC-C6",
+      "LC-C7"
+    ],
+    "skillCodes": [
+      "LC-H18",
+      "LC-H19",
+      "LC-H20",
+      "LC-H21",
+      "LC-H22",
+      "LC-H23",
+      "LC-H24"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10004,
@@ -36,8 +79,20 @@
     "syllabusItem": "Estudo do texto literário",
     "subject": "Literatura",
     "detail": "Produção literária e processo social, formação nacional, patrimônio literário, gêneros, construção, recepção, continuidade, ruptura e diálogo com outras artes.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14–15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 10 e 32–33",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC4",
+    "topicTitle": "Estudo do texto literário",
+    "isGroup": true,
+    "competencyCodes": [
+      "LC-C5"
+    ],
+    "skillCodes": [
+      "LC-H15",
+      "LC-H16",
+      "LC-H17"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10005,
@@ -46,8 +101,20 @@
     "syllabusItem": "Produção e recepção de textos artísticos",
     "subject": "Artes",
     "detail": "Artes visuais, teatro, música e dança: estruturas, contextos, fontes de criação, identidade, cidadania, inclusão, diversidade e multiculturalidade.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 10 e 32",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC3",
+    "topicTitle": "Produção e recepção de textos artísticos",
+    "isGroup": true,
+    "competencyCodes": [
+      "LC-C4"
+    ],
+    "skillCodes": [
+      "LC-H12",
+      "LC-H13",
+      "LC-H14"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10006,
@@ -56,8 +123,20 @@
     "syllabusItem": "Estudo das práticas corporais",
     "subject": "Educação Física",
     "detail": "Linguagem corporal, identidade, lazer, saúde, expressão cultural, autonomia, condicionamento, esporte, dança, lutas, jogos e brincadeiras.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 9 e 31–32",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC2",
+    "topicTitle": "Estudo das práticas corporais",
+    "isGroup": true,
+    "competencyCodes": [
+      "LC-C3"
+    ],
+    "skillCodes": [
+      "LC-H9",
+      "LC-H10",
+      "LC-H11"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10007,
@@ -66,8 +145,25 @@
     "syllabusItem": "Estudo dos gêneros digitais",
     "subject": "Tecnologias da comunicação",
     "detail": "Suportes e gêneros digitais, interlocutores, recursos linguísticos, cultura de massa, impacto e função social das tecnologias da comunicação e informação.",
-    "page": "Matriz de Referência ENEM 2026 · p. 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 8, 12 e 34",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC8",
+    "topicTitle": "Tecnologias da comunicação e gêneros digitais",
+    "isGroup": true,
+    "competencyCodes": [
+      "LC-C1",
+      "LC-C9"
+    ],
+    "skillCodes": [
+      "LC-H1",
+      "LC-H2",
+      "LC-H3",
+      "LC-H4",
+      "LC-H28",
+      "LC-H29",
+      "LC-H30"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10008,
@@ -76,8 +172,20 @@
     "syllabusItem": "Usos da língua",
     "subject": "Variação linguística",
     "detail": "Variações sociais, regionais e de registro; norma-padrão, oralidade, preconceito linguístico e adequação à situação comunicativa.",
-    "page": "Matriz de Referência ENEM 2026 · p. 4 e 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 12 e 34",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC7",
+    "topicTitle": "Usos da língua, norma-padrão e variação",
+    "isGroup": true,
+    "competencyCodes": [
+      "LC-C8"
+    ],
+    "skillCodes": [
+      "LC-H25",
+      "LC-H26",
+      "LC-H27"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10009,
@@ -86,8 +194,20 @@
     "syllabusItem": "Aspectos linguísticos",
     "subject": "Gramática e recursos linguísticos",
     "detail": "Recursos expressivos, macroestrutura semântica, relações lógico-semânticas, seleção lexical, tempos e modos verbais, referência e coesão.",
-    "page": "Matriz de Referência ENEM 2026 · p. 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 11 e 33",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC5",
+    "topicTitle": "Aspectos linguísticos em diferentes textos",
+    "isGroup": true,
+    "competencyCodes": [
+      "LC-C6"
+    ],
+    "skillCodes": [
+      "LC-H18",
+      "LC-H19",
+      "LC-H20"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10101,
@@ -96,8 +216,52 @@
     "syllabusItem": "Processos históricos",
     "subject": "História",
     "detail": "Temporalidade, fontes, memória, cultura, poder, trabalho, cidadania, conflitos, revoluções e transformações políticas e econômicas do Brasil e do mundo.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22–23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25 e 51–54",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-AREA",
+    "topicTitle": "Objetos de conhecimento de Ciências Humanas",
+    "isGroup": true,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10102,
@@ -106,8 +270,52 @@
     "syllabusItem": "Espaço geográfico",
     "subject": "Geografia",
     "detail": "Território, cartografia, população, urbanização, produção, globalização, geopolítica, natureza, ambiente e sustentabilidade.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22–24",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25 e 51–54",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-AREA",
+    "topicTitle": "Objetos de conhecimento de Ciências Humanas",
+    "isGroup": true,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 10103,
@@ -116,8 +324,52 @@
     "syllabusItem": "Pensamento político e ética",
     "subject": "Filosofia",
     "detail": "Cidadania, democracia, Estado, direitos, pensamento liberal e seus críticos, ética, argumentação e relações entre sociedade e natureza.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22–24",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25 e 51–54",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-AREA",
+    "topicTitle": "Objetos de conhecimento de Ciências Humanas",
+    "isGroup": true,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 10104,
@@ -126,8 +378,52 @@
     "syllabusItem": "Organização social",
     "subject": "Sociologia",
     "detail": "Cultura, identidade, movimentos sociais, trabalho, desigualdade, cidadania, direitos, conflitos, vida urbana e transformações produtivas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22–23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25 e 51–54",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-AREA",
+    "topicTitle": "Objetos de conhecimento de Ciências Humanas",
+    "isGroup": true,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 4
   },
   {
     "id": 10105,
@@ -136,8 +432,52 @@
     "syllabusItem": "Integração das Ciências Humanas",
     "subject": "Interpretação e resolução de problemas",
     "detail": "Leitura interdisciplinar de documentos, mapas, processos históricos, relações sociais, cultura, política, economia e ambiente.",
-    "page": "Matriz de Referência ENEM 2026 · p. 11–13",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências Humanas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10201,
@@ -146,8 +486,54 @@
     "syllabusItem": "Conhecimentos biológicos",
     "subject": "Biologia",
     "detail": "Seres vivos, células, genética, evolução, fisiologia, ecologia, saúde, biotecnologia e sustentabilidade em situações-problema.",
-    "page": "Matriz de Referência ENEM 2026 · p. 20–21",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 17–21 e 37–50",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-AREA",
+    "topicTitle": "Objetos de conhecimento de Ciências da Natureza",
+    "isGroup": true,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C2",
+      "CN-C3",
+      "CN-C4",
+      "CN-C5",
+      "CN-C6",
+      "CN-C7",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H1",
+      "CN-H2",
+      "CN-H3",
+      "CN-H4",
+      "CN-H5",
+      "CN-H6",
+      "CN-H7",
+      "CN-H8",
+      "CN-H9",
+      "CN-H10",
+      "CN-H11",
+      "CN-H12",
+      "CN-H13",
+      "CN-H14",
+      "CN-H15",
+      "CN-H16",
+      "CN-H17",
+      "CN-H18",
+      "CN-H19",
+      "CN-H20",
+      "CN-H21",
+      "CN-H22",
+      "CN-H23",
+      "CN-H24",
+      "CN-H25",
+      "CN-H26",
+      "CN-H27",
+      "CN-H28",
+      "CN-H29",
+      "CN-H30"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10202,
@@ -156,8 +542,54 @@
     "syllabusItem": "Conhecimentos físicos",
     "subject": "Física",
     "detail": "Mecânica, energia, gravitação, eletricidade, magnetismo, ondas, óptica, radiação, calor e termodinâmica em contextos naturais e tecnológicos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 17–18",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 17–21 e 37–50",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-AREA",
+    "topicTitle": "Objetos de conhecimento de Ciências da Natureza",
+    "isGroup": true,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C2",
+      "CN-C3",
+      "CN-C4",
+      "CN-C5",
+      "CN-C6",
+      "CN-C7",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H1",
+      "CN-H2",
+      "CN-H3",
+      "CN-H4",
+      "CN-H5",
+      "CN-H6",
+      "CN-H7",
+      "CN-H8",
+      "CN-H9",
+      "CN-H10",
+      "CN-H11",
+      "CN-H12",
+      "CN-H13",
+      "CN-H14",
+      "CN-H15",
+      "CN-H16",
+      "CN-H17",
+      "CN-H18",
+      "CN-H19",
+      "CN-H20",
+      "CN-H21",
+      "CN-H22",
+      "CN-H23",
+      "CN-H24",
+      "CN-H25",
+      "CN-H26",
+      "CN-H27",
+      "CN-H28",
+      "CN-H29",
+      "CN-H30"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 10203,
@@ -166,8 +598,54 @@
     "syllabusItem": "Conhecimentos químicos",
     "subject": "Química",
     "detail": "Matéria, transformações, cálculos, soluções, energia, cinética, equilíbrio, química orgânica, tecnologias, ambiente e recursos energéticos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 18–19",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 17–21 e 37–50",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-AREA",
+    "topicTitle": "Objetos de conhecimento de Ciências da Natureza",
+    "isGroup": true,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C2",
+      "CN-C3",
+      "CN-C4",
+      "CN-C5",
+      "CN-C6",
+      "CN-C7",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H1",
+      "CN-H2",
+      "CN-H3",
+      "CN-H4",
+      "CN-H5",
+      "CN-H6",
+      "CN-H7",
+      "CN-H8",
+      "CN-H9",
+      "CN-H10",
+      "CN-H11",
+      "CN-H12",
+      "CN-H13",
+      "CN-H14",
+      "CN-H15",
+      "CN-H16",
+      "CN-H17",
+      "CN-H18",
+      "CN-H19",
+      "CN-H20",
+      "CN-H21",
+      "CN-H22",
+      "CN-H23",
+      "CN-H24",
+      "CN-H25",
+      "CN-H26",
+      "CN-H27",
+      "CN-H28",
+      "CN-H29",
+      "CN-H30"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 10204,
@@ -176,8 +654,31 @@
     "syllabusItem": "Integração das Ciências da Natureza",
     "subject": "Interpretação e resolução de problemas",
     "detail": "Método científico e integração de modelos, gráficos, experimentos e conhecimentos físicos, químicos e biológicos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 8–10",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 17–19",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências da Natureza",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C3",
+      "CN-C5"
+    ],
+    "skillCodes": [
+      "CN-H1",
+      "CN-H2",
+      "CN-H3",
+      "CN-H4",
+      "CN-H8",
+      "CN-H9",
+      "CN-H10",
+      "CN-H11",
+      "CN-H12",
+      "CN-H17",
+      "CN-H18",
+      "CN-H19"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10301,
@@ -186,8 +687,53 @@
     "syllabusItem": "Conhecimentos geométricos",
     "subject": "Geometria",
     "detail": "Figuras planas e espaciais; unidades, escalas, comprimentos, áreas, volumes, ângulos, retas, simetria, congruência, semelhança, Tales, relações métricas, circunferência e trigonometria do ângulo agudo.",
-    "page": "Matriz de Referência ENEM 2026 · p. 16",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13–16 e 35–36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-AREA",
+    "topicTitle": "Objetos de conhecimento de Matemática",
+    "isGroup": true,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C2",
+      "MT-C3",
+      "MT-C4",
+      "MT-C5",
+      "MT-C6",
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9",
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18",
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23",
+      "MT-H24",
+      "MT-H25",
+      "MT-H26",
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 10302,
@@ -196,8 +742,53 @@
     "syllabusItem": "Estatística e probabilidade",
     "subject": "Estatística e probabilidade",
     "detail": "Representação e análise de dados, tabelas, gráficos, médias, moda, mediana, desvios, variância, amostragem e probabilidade.",
-    "page": "Matriz de Referência ENEM 2026 · p. 6–7 e 16",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13–16 e 35–36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-AREA",
+    "topicTitle": "Objetos de conhecimento de Matemática",
+    "isGroup": true,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C2",
+      "MT-C3",
+      "MT-C4",
+      "MT-C5",
+      "MT-C6",
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9",
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18",
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23",
+      "MT-H24",
+      "MT-H25",
+      "MT-H26",
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 10303,
@@ -206,8 +797,53 @@
     "syllabusItem": "Conhecimentos algébricos",
     "subject": "Funções",
     "detail": "Gráficos e funções do 1º e 2º graus, polinomiais, racionais, exponenciais e logarítmicas; ciclo e funções trigonométricas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 16",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13–16 e 35–36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-AREA",
+    "topicTitle": "Objetos de conhecimento de Matemática",
+    "isGroup": true,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C2",
+      "MT-C3",
+      "MT-C4",
+      "MT-C5",
+      "MT-C6",
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9",
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18",
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23",
+      "MT-H24",
+      "MT-H25",
+      "MT-H26",
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 10304,
@@ -216,8 +852,53 @@
     "syllabusItem": "Conhecimentos numéricos",
     "subject": "Matemática financeira",
     "detail": "Porcentagem, juros, taxas, descontos, aumentos, financiamentos e análise de situações financeiras.",
-    "page": "Matriz de Referência ENEM 2026 · p. 16",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13–16 e 35–36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-AREA",
+    "topicTitle": "Objetos de conhecimento de Matemática",
+    "isGroup": true,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C2",
+      "MT-C3",
+      "MT-C4",
+      "MT-C5",
+      "MT-C6",
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9",
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18",
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23",
+      "MT-H24",
+      "MT-H25",
+      "MT-H26",
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 4
   },
   {
     "id": 10305,
@@ -226,8 +907,53 @@
     "syllabusItem": "Conhecimentos algébricos",
     "subject": "Álgebra",
     "detail": "Equações, inequações, expressões, polinômios, sequências, progressões, plano cartesiano, retas, circunferências e sistemas de equações.",
-    "page": "Matriz de Referência ENEM 2026 · p. 16",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13–16 e 35–36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-AREA",
+    "topicTitle": "Objetos de conhecimento de Matemática",
+    "isGroup": true,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C2",
+      "MT-C3",
+      "MT-C4",
+      "MT-C5",
+      "MT-C6",
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9",
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18",
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23",
+      "MT-H24",
+      "MT-H25",
+      "MT-H26",
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 5
   },
   {
     "id": 10306,
@@ -236,8 +962,53 @@
     "syllabusItem": "Conhecimentos numéricos",
     "subject": "Aritmética e proporcionalidade",
     "detail": "Naturais, inteiros, racionais e reais; operações, desigualdades, divisibilidade, fatoração, razões, proporções, dependência entre grandezas e princípios de contagem.",
-    "page": "Matriz de Referência ENEM 2026 · p. 16",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13–16 e 35–36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-AREA",
+    "topicTitle": "Objetos de conhecimento de Matemática",
+    "isGroup": true,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C2",
+      "MT-C3",
+      "MT-C4",
+      "MT-C5",
+      "MT-C6",
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9",
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18",
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23",
+      "MT-H24",
+      "MT-H25",
+      "MT-H26",
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 6
   },
   {
     "id": 10307,
@@ -246,8 +1017,53 @@
     "syllabusItem": "Modelagem matemática",
     "subject": "Interpretação e resolução de problemas",
     "detail": "Leitura matemática de situações cotidianas, modelagem, avaliação de resultados, argumentação quantitativa e integração entre números, álgebra, geometria, grandezas, gráficos e tabelas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 5–7",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13–16 e 35–36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-AREA",
+    "topicTitle": "Objetos de conhecimento de Matemática",
+    "isGroup": true,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C2",
+      "MT-C3",
+      "MT-C4",
+      "MT-C5",
+      "MT-C6",
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9",
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18",
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23",
+      "MT-H24",
+      "MT-H25",
+      "MT-H26",
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 7
   },
   {
     "id": 11001,
@@ -256,8 +1072,25 @@
     "syllabusItem": "Gêneros e sequências discursivas",
     "subject": "Organização da composição textual",
     "detail": "Narração, descrição, exposição, injunção e argumentação; finalidade, suporte, interlocutores e circulação social dos gêneros.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 11 e 31",
+    "suggestedPriority": "Alta",
+    "topicCode": "LC-OC1",
+    "topicTitle": "Estudo do texto",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C6",
+      "LC-C7"
+    ],
+    "skillCodes": [
+      "LC-H18",
+      "LC-H19",
+      "LC-H20",
+      "LC-H21",
+      "LC-H22",
+      "LC-H23",
+      "LC-H24"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11002,
@@ -266,8 +1099,20 @@
     "syllabusItem": "Aspectos linguísticos",
     "subject": "Macroestrutura e relações lógico-semânticas",
     "detail": "Progressão temática, articulação de ideias e proposições, causa, consequência, condição, oposição, comparação e conclusão.",
-    "page": "Matriz de Referência ENEM 2026 · p. 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 11 e 33–34",
+    "suggestedPriority": "Alta",
+    "topicCode": "LC-OC5",
+    "topicTitle": "Aspectos linguísticos em diferentes textos",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C6"
+    ],
+    "skillCodes": [
+      "LC-H18",
+      "LC-H19",
+      "LC-H20"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11003,
@@ -276,8 +1121,21 @@
     "syllabusItem": "Texto argumentativo",
     "subject": "Pontos de vista e estratégias argumentativas",
     "detail": "Tese, argumentos, contra-argumentos, papéis sociais, propósitos comunicativos, convencimento e público-alvo.",
-    "page": "Matriz de Referência ENEM 2026 · p. 4 e 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 11 e 33",
+    "suggestedPriority": "Alta",
+    "topicCode": "LC-OC6",
+    "topicTitle": "Estudo do texto argumentativo",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C7"
+    ],
+    "skillCodes": [
+      "LC-H21",
+      "LC-H22",
+      "LC-H23",
+      "LC-H24"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11004,
@@ -286,8 +1144,20 @@
     "syllabusItem": "Coesão textual",
     "subject": "Referência e articulação de sequências",
     "detail": "Referência pessoal, temporal e espacial; conectores, retomadas, substituições, elipses e construção da microestrutura.",
-    "page": "Matriz de Referência ENEM 2026 · p. 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 11 e 33–34",
+    "suggestedPriority": "Alta",
+    "topicCode": "LC-OC5",
+    "topicTitle": "Aspectos linguísticos em diferentes textos",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C6"
+    ],
+    "skillCodes": [
+      "LC-H18",
+      "LC-H19",
+      "LC-H20"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11005,
@@ -296,8 +1166,20 @@
     "syllabusItem": "Usos da língua",
     "subject": "Registro, formalidade e norma-padrão",
     "detail": "Adequação linguística ao contexto, seleção lexical, tempos e modos verbais e usos da norma-padrão.",
-    "page": "Matriz de Referência ENEM 2026 · p. 4 e 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 12 e 34",
+    "suggestedPriority": "Alta",
+    "topicCode": "LC-OC7",
+    "topicTitle": "Usos da língua, norma-padrão e variação",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C8"
+    ],
+    "skillCodes": [
+      "LC-H25",
+      "LC-H26",
+      "LC-H27"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11006,
@@ -306,8 +1188,20 @@
     "syllabusItem": "Formação literária",
     "subject": "Literatura e formação nacional",
     "detail": "Produção literária e processo social, cosmopolitismo e localismo, patrimônio e processos de formação da literatura brasileira.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14–15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 10 e 32–33",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC4",
+    "topicTitle": "Estudo do texto literário",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C5"
+    ],
+    "skillCodes": [
+      "LC-H15",
+      "LC-H16",
+      "LC-H17"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11007,
@@ -316,8 +1210,20 @@
     "syllabusItem": "Gêneros literários",
     "subject": "Narrativa, lírica e drama",
     "detail": "Natureza, função, organização, estrutura, recursos expressivos, construção e recepção dos gêneros épico/narrativo, lírico e dramático.",
-    "page": "Matriz de Referência ENEM 2026 · p. 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 10 e 32–33",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC4",
+    "topicTitle": "Estudo do texto literário",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C5"
+    ],
+    "skillCodes": [
+      "LC-H15",
+      "LC-H16",
+      "LC-H17"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11008,
@@ -326,8 +1232,20 @@
     "syllabusItem": "História literária",
     "subject": "Continuidade e ruptura na literatura brasileira",
     "detail": "Relações entre momento histórico, concepções artísticas, procedimentos de construção e valores sociais no patrimônio literário.",
-    "page": "Matriz de Referência ENEM 2026 · p. 3 e 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 10 e 32–33",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC4",
+    "topicTitle": "Estudo do texto literário",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C5"
+    ],
+    "skillCodes": [
+      "LC-H15",
+      "LC-H16",
+      "LC-H17"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 11009,
@@ -336,8 +1254,20 @@
     "syllabusItem": "Linguagens artísticas",
     "subject": "Artes visuais, teatro, música e dança",
     "detail": "Estruturas morfológicas e sintáticas, contexto da obra e da comunidade, fontes de criação e inter-relações entre linguagens.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 10 e 32",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC3",
+    "topicTitle": "Produção e recepção de textos artísticos",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C4"
+    ],
+    "skillCodes": [
+      "LC-H12",
+      "LC-H13",
+      "LC-H14"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11010,
@@ -346,8 +1276,20 @@
     "syllabusItem": "Arte, sociedade e identidade",
     "subject": "Diversidade estética e cultural",
     "detail": "Funções da arte, padrões de beleza, preconceitos, minorias sociais, inclusão, multiculturalidade, identidade e cidadania.",
-    "page": "Matriz de Referência ENEM 2026 · p. 3 e 14",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 10 e 32",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC3",
+    "topicTitle": "Produção e recepção de textos artísticos",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C4"
+    ],
+    "skillCodes": [
+      "LC-H12",
+      "LC-H13",
+      "LC-H14"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11011,
@@ -356,8 +1298,20 @@
     "syllabusItem": "Cultura corporal",
     "subject": "Corpo, identidade e sociedade",
     "detail": "Performance, identidades juvenis, símbolos, expressão artística e cultural, autonomia e condicionamentos sociais do corpo.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 9 e 31–32",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC2",
+    "topicTitle": "Estudo das práticas corporais",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C3"
+    ],
+    "skillCodes": [
+      "LC-H9",
+      "LC-H10",
+      "LC-H11"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11012,
@@ -366,8 +1320,20 @@
     "syllabusItem": "Saúde e lazer",
     "subject": "Práticas corporais e qualidade de vida",
     "detail": "Exercício, esforço e condicionamento físico; lazer crítico; esporte, dança, lutas, jogos e brincadeiras.",
-    "page": "Matriz de Referência ENEM 2026 · p. 14",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 9 e 31–32",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC2",
+    "topicTitle": "Estudo das práticas corporais",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C3"
+    ],
+    "skillCodes": [
+      "LC-H9",
+      "LC-H10",
+      "LC-H11"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11013,
@@ -376,8 +1342,25 @@
     "syllabusItem": "Sistemas de comunicação",
     "subject": "Impactos sociais da comunicação e informação",
     "detail": "Linguagens, recursos expressivos, funções sociais, posições críticas, produção de conhecimento e resolução de problemas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 2 e 4",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 8, 12 e 34",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC8",
+    "topicTitle": "Tecnologias da comunicação e gêneros digitais",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C1",
+      "LC-C9"
+    ],
+    "skillCodes": [
+      "LC-H1",
+      "LC-H2",
+      "LC-H3",
+      "LC-H4",
+      "LC-H28",
+      "LC-H29",
+      "LC-H30"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11014,
@@ -386,8 +1369,25 @@
     "syllabusItem": "Gêneros digitais",
     "subject": "Comunicação na cultura digital",
     "detail": "Suporte, interlocutores, recursos linguísticos, texto de cultura de massa e função social das novas tecnologias.",
-    "page": "Matriz de Referência ENEM 2026 · p. 15",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 8, 12 e 34",
+    "suggestedPriority": "Média",
+    "topicCode": "LC-OC8",
+    "topicTitle": "Tecnologias da comunicação e gêneros digitais",
+    "isGroup": false,
+    "competencyCodes": [
+      "LC-C1",
+      "LC-C9"
+    ],
+    "skillCodes": [
+      "LC-H1",
+      "LC-H2",
+      "LC-H3",
+      "LC-H4",
+      "LC-H28",
+      "LC-H29",
+      "LC-H30"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11015,
@@ -396,8 +1396,16 @@
     "syllabusItem": "Competência I",
     "subject": "Norma-padrão escrita",
     "detail": "Convenções da escrita formal, sintaxe, pontuação, ortografia, concordância, regência e escolha vocabular.",
-    "page": "Matriz de Referência ENEM 2026 · p. 1",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 27–29",
+    "suggestedPriority": "Média",
+    "topicCode": "RED",
+    "topicTitle": "Competências da prova de Redação",
+    "isGroup": false,
+    "competencyCodes": [
+      "RED-C1"
+    ],
+    "skillCodes": [],
+    "sortOrder": 1
   },
   {
     "id": 11016,
@@ -406,8 +1414,16 @@
     "syllabusItem": "Competência II",
     "subject": "Compreensão do tema e repertório",
     "detail": "Atendimento ao recorte temático, estrutura dissertativo-argumentativa e repertório sociocultural produtivo.",
-    "page": "Matriz de Referência ENEM 2026 · p. 1",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 27–29",
+    "suggestedPriority": "Média",
+    "topicCode": "RED",
+    "topicTitle": "Competências da prova de Redação",
+    "isGroup": false,
+    "competencyCodes": [
+      "RED-C2"
+    ],
+    "skillCodes": [],
+    "sortOrder": 2
   },
   {
     "id": 11017,
@@ -416,8 +1432,16 @@
     "syllabusItem": "Competência III",
     "subject": "Projeto de texto e argumentação",
     "detail": "Seleção, relação, organização e interpretação de informações, fatos, opiniões e argumentos em defesa de um ponto de vista.",
-    "page": "Matriz de Referência ENEM 2026 · p. 1",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 27–29",
+    "suggestedPriority": "Média",
+    "topicCode": "RED",
+    "topicTitle": "Competências da prova de Redação",
+    "isGroup": false,
+    "competencyCodes": [
+      "RED-C3"
+    ],
+    "skillCodes": [],
+    "sortOrder": 3
   },
   {
     "id": 11018,
@@ -426,8 +1450,16 @@
     "syllabusItem": "Competência IV",
     "subject": "Coesão e mecanismos linguísticos",
     "detail": "Articulação entre parágrafos e períodos, referenciação, conectores e encadeamento lógico da argumentação.",
-    "page": "Matriz de Referência ENEM 2026 · p. 1",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 27–29",
+    "suggestedPriority": "Média",
+    "topicCode": "RED",
+    "topicTitle": "Competências da prova de Redação",
+    "isGroup": false,
+    "competencyCodes": [
+      "RED-C4"
+    ],
+    "skillCodes": [],
+    "sortOrder": 4
   },
   {
     "id": 11019,
@@ -436,8 +1468,16 @@
     "syllabusItem": "Competência V",
     "subject": "Proposta de intervenção",
     "detail": "Agente, ação, meio ou modo, finalidade/efeito e detalhamento, com respeito aos direitos humanos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 1",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 27–29",
+    "suggestedPriority": "Média",
+    "topicCode": "RED",
+    "topicTitle": "Competências da prova de Redação",
+    "isGroup": false,
+    "competencyCodes": [
+      "RED-C5"
+    ],
+    "skillCodes": [],
+    "sortOrder": 5
   },
   {
     "id": 11020,
@@ -446,8 +1486,20 @@
     "syllabusItem": "Planejamento",
     "subject": "Introdução, desenvolvimento e conclusão",
     "detail": "Tese clara, parágrafos argumentativos consistentes, progressão temática e conclusão integrada à proposta de intervenção.",
-    "page": "Matriz de Referência ENEM 2026 · p. 1",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 27–29",
+    "suggestedPriority": "Média",
+    "topicCode": "RED",
+    "topicTitle": "Competências da prova de Redação",
+    "isGroup": false,
+    "competencyCodes": [
+      "RED-C1",
+      "RED-C2",
+      "RED-C3",
+      "RED-C4",
+      "RED-C5"
+    ],
+    "skillCodes": [],
+    "sortOrder": 6
   },
   {
     "id": 11201,
@@ -456,8 +1508,22 @@
     "syllabusItem": "Fundamentos",
     "subject": "Grandezas, unidades, gráficos e vetores",
     "detail": "Ordem de grandeza, notação científica, SI, investigação, observações, mensurações, grandezas escalares e vetoriais e operações com vetores.",
-    "page": "Matriz de Referência ENEM 2026 · p. 17",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 37",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-FIS1",
+    "topicTitle": "Conhecimentos básicos e fundamentais de Física",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C5",
+      "CN-C6"
+    ],
+    "skillCodes": [
+      "CN-H17",
+      "CN-H18",
+      "CN-H19",
+      "CN-H20"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11202,
@@ -466,8 +1532,18 @@
     "syllabusItem": "Mecânica",
     "subject": "Movimento, forças e equilíbrio",
     "detail": "Tempo, espaço, velocidade, aceleração, inércia, referenciais, massa, momento linear, impulso, Newton, centro de massa, torque, atrito, peso, normal, tração, movimento circular e hidrostática.",
-    "page": "Matriz de Referência ENEM 2026 · p. 17",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 38",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-FIS2",
+    "topicTitle": "Movimento, equilíbrio e leis físicas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C6"
+    ],
+    "skillCodes": [
+      "CN-H20"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11203,
@@ -476,8 +1552,19 @@
     "syllabusItem": "Mecânica",
     "subject": "Energia, trabalho e potência",
     "detail": "Energia cinética e potencial, trabalho, potência, conservação da energia mecânica, gravidade, forças conservativas e dissipativas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 17",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 39",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-FIS3",
+    "topicTitle": "Energia, trabalho e potência",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C6"
+    ],
+    "skillCodes": [
+      "CN-H20",
+      "CN-H23"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11204,
@@ -486,8 +1573,20 @@
     "syllabusItem": "Gravitação",
     "subject": "Mecânica e funcionamento do Universo",
     "detail": "Peso, aceleração gravitacional, gravitação universal, leis de Kepler, corpos celestes, marés, clima e concepções sobre a origem e evolução do Universo.",
-    "page": "Matriz de Referência ENEM 2026 · p. 17",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 39",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-FIS4",
+    "topicTitle": "Mecânica e funcionamento do Universo",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C6"
+    ],
+    "skillCodes": [
+      "CN-H3",
+      "CN-H20"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11205,
@@ -496,8 +1595,22 @@
     "syllabusItem": "Eletromagnetismo",
     "subject": "Fenômenos elétricos e magnéticos",
     "detail": "Carga, corrente, Coulomb, campos e potenciais, capacitores, Joule, Ohm, resistência, tensão, potência, energia, circuitos, medidores, corrente contínua e alternada e magnetismo.",
-    "page": "Matriz de Referência ENEM 2026 · p. 17–18",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 39–40",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-FIS5",
+    "topicTitle": "Fenômenos elétricos e magnéticos",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C2",
+      "CN-C6"
+    ],
+    "skillCodes": [
+      "CN-H5",
+      "CN-H6",
+      "CN-H21",
+      "CN-H23"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11206,
@@ -506,8 +1619,20 @@
     "syllabusItem": "Ondulatória e óptica",
     "subject": "Oscilações, ondas, óptica e radiação",
     "detail": "Pulsos, ondas, período, frequência, comprimento, velocidade, propagação, reflexão, refração, lentes, espelhos, formação de imagens e instrumentos ópticos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 18",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 40–41",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-FIS6",
+    "topicTitle": "Oscilações, ondas, óptica e radiação",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C6"
+    ],
+    "skillCodes": [
+      "CN-H1",
+      "CN-H22"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11207,
@@ -516,8 +1641,52 @@
     "syllabusItem": "Termologia",
     "subject": "Calor e fenômenos térmicos",
     "detail": "Calor, temperatura, escalas, equilíbrio e transferência térmica, capacidade, calor específico, dilatação, estados físicos, calor latente, gases ideais, máquinas, Carnot, termodinâmica e ciclo da água.",
-    "page": "Matriz de Referência ENEM 2026 · p. 18",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 41",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-FIS7",
+    "topicTitle": "Calor e fenômenos térmicos",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C6"
+    ],
+    "skillCodes": [
+      "CN-H21",
+      "CN-H23"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11208,
+    "module": "Ciências da Natureza",
+    "discipline": "Física",
+    "syllabusItem": "Métodos e procedimentos",
+    "subject": "Modelos, gráficos e investigação em Física",
+    "detail": "Leitura de gráficos e relações matemáticas, mensuração, regularidades, modelos físicos, experimentos e avaliação de procedimentos científicos e tecnológicos.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 17–19",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências da Natureza",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C3",
+      "CN-C5"
+    ],
+    "skillCodes": [
+      "CN-H1",
+      "CN-H2",
+      "CN-H3",
+      "CN-H4",
+      "CN-H8",
+      "CN-H9",
+      "CN-H10",
+      "CN-H11",
+      "CN-H12",
+      "CN-H17",
+      "CN-H18",
+      "CN-H19"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11301,
@@ -526,8 +1695,19 @@
     "syllabusItem": "Química geral",
     "subject": "Transformações químicas e estrutura da matéria",
     "detail": "Evidências de transformações, gases, Avogadro, teoria cinética, modelo corpuscular, modelos atômicos, estrutura atômica, isótopos, elementos, tabela periódica e reações.",
-    "page": "Matriz de Referência ENEM 2026 · p. 18",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 41–42",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-QUI1",
+    "topicTitle": "Transformações químicas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H24",
+      "CN-H25"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11302,
@@ -536,8 +1716,19 @@
     "syllabusItem": "Química quantitativa",
     "subject": "Representação e estequiometria",
     "detail": "Fórmulas, balanceamento, leis ponderais, massa, volume, mol, massa molar, constante de Avogadro, rendimento e cálculos estequiométricos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 18",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 42",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-QUI2",
+    "topicTitle": "Representação das transformações químicas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H24",
+      "CN-H25"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11303,
@@ -546,8 +1737,22 @@
     "syllabusItem": "Materiais",
     "subject": "Propriedades, ligações e separação de misturas",
     "detail": "Estados e mudanças, misturas e separação, substâncias, metais e ligas, ligações iônica, covalente e metálica, polaridade e forças intermoleculares.",
-    "page": "Matriz de Referência ENEM 2026 · p. 18",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 42–43",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-QUI3",
+    "topicTitle": "Materiais, suas propriedades e usos",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C2",
+      "CN-C5",
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H7",
+      "CN-H18",
+      "CN-H25"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11304,
@@ -556,8 +1761,21 @@
     "syllabusItem": "Soluções",
     "subject": "Água, soluções, ácidos, bases, sais e óxidos",
     "detail": "Solubilidade, concentração, coloides, suspensões, propriedades coligativas, formulação, nomenclatura, indicadores, condutividade e neutralização.",
-    "page": "Matriz de Referência ENEM 2026 · p. 19",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 43–44",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-QUI4",
+    "topicTitle": "Água e soluções",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C5",
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H18",
+      "CN-H24",
+      "CN-H25"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11305,
@@ -566,8 +1784,21 @@
     "syllabusItem": "Físico-química",
     "subject": "Termoquímica, eletroquímica e radioatividade",
     "detail": "Entalpia, calor de reação, Hess, oxirredução, potenciais, pilhas, eletrólise, Faraday, fissão, fusão, desintegração e radioisótopos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 19",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 44",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-QUI5",
+    "topicTitle": "Transformações químicas e energia",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C6",
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H21",
+      "CN-H23",
+      "CN-H26"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11306,
@@ -576,8 +1807,18 @@
     "syllabusItem": "Cinética química",
     "subject": "Velocidade das transformações",
     "detail": "Velocidade, energia de ativação e efeitos de concentração, pressão, temperatura e catalisador.",
-    "page": "Matriz de Referência ENEM 2026 · p. 19",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 44–45",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-QUI6",
+    "topicTitle": "Dinâmica das transformações químicas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H25"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11307,
@@ -586,8 +1827,19 @@
     "syllabusItem": "Equilíbrio químico",
     "subject": "Equilíbrio, pH, solubilidade e hidrólise",
     "detail": "Constantes, produto iônico da água, equilíbrio ácido-base, pH, solubilidade, hidrólise, deslocamento do equilíbrio e aplicações cotidianas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 19",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 45",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-QUI7",
+    "topicTitle": "Transformação química e equilíbrio",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H24",
+      "CN-H25"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11308,
@@ -596,18 +1848,105 @@
     "syllabusItem": "Química orgânica",
     "subject": "Compostos de carbono e polímeros",
     "detail": "Funções orgânicas, hidrocarbonetos, compostos oxigenados e nitrogenados, fermentação, macromoléculas, polímeros, óleos, gorduras, sabões, proteínas e enzimas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 19",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 45",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-QUI8",
+    "topicTitle": "Compostos de carbono",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C5",
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H18",
+      "CN-H24",
+      "CN-H25"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11309,
     "module": "Ciências da Natureza",
     "discipline": "Química",
     "syllabusItem": "Química, tecnologia e ambiente",
-    "subject": "Indústria, poluição e energia",
-    "detail": "Agricultura, saúde, alimentos, indústria, mineração, metalurgia, tratamento de água, atmosfera, petróleo, gás, carvão, biomassa, biocombustíveis, energia nuclear e impactos ambientais.",
-    "page": "Matriz de Referência ENEM 2026 · p. 19",
-    "suggestedPriority": "Alta"
+    "subject": "Química, tecnologias, sociedade e ambiente",
+    "detail": "Química no cotidiano, agricultura, saúde, alimentos, indústria, obtenção de substâncias, mineração, metalurgia, tratamento de água, poluição atmosférica e proteção ambiental.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 46",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-QUI9",
+    "topicTitle": "Química, tecnologias, sociedade e ambiente",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C3",
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H8",
+      "CN-H10",
+      "CN-H12",
+      "CN-H25",
+      "CN-H27"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11310,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Energias químicas",
+    "subject": "Energias químicas no cotidiano",
+    "detail": "Petróleo, gás natural, carvão, madeira, hulha, biomassa, biocombustíveis, combustíveis fósseis, energia nuclear, lixo atômico, vantagens, desvantagens e impactos ambientais.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 46",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-QUI10",
+    "topicTitle": "Energias químicas no cotidiano",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C3",
+      "CN-C6",
+      "CN-C7"
+    ],
+    "skillCodes": [
+      "CN-H8",
+      "CN-H12",
+      "CN-H23",
+      "CN-H26",
+      "CN-H27"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11311,
+    "module": "Ciências da Natureza",
+    "discipline": "Química",
+    "syllabusItem": "Métodos e procedimentos",
+    "subject": "Códigos, modelos e investigação em Química",
+    "detail": "Códigos e nomenclatura, linguagem simbólica, gráficos, modelos, experimentos, comparação de materiais e avaliação de processos químicos.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 17–19",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências da Natureza",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C3",
+      "CN-C5"
+    ],
+    "skillCodes": [
+      "CN-H1",
+      "CN-H2",
+      "CN-H3",
+      "CN-H4",
+      "CN-H8",
+      "CN-H9",
+      "CN-H10",
+      "CN-H11",
+      "CN-H12",
+      "CN-H17",
+      "CN-H18",
+      "CN-H19"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 11401,
@@ -616,8 +1955,23 @@
     "syllabusItem": "Biologia celular",
     "subject": "Moléculas, células e tecidos",
     "detail": "Membrana, citoplasma, núcleo, divisão, bioquímica, metabolismo, fotossíntese, respiração, informação genética, síntese proteica, diferenciação, tecidos e células-tronco.",
-    "page": "Matriz de Referência ENEM 2026 · p. 20",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 47",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-BIO1",
+    "topicTitle": "Moléculas, células, tecidos e biotecnologia",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C3",
+      "CN-C4",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H11",
+      "CN-H14",
+      "CN-H15",
+      "CN-H29"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11402,
@@ -626,8 +1980,21 @@
     "syllabusItem": "Genética",
     "subject": "Hereditariedade e diversidade da vida",
     "detail": "Transmissão hereditária, Mendel, genética humana, antígenos, anticorpos, grupos sanguíneos, transplantes, autoimunidade, câncer, mutações, aconselhamento e diversidade genética.",
-    "page": "Matriz de Referência ENEM 2026 · p. 20",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 47–48",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-BIO2",
+    "topicTitle": "Hereditariedade e diversidade da vida",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C4",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H13",
+      "CN-H16",
+      "CN-H29"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11403,
@@ -636,8 +2003,22 @@
     "syllabusItem": "Seres vivos",
     "subject": "Identidade, classificação e fisiologia",
     "detail": "Níveis de organização, vírus, procariontes, eucariontes, nutrição, ciclos de vida, sistemática, evolução, embriologia, anatomia e fisiologia humana.",
-    "page": "Matriz de Referência ENEM 2026 · p. 20",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 48",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-BIO3",
+    "topicTitle": "Identidade dos seres vivos",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C4",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H14",
+      "CN-H15",
+      "CN-H16",
+      "CN-H28"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11404,
@@ -646,8 +2027,23 @@
     "syllabusItem": "Ecologia",
     "subject": "Ecossistemas e ciências ambientais",
     "detail": "Fatores, habitat, nicho, teias, sucessão, populações, interações, ciclos, energia, biogeografia, biomas, recursos, impactos, conservação, saneamento e legislação ambiental.",
-    "page": "Matriz de Referência ENEM 2026 · p. 20",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 48–49",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-BIO4",
+    "topicTitle": "Ecologia e ciências ambientais",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C3",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H4",
+      "CN-H9",
+      "CN-H10",
+      "CN-H12",
+      "CN-H28"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11405,
@@ -656,8 +2052,22 @@
     "syllabusItem": "Evolução",
     "subject": "Origem e evolução da vida",
     "detail": "História e método da Biologia, origem do Universo, Terra e vida, teorias pré-darwinistas, Darwin, síntese evolutiva e seleção artificial.",
-    "page": "Matriz de Referência ENEM 2026 · p. 20",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 49",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-BIO5",
+    "topicTitle": "Origem e evolução da vida",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C4",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H3",
+      "CN-H16",
+      "CN-H28"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11406,
@@ -666,8 +2076,21 @@
     "syllabusItem": "Saúde",
     "subject": "Qualidade de vida das populações",
     "detail": "Desenvolvimento humano, indicadores, doenças brasileiras, prevenção, primeiros socorros, ISTs, drogas, gravidez, obesidade, violência, exercício, sustentabilidade e cidadania.",
-    "page": "Matriz de Referência ENEM 2026 · p. 20–21",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 50",
+    "suggestedPriority": "Alta",
+    "topicCode": "CN-BIO6",
+    "topicTitle": "Qualidade de vida das populações humanas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C4",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H14",
+      "CN-H19",
+      "CN-H30"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11407,
@@ -676,8 +2099,56 @@
     "syllabusItem": "Biotecnologia",
     "subject": "DNA, clonagem e aplicações biotecnológicas",
     "detail": "DNA recombinante, alimentos, fármacos, investigação, paternidade, identificação, ética, clonagem, células-tronco e sustentabilidade.",
-    "page": "Matriz de Referência ENEM 2026 · p. 20",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 47",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-BIO1",
+    "topicTitle": "Moléculas, células, tecidos e biotecnologia",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C3",
+      "CN-C4",
+      "CN-C8"
+    ],
+    "skillCodes": [
+      "CN-H11",
+      "CN-H14",
+      "CN-H15",
+      "CN-H29"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11408,
+    "module": "Ciências da Natureza",
+    "discipline": "Biologia",
+    "syllabusItem": "Métodos e procedimentos",
+    "subject": "Modelos, experimentos e investigação em Biologia",
+    "detail": "Interpretação de modelos e experimentos, níveis de organização, procedimentos científicos e avaliação de aplicações biológicas e biotecnológicas.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 17–19",
+    "suggestedPriority": "Média",
+    "topicCode": "CN-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências da Natureza",
+    "isGroup": false,
+    "competencyCodes": [
+      "CN-C1",
+      "CN-C3",
+      "CN-C5"
+    ],
+    "skillCodes": [
+      "CN-H1",
+      "CN-H2",
+      "CN-H3",
+      "CN-H4",
+      "CN-H8",
+      "CN-H9",
+      "CN-H10",
+      "CN-H11",
+      "CN-H12",
+      "CN-H17",
+      "CN-H18",
+      "CN-H19"
+    ],
+    "sortOrder": 4
   },
   {
     "id": 11501,
@@ -686,8 +2157,28 @@
     "syllabusItem": "Cultura e diversidade",
     "subject": "Conquista da América e relações coloniais",
     "detail": "Conflitos entre europeus e indígenas, escravidão e resistências indígena e africana na América.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC1",
+    "topicTitle": "Diversidade cultural, conflitos e vida em sociedade",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C3"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11502,
@@ -696,8 +2187,28 @@
     "syllabusItem": "História do Brasil",
     "subject": "Povos africanos, indígenas e formação brasileira",
     "detail": "História cultural africana, luta negra, povos indígenas, diversidade cultural, patrimônio e formação sociocultural do Brasil.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC1",
+    "topicTitle": "Diversidade cultural, conflitos e vida em sociedade",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C3"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11503,
@@ -706,8 +2217,34 @@
     "syllabusItem": "História política",
     "subject": "Antiguidade, cidadania e democracia",
     "detail": "Cidadania e democracia antigas; Estado, direitos e formas direta, indireta e representativa a partir da modernidade.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11504,
@@ -716,8 +2253,34 @@
     "syllabusItem": "Idade Moderna",
     "subject": "Revoluções modernas e independências americanas",
     "detail": "Revoluções sociais e políticas europeias e lutas de independência das colônias da América.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11505,
@@ -726,8 +2289,34 @@
     "syllabusItem": "Brasil Império",
     "subject": "Construção da nação no Brasil imperial",
     "detail": "Grupos sociais em conflito, Estado, cidadania, território, escravidão, abolição e construção nacional.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 11506,
@@ -736,8 +2325,34 @@
     "syllabusItem": "Mundo contemporâneo",
     "subject": "Imperialismo, guerras e Guerra Fria",
     "detail": "Ocupação da Ásia e África, Guerras Mundiais, Guerra Fria e conflitos geopolíticos dos séculos XIX e XX.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 4
   },
   {
     "id": 11507,
@@ -746,8 +2361,34 @@
     "syllabusItem": "Revoluções do século XX",
     "subject": "Revoluções Russa, Chinesa e Cubana",
     "detail": "Grupos sociais, projetos políticos e impactos dos grandes processos revolucionários do século XX.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 5
   },
   {
     "id": 11508,
@@ -756,8 +2397,34 @@
     "syllabusItem": "Autoritarismo",
     "subject": "Totalitarismos e ditaduras latino-americanas",
     "detail": "Nazifascismo, franquismo, salazarismo, stalinismo, Estado Novo e ditaduras na América Latina.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 6
   },
   {
     "id": 11509,
@@ -766,8 +2433,22 @@
     "syllabusItem": "Economia colonial e imperial",
     "subject": "Economia agroexportadora brasileira",
     "detail": "Açúcar, mineração, café e borracha na organização econômica e territorial brasileira.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 52–53",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC3",
+    "topicTitle": "Características e transformações das estruturas produtivas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C4"
+    ],
+    "skillCodes": [
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11510,
@@ -776,8 +2457,76 @@
     "syllabusItem": "Industrialização",
     "subject": "Revolução Industrial e sistemas de produção",
     "detail": "Sistema fabril, espaço urbano-industrial, fordismo, toyotismo, técnicas produtivas e impactos sociais.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 52–53",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC3",
+    "topicTitle": "Características e transformações das estruturas produtivas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C4"
+    ],
+    "skillCodes": [
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11511,
+    "module": "Ciências Humanas",
+    "discipline": "História",
+    "syllabusItem": "Fontes e processos históricos",
+    "subject": "Fontes, memória e interpretação histórica",
+    "detail": "Interpretação e comparação de fontes, temporalidade, memória, patrimônio, processos históricos e diferentes pontos de vista.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências Humanas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11601,
@@ -786,8 +2535,34 @@
     "syllabusItem": "Geografia do Brasil",
     "subject": "Formação territorial e regiões brasileiras",
     "detail": "Formação territorial, regionalização e políticas de reordenamento territorial.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 7
   },
   {
     "id": 11602,
@@ -796,8 +2571,34 @@
     "syllabusItem": "População",
     "subject": "Migrações, imigrações e emigrações",
     "detail": "Políticas e fluxos populacionais no Brasil nos séculos XIX, XX e XXI.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 8
   },
   {
     "id": 11603,
@@ -806,8 +2607,34 @@
     "syllabusItem": "Geopolítica",
     "subject": "Ordem mundial e organismos multilaterais",
     "detail": "Pós-Guerra Fria, conflitos político-culturais, reorganização internacional e organismos multilaterais.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 9
   },
   {
     "id": 11604,
@@ -816,8 +2643,34 @@
     "syllabusItem": "Geografia urbana",
     "subject": "Redes, hierarquia e segregação urbana",
     "detail": "Vida urbana, cidades, pobreza, segregação espacial, industrialização, urbanização e transformações sociais.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 10
   },
   {
     "id": 11605,
@@ -826,8 +2679,22 @@
     "syllabusItem": "Globalização",
     "subject": "Tecnologias e economia global",
     "detail": "Telecomunicações e consequências econômicas, políticas, culturais e sociais da globalização.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 52–53",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC3",
+    "topicTitle": "Características e transformações das estruturas produtivas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C4"
+    ],
+    "skillCodes": [
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 11606,
@@ -836,8 +2703,22 @@
     "syllabusItem": "Geografia agrária",
     "subject": "Espaço agrário e relações campo-cidade",
     "detail": "Modernização, estruturas tradicionais, agronegócio, agricultura familiar, assalariados, lutas sociais e relação campo-cidade.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 52–53",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC3",
+    "topicTitle": "Características e transformações das estruturas produtivas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C4"
+    ],
+    "skillCodes": [
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20"
+    ],
+    "sortOrder": 4
   },
   {
     "id": 11607,
@@ -846,8 +2727,22 @@
     "syllabusItem": "Recursos naturais",
     "subject": "Sociedade, natureza e impactos econômicos",
     "detail": "Apropriação de recursos, mineração, energia, recursos hídricos, bacias e impactos das atividades econômicas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 53–54",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC4",
+    "topicTitle": "Domínios naturais e relação do ser humano com o ambiente",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 1
   },
   {
     "id": 11608,
@@ -856,8 +2751,22 @@
     "syllabusItem": "Questões ambientais",
     "subject": "Mudanças climáticas e ordem ambiental",
     "detail": "Ilhas de calor, efeito estufa, chuva ácida, ozônio, políticas ambientais, conservação, unidades, corredores e zoneamento.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23–24",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 53–54",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC4",
+    "topicTitle": "Domínios naturais e relação do ser humano com o ambiente",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 2
   },
   {
     "id": 11609,
@@ -866,8 +2775,22 @@
     "syllabusItem": "Geologia e geomorfologia",
     "subject": "Estrutura da Terra, solos e relevo",
     "detail": "Estrutura interna, solos, formas de relevo e agentes internos e externos modeladores.",
-    "page": "Matriz de Referência ENEM 2026 · p. 24",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 53–54",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC4",
+    "topicTitle": "Domínios naturais e relação do ser humano com o ambiente",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 11610,
@@ -876,8 +2799,22 @@
     "syllabusItem": "Climatologia",
     "subject": "Atmosfera e climas",
     "detail": "Estrutura e dinâmica atmosférica, classificação climática e características dos climas brasileiros.",
-    "page": "Matriz de Referência ENEM 2026 · p. 24",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 53–54",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC4",
+    "topicTitle": "Domínios naturais e relação do ser humano com o ambiente",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 4
   },
   {
     "id": 11611,
@@ -886,8 +2823,22 @@
     "syllabusItem": "Biogeografia",
     "subject": "Domínios de vegetação",
     "detail": "Grandes domínios vegetais e relações entre clima, relevo, solos e biodiversidade no Brasil e no mundo.",
-    "page": "Matriz de Referência ENEM 2026 · p. 24",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 53–54",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC4",
+    "topicTitle": "Domínios naturais e relação do ser humano com o ambiente",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 5
   },
   {
     "id": 11612,
@@ -896,8 +2847,72 @@
     "syllabusItem": "Cartografia",
     "subject": "Representação espacial",
     "detail": "Projeções, escalas, leitura de mapas temáticos, físicos e políticos e tecnologias modernas de cartografia.",
-    "page": "Matriz de Referência ENEM 2026 · p. 24",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 54",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC5",
+    "topicTitle": "Representação espacial",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2"
+    ],
+    "skillCodes": [
+      "CH-H6"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11613,
+    "module": "Ciências Humanas",
+    "discipline": "Geografia",
+    "syllabusItem": "Espaço geográfico",
+    "subject": "Leitura e interpretação do espaço geográfico",
+    "detail": "Paisagem, lugar, território, região, escalas geográficas e interpretação de relações socioespaciais em diferentes fontes.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências Humanas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 11701,
@@ -906,8 +2921,34 @@
     "syllabusItem": "Filosofia política",
     "subject": "Estado, cidadania e democracia",
     "detail": "Fundamentos e transformações da cidadania, democracia, direitos e legitimidade do Estado da Antiguidade à modernidade.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 11
   },
   {
     "id": 11702,
@@ -916,8 +2957,34 @@
     "syllabusItem": "Pensamento político",
     "subject": "Liberalismo e seus críticos",
     "detail": "Desenvolvimento do pensamento liberal na sociedade capitalista e críticas dos séculos XIX e XX.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 12
   },
   {
     "id": 11703,
@@ -926,8 +2993,34 @@
     "syllabusItem": "Ética e direitos",
     "subject": "Direitos humanos, justiça e ação política",
     "detail": "Direitos civis, humanos, políticos e sociais, constituições, políticas afirmativas, dilemas éticos e construção de argumentos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 13
   },
   {
     "id": 11704,
@@ -936,8 +3029,76 @@
     "syllabusItem": "Filosofia ambiental",
     "subject": "Ética ambiental e sustentabilidade",
     "detail": "Relação sociedade-natureza, origem e evolução do conceito de sustentabilidade e avaliação ética de intervenções.",
-    "page": "Matriz de Referência ENEM 2026 · p. 24",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 53–54",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC4",
+    "topicTitle": "Domínios naturais e relação do ser humano com o ambiente",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 6
+  },
+  {
+    "id": 11705,
+    "module": "Ciências Humanas",
+    "discipline": "Filosofia",
+    "syllabusItem": "Métodos e argumentação",
+    "subject": "Argumentação e análise filosófica",
+    "detail": "Conceitos, problemas, comparação de pontos de vista, validade de argumentos e leitura de textos filosóficos.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências Humanas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 4
   },
   {
     "id": 11801,
@@ -946,8 +3107,28 @@
     "syllabusItem": "Cultura",
     "subject": "Cultura, patrimônio e identidades",
     "detail": "Cultura material e imaterial, diversidade, movimentos culturais, memória, identidades e patrimônio.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC1",
+    "topicTitle": "Diversidade cultural, conflitos e vida em sociedade",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C3"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15"
+    ],
+    "sortOrder": 3
   },
   {
     "id": 11802,
@@ -956,8 +3137,34 @@
     "syllabusItem": "Movimentos sociais",
     "subject": "Organização social e ação coletiva",
     "detail": "Grupos sociais, conflitos, movimentos, participação política, cidadania e conquista de direitos.",
-    "page": "Matriz de Referência ENEM 2026 · p. 22–23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 14
   },
   {
     "id": 11803,
@@ -966,8 +3173,22 @@
     "syllabusItem": "Trabalho e produção",
     "subject": "Escravismo, feudalismo, capitalismo e socialismo",
     "detail": "Formas históricas de organização da produção, relações de trabalho e experiências econômicas e sociais.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 52–53",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC3",
+    "topicTitle": "Características e transformações das estruturas produtivas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C4"
+    ],
+    "skillCodes": [
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20"
+    ],
+    "sortOrder": 5
   },
   {
     "id": 11804,
@@ -976,8 +3197,34 @@
     "syllabusItem": "Desigualdades",
     "subject": "Direitos, políticas afirmativas e segregação",
     "detail": "Direitos sociais, desigualdades raciais, econômicas e territoriais, pobreza, políticas públicas e ações afirmativas.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 51–52",
+    "suggestedPriority": "Alta",
+    "topicCode": "CH-OC2",
+    "topicTitle": "Organização social, movimentos, pensamento político e ação do Estado",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C2",
+      "CH-C3",
+      "CH-C5"
+    ],
+    "skillCodes": [
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25"
+    ],
+    "sortOrder": 15
   },
   {
     "id": 11805,
@@ -986,7 +3233,625 @@
     "syllabusItem": "Sociologia rural e urbana",
     "subject": "Relações sociais no campo e na cidade",
     "detail": "Urbanização, segregação, transformações trabalhistas, agronegócio, agricultura familiar, assalariamento e lutas sociais.",
-    "page": "Matriz de Referência ENEM 2026 · p. 23",
-    "suggestedPriority": "Alta"
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 52–53",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-OC3",
+    "topicTitle": "Características e transformações das estruturas produtivas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C4"
+    ],
+    "skillCodes": [
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20"
+    ],
+    "sortOrder": 6
+  },
+  {
+    "id": 11806,
+    "module": "Ciências Humanas",
+    "discipline": "Sociologia",
+    "syllabusItem": "Teoria e análise social",
+    "subject": "Teoria social e interpretação da sociedade",
+    "detail": "Instituições, grupos, relações sociais, socialização, poder, cultura e interpretação sociológica de diferentes fontes.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 22–25",
+    "suggestedPriority": "Média",
+    "topicCode": "CH-COMP",
+    "topicTitle": "Competências interdisciplinares de Ciências Humanas",
+    "isGroup": false,
+    "competencyCodes": [
+      "CH-C1",
+      "CH-C2",
+      "CH-C3",
+      "CH-C4",
+      "CH-C5",
+      "CH-C6"
+    ],
+    "skillCodes": [
+      "CH-H1",
+      "CH-H2",
+      "CH-H3",
+      "CH-H4",
+      "CH-H5",
+      "CH-H6",
+      "CH-H7",
+      "CH-H8",
+      "CH-H9",
+      "CH-H10",
+      "CH-H11",
+      "CH-H12",
+      "CH-H13",
+      "CH-H14",
+      "CH-H15",
+      "CH-H16",
+      "CH-H17",
+      "CH-H18",
+      "CH-H19",
+      "CH-H20",
+      "CH-H21",
+      "CH-H22",
+      "CH-H23",
+      "CH-H24",
+      "CH-H25",
+      "CH-H26",
+      "CH-H27",
+      "CH-H28",
+      "CH-H29",
+      "CH-H30"
+    ],
+    "sortOrder": 5
+  },
+  {
+    "id": 11901,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos geométricos",
+    "subject": "Figuras planas e espaciais",
+    "detail": "Características, composição, decomposição, localização e representação bidimensional e tridimensional de figuras geométricas.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 14 e 35–36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC2",
+    "topicTitle": "Conhecimentos geométricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C2"
+    ],
+    "skillCodes": [
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11902,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Grandezas e medidas",
+    "subject": "Grandezas, unidades de medida e escalas",
+    "detail": "Conversões, relações entre grandezas, Sistema Internacional, leitura e aplicação de escalas em situações cotidianas.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 14 e 35",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC2",
+    "topicTitle": "Grandezas, medidas e conhecimentos geométricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C3"
+    ],
+    "skillCodes": [
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11903,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Grandezas e medidas",
+    "subject": "Comprimentos, áreas e volumes",
+    "detail": "Perímetros, áreas de figuras planas, áreas e volumes de sólidos e avaliação da razoabilidade de medições.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 14 e 35",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC2",
+    "topicTitle": "Grandezas, medidas e conhecimentos geométricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C3"
+    ],
+    "skillCodes": [
+      "MT-H10",
+      "MT-H11",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11904,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos geométricos",
+    "subject": "Ângulos, posições de retas e simetrias",
+    "detail": "Ângulos, posições relativas de retas e simetrias de figuras planas e espaciais.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 14 e 35–36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-OC2",
+    "topicTitle": "Conhecimentos geométricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C2"
+    ],
+    "skillCodes": [
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11905,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos geométricos",
+    "subject": "Congruência, semelhança e Teorema de Tales",
+    "detail": "Congruência e semelhança de triângulos, proporcionalidade geométrica e aplicações do Teorema de Tales.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 14 e 35–36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC2",
+    "topicTitle": "Conhecimentos geométricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C2"
+    ],
+    "skillCodes": [
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9"
+    ],
+    "sortOrder": 3
+  },
+  {
+    "id": 11906,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos geométricos",
+    "subject": "Relações métricas, circunferência e trigonometria",
+    "detail": "Relações métricas nos triângulos, circunferências e trigonometria do ângulo agudo.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 14 e 35–36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC2",
+    "topicTitle": "Conhecimentos geométricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C2"
+    ],
+    "skillCodes": [
+      "MT-H6",
+      "MT-H7",
+      "MT-H8",
+      "MT-H9"
+    ],
+    "sortOrder": 4
+  },
+  {
+    "id": 11907,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Estatística",
+    "subject": "Representação e análise de dados",
+    "detail": "Leitura, comparação e construção de tabelas e gráficos; tendências, inferências, interpolação e extrapolação.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 16 e 36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC3",
+    "topicTitle": "Representação e análise de dados",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C6"
+    ],
+    "skillCodes": [
+      "MT-H24",
+      "MT-H25",
+      "MT-H26"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11908,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Estatística",
+    "subject": "Média, moda, mediana, desvios e variância",
+    "detail": "Medidas de tendência central e dispersão em dados apresentados diretamente, em tabelas de frequência ou em gráficos.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 16 e 36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC3",
+    "topicTitle": "Estatística e probabilidade",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11909,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Probabilidade",
+    "subject": "Probabilidade e fenômenos aleatórios",
+    "detail": "Espaço amostral, princípios de contagem, cálculo de probabilidades e avaliação de fenômenos aleatórios.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 16 e 36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC3",
+    "topicTitle": "Estatística e probabilidade",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H27",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11910,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos",
+    "subject": "Gráficos e funções do 1º e do 2º graus",
+    "detail": "Relações entre grandezas, representações algébricas, gráficos cartesianos e funções afins e quadráticas.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 15 e 36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC4",
+    "topicTitle": "Conhecimentos algébricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C5"
+    ],
+    "skillCodes": [
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11911,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos",
+    "subject": "Funções polinomiais e racionais",
+    "detail": "Modelagem e resolução de problemas com funções polinomiais e racionais.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 15 e 36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-OC4",
+    "topicTitle": "Conhecimentos algébricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C5"
+    ],
+    "skillCodes": [
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11912,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos",
+    "subject": "Funções exponenciais e logarítmicas",
+    "detail": "Crescimento, decrescimento, escalas e modelagem com funções exponenciais e logarítmicas.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 15 e 36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC4",
+    "topicTitle": "Conhecimentos algébricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C5"
+    ],
+    "skillCodes": [
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23"
+    ],
+    "sortOrder": 3
+  },
+  {
+    "id": 11913,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos",
+    "subject": "Ciclo e funções trigonométricas",
+    "detail": "Relações no ciclo trigonométrico, periodicidade, gráficos e funções trigonométricas.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 15 e 36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-OC4",
+    "topicTitle": "Conhecimentos algébricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C5"
+    ],
+    "skillCodes": [
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23"
+    ],
+    "sortOrder": 4
+  },
+  {
+    "id": 11914,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos",
+    "subject": "Equações e inequações",
+    "detail": "Equações, inequações e representações algébricas aplicadas à resolução de situações-problema.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 15 e 36",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC4",
+    "topicTitle": "Conhecimentos algébricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C5"
+    ],
+    "skillCodes": [
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23"
+    ],
+    "sortOrder": 5
+  },
+  {
+    "id": 11915,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos e geométricos",
+    "subject": "Plano cartesiano, retas e circunferências",
+    "detail": "Coordenadas, distâncias, equações e interpretação geométrica de retas e circunferências.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 15 e 36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-OC5",
+    "topicTitle": "Conhecimentos algébricos e geométricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C5"
+    ],
+    "skillCodes": [
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11916,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos algébricos e geométricos",
+    "subject": "Paralelismo, perpendicularidade e sistemas",
+    "detail": "Posições relativas de retas, sistemas de equações e integração entre representações algébricas e geométricas.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 15 e 36",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-OC5",
+    "topicTitle": "Conhecimentos algébricos e geométricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C5"
+    ],
+    "skillCodes": [
+      "MT-H19",
+      "MT-H20",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11917,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos numéricos",
+    "subject": "Conjuntos numéricos e operações",
+    "detail": "Naturais, inteiros, racionais e reais, operações, representações e avaliação de resultados numéricos.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13 e 35",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC1",
+    "topicTitle": "Conhecimentos numéricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C1"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11918,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos numéricos",
+    "subject": "Desigualdades, divisibilidade e fatoração",
+    "detail": "Desigualdades, múltiplos, divisores, critérios de divisibilidade, números primos e fatoração.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13 e 35",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-OC1",
+    "topicTitle": "Conhecimentos numéricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C1"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11919,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Variação de grandezas",
+    "subject": "Razões, proporções e porcentagem",
+    "detail": "Razões, proporções, porcentagens e dependência direta ou inversamente proporcional entre grandezas.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13, 15 e 35",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC1",
+    "topicTitle": "Conhecimentos numéricos e variação de grandezas",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C4"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "id": 11920,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos numéricos",
+    "subject": "Sequências, progressões e princípios de contagem",
+    "detail": "Padrões numéricos, sequências, progressões aritméticas e geométricas e princípios de contagem.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13 e 35",
+    "suggestedPriority": "Média",
+    "topicCode": "MT-OC1",
+    "topicTitle": "Conhecimentos numéricos",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C1"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5"
+    ],
+    "sortOrder": 3
+  },
+  {
+    "id": 11921,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Conhecimentos numéricos",
+    "subject": "Matemática financeira",
+    "detail": "Juros simples e compostos, taxas, descontos, aumentos, financiamentos e comparação de propostas financeiras.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13, 15 e 35",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-OC1",
+    "topicTitle": "Conhecimentos numéricos e variação de grandezas",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C4"
+    ],
+    "skillCodes": [
+      "MT-H1",
+      "MT-H2",
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H15",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": 11922,
+    "module": "Matemática",
+    "discipline": "Matemática",
+    "syllabusItem": "Modelagem e argumentação",
+    "subject": "Resolução, argumentação e intervenção matemática",
+    "detail": "Modelagem de situações socioeconômicas ou técnico-científicas, avaliação da razoabilidade de resultados, construção de argumentos e análise de propostas de intervenção.",
+    "page": "Matriz de Referência do Enem (Inep, 2026) · p. 13–16",
+    "suggestedPriority": "Alta",
+    "topicCode": "MT-COMP",
+    "topicTitle": "Modelagem, argumentação e intervenção",
+    "isGroup": false,
+    "competencyCodes": [
+      "MT-C1",
+      "MT-C2",
+      "MT-C3",
+      "MT-C4",
+      "MT-C5",
+      "MT-C6",
+      "MT-C7"
+    ],
+    "skillCodes": [
+      "MT-H3",
+      "MT-H4",
+      "MT-H5",
+      "MT-H8",
+      "MT-H9",
+      "MT-H12",
+      "MT-H13",
+      "MT-H14",
+      "MT-H16",
+      "MT-H17",
+      "MT-H18",
+      "MT-H21",
+      "MT-H22",
+      "MT-H23",
+      "MT-H25",
+      "MT-H26",
+      "MT-H28",
+      "MT-H29",
+      "MT-H30"
+    ],
+    "sortOrder": 1
   }
 ]

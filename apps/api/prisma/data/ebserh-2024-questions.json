@@ -9,7 +9,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 1
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 18
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 17
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "contextImage": null,
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 2
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 2
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 2
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 2
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 7
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 18
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 13
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 12,
@@ -141,7 +141,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 13,
@@ -153,7 +153,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 14,
@@ -165,7 +165,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 15,
@@ -177,7 +177,7 @@
     "contextImage": null,
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 16,
@@ -189,7 +189,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 17,
@@ -201,7 +201,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 18,
@@ -213,7 +213,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 42
   },
   {
     "id": 19,
@@ -225,7 +225,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 20,
@@ -237,7 +237,7 @@
     "contextImage": null,
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 21,
@@ -249,7 +249,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 22,
@@ -261,7 +261,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 23,
@@ -273,7 +273,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 24,
@@ -285,7 +285,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 25,
@@ -297,7 +297,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 26,
@@ -309,7 +309,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 27,
@@ -321,7 +321,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 28,
@@ -333,7 +333,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 29,
@@ -345,7 +345,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 30,
@@ -357,7 +357,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 31,
@@ -369,7 +369,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 43
   },
   {
     "id": 32,
@@ -381,7 +381,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 43
   },
   {
     "id": 33,
@@ -393,7 +393,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 43
   },
   {
     "id": 34,
@@ -405,7 +405,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 42
   },
   {
     "id": 35,
@@ -417,7 +417,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 42
   },
   {
     "id": 36,
@@ -429,7 +429,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 43
   },
   {
     "id": 37,
@@ -441,7 +441,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 38,
@@ -453,7 +453,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 43
   },
   {
     "id": 39,
@@ -465,7 +465,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 43
   },
   {
     "id": 40,
@@ -477,7 +477,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 64
   },
   {
     "id": 41,
@@ -489,7 +489,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 43
   },
   {
     "id": 42,
@@ -501,7 +501,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 215
   },
   {
     "id": 43,
@@ -513,7 +513,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 44,
@@ -525,7 +525,7 @@
     "contextImage": null,
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 45,
@@ -537,7 +537,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 134
   },
   {
     "id": 46,
@@ -549,7 +549,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 138
   },
   {
     "id": 47,
@@ -561,7 +561,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 128
   },
   {
     "id": 48,
@@ -573,7 +573,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 126
   },
   {
     "id": 49,
@@ -585,7 +585,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 303
   },
   {
     "id": 50,
@@ -597,7 +597,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 106
   },
   {
     "id": 51,
@@ -609,7 +609,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 298
   },
   {
     "id": 52,
@@ -621,7 +621,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 53,
@@ -633,7 +633,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 269
   },
   {
     "id": 54,
@@ -645,7 +645,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 218
   },
   {
     "id": 55,
@@ -657,7 +657,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 95
   },
   {
     "id": 56,
@@ -669,7 +669,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 223
   },
   {
     "id": 57,
@@ -681,7 +681,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 105
   },
   {
     "id": 58,
@@ -693,7 +693,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 59,
@@ -705,7 +705,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 45
   },
   {
     "id": 60,
@@ -717,6 +717,6 @@
     "contextImage": null,
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 156
   }
 ]

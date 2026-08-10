@@ -1,6 +1,7 @@
 import { calculateAttemptScore } from "../src/questions/scoring";
 import {
   calculateTargetSecondsPerQuestion,
+  calculateTrainingTimeLimitSeconds,
   calculateTimePerformance,
 } from "../src/questions/timing";
 
@@ -52,12 +53,19 @@ describe("calculateAttemptScore", () => {
 });
 
 describe("calculateTargetSecondsPerQuestion", () => {
-  it("calcula a média após reservar 30 minutos para o gabarito", () => {
+  it("calcula a média com os 210 minutos líquidos após reservar o gabarito", () => {
     expect(calculateTargetSecondsPerQuestion(210, 70)).toBe(180);
   });
 
   it("inclui a hora adicional na modalidade de 5 horas", () => {
     expect(calculateTargetSecondsPerQuestion(270, 70)).toBe(231);
+  });
+});
+
+describe("calculateTrainingTimeLimitSeconds", () => {
+  it("proporcionaliza o treino DATAPREV pela quantidade da disciplina", () => {
+    expect(calculateTrainingTimeLimitSeconds(210, 70, 12)).toBe(2160);
+    expect(calculateTrainingTimeLimitSeconds(270, 70, 5)).toBe(1155);
   });
 });
 

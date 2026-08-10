@@ -1,8 +1,8 @@
 "use client";
 
-import { Flag, Mail, X } from "lucide-react";
+import { CheckCircle2, Flag, Send, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useApp } from "@/components/app-context";
+import { apiFetch } from "@/lib/api";
 import type { Option } from "@/lib/types";
 
 export interface ReportableQuestion {
@@ -65,12 +65,13 @@ export function QuestionReport({
   question: ReportableQuestion;
   attemptId: string;
 }) {
-  const { user, selectedContest } = useApp();
   const [open, setOpen] = useState(false);
   const [issueType, setIssueType] =
     useState<(typeof issueTypes)[number]["value"]>("IMAGE");
   const [description, setDescription] = useState("");
-  const [emailOpened, setEmailOpened] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const selectedIssue = issueTypes.find((item) => item.value === issueType)!;
 
   useEffect(() => {
@@ -84,48 +85,38 @@ export function QuestionReport({
 
   function openReport() {
     setDescription("");
-    setEmailOpened(false);
+    setSubmitted(false);
+    setError(null);
     setOpen(true);
   }
 
-  function submit(event: React.FormEvent<HTMLFormElement>) {
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const imageUrl = new URL(
-      question.sourceImage,
-      window.location.origin,
-    ).href;
-    const body = [
-      "RELATÓRIO DE PROBLEMA EM QUESTÃO",
-      "",
-      `Tipo do problema: ${selectedIssue.label}`,
-      `Descrição: ${description}`,
-      "",
-      "DADOS DA QUESTÃO",
-      `ID interno: ${question.questionId}`,
-      `Prova: ${question.examName}`,
-      `ID da prova: ${question.examId}`,
-      `Ano: ${question.examYear}`,
-      `Dia: ${question.examDay ?? "Não se aplica"}`,
-      `Número: ${question.questionNumber}`,
-      `Disciplina atual: ${question.discipline}`,
-      `Assunto atual: ${question.subject}`,
-      `Página de origem: ${question.sourcePage ?? "Não informada"}`,
-      `Imagem: ${imageUrl}`,
-      "",
-      "CONTEXTO",
-      `Concurso: ${selectedContest?.name ?? "Não identificado"}`,
-      `Tentativa: ${attemptId}`,
-      `Resposta marcada: ${question.selectedAnswer ?? "Em branco"}`,
-      `Gabarito disponível: ${question.correctAnswer ?? "Não informado"}`,
-      `Usuário: ${user?.displayName ?? user?.username ?? "Não identificado"}`,
-      `Tela: ${window.location.href}`,
-    ].join("\n");
-    const subject =
-      `[Problema em questão] ${question.examName} — questão ${question.questionNumber}`;
-    window.location.href =
-      `mailto:emilianocalado@hotmail.com?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(body)}`;
-    setEmailOpened(true);
+    setSubmitting(true);
+    setError(null);
+    try {
+      await apiFetch(
+        `/simulations/${attemptId}/questions/${question.questionId}/reports`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            issueType,
+            description,
+            selectedAnswer: question.selectedAnswer ?? undefined,
+            screenUrl: window.location.href,
+          }),
+        },
+      );
+      setSubmitted(true);
+    } catch (reason) {
+      setError(
+        reason instanceof Error
+          ? reason.message
+          : "Não foi possível registrar o problema.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -210,16 +201,26 @@ export function QuestionReport({
               </span>
             </div>
 
-            {emailOpened && (
+            {submitted && (
               <p className="auth-success">
-                O relatório foi preparado para emilianocalado@hotmail.com.
-                Revise e confirme o envio no aplicativo de e-mail.
+                <CheckCircle2 size={16} /> Problema adicionado à lista de
+                questões reportadas.
               </p>
             )}
 
-            <button className="button primary" type="submit">
-              <Mail size={17} />
-              Abrir relatório no e-mail
+            {error && <p className="form-error">{error}</p>}
+
+            <button
+              className="button primary"
+              type="submit"
+              disabled={submitting || submitted}
+            >
+              {submitted ? <CheckCircle2 size={17} /> : <Send size={17} />}
+              {submitting
+                ? "Registrando..."
+                : submitted
+                  ? "Problema registrado"
+                  : "Adicionar à lista de problemas"}
             </button>
           </form>
         </div>

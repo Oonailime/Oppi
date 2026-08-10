@@ -9,6 +9,21 @@ export function calculateTargetSecondsPerQuestion(
   return Math.round((durationMinutes * 60) / totalQuestions);
 }
 
+export function calculateTrainingTimeLimitSeconds(
+  durationMinutes: number,
+  examQuestionCount: number,
+  trainingQuestionCount: number,
+) {
+  if (trainingQuestionCount <= 0) {
+    throw new Error("A quantidade de questões do treino deve ser positiva.");
+  }
+
+  return (
+    calculateTargetSecondsPerQuestion(durationMinutes, examQuestionCount) *
+    trainingQuestionCount
+  );
+}
+
 export function calculateTimePerformance(
   targetSecondsPerQuestion: number,
   totalQuestions: number,

@@ -12,6 +12,12 @@ interface TopicSeed {
   detail: string | null;
   page: string;
   suggestedPriority: string;
+  topicCode?: string | null;
+  topicTitle?: string | null;
+  isGroup?: boolean;
+  competencyCodes?: string[];
+  skillCodes?: string[];
+  sortOrder?: number;
 }
 
 interface QuestionSeed {
@@ -98,12 +104,14 @@ async function main() {
       id: ENEM_CONTEST_ID,
       userId: EMILIANO_USER_ID,
       name: "ENEM",
+      targetDate: new Date("2026-11-08T00:00:00.000Z"),
       type: ContestType.RECURRING,
       systemManaged: true,
     },
     update: {
       userId: EMILIANO_USER_ID,
       name: "ENEM",
+      targetDate: new Date("2026-11-08T00:00:00.000Z"),
       type: ContestType.RECURRING,
       systemManaged: true,
     },
@@ -121,6 +129,12 @@ async function main() {
         detail: topic.detail,
         page: topic.page,
         suggestedPriority: topic.suggestedPriority,
+        topicCode: topic.topicCode,
+        topicTitle: topic.topicTitle,
+        isGroup: topic.isGroup ?? false,
+        competencyCodes: topic.competencyCodes ?? [],
+        skillCodes: topic.skillCodes ?? [],
+        sortOrder: topic.sortOrder ?? 0,
       },
     });
   }
@@ -217,6 +231,44 @@ async function main() {
       COUNT(*) > 0
     )
     FROM "Question"
+  `;
+
+  await prisma.$executeRaw`
+    UPDATE "ContestStudyTopic"
+    SET "questionsCompleted" = 0,
+        "correctAnswers" = 0
+  `;
+  await prisma.$executeRaw`
+    UPDATE "ContestStudyTopic" AS progress
+    SET "questionsCompleted" = stats.total,
+        "correctAnswers" = stats.correct,
+        "status" = CASE
+          WHEN progress."status" = 'NOT_STARTED'::"StudyStatus"
+            THEN 'IN_PROGRESS'::"StudyStatus"
+          ELSE progress."status"
+        END,
+        "progress" = CASE
+          WHEN progress."status" = 'NOT_STARTED'::"StudyStatus" THEN 50
+          ELSE progress."progress"
+        END,
+        "startedAt" = COALESCE(progress."startedAt", stats.started_at)
+    FROM (
+      SELECT
+        attempt."contestId" AS contest_id,
+        question."studyTopicId" AS topic_id,
+        COUNT(*)::INTEGER AS total,
+        COUNT(*) FILTER (WHERE answer."isCorrect")::INTEGER AS correct,
+        MIN(attempt."startedAt") AS started_at
+      FROM "AttemptAnswer" AS answer
+      JOIN "Attempt" AS attempt ON attempt.id = answer."attemptId"
+      JOIN "Question" AS question ON question.id = answer."questionId"
+      WHERE attempt."completedAt" IS NOT NULL
+        AND NOT question."annulled"
+        AND question."studyTopicId" IS NOT NULL
+      GROUP BY attempt."contestId", question."studyTopicId"
+    ) AS stats
+    WHERE progress."contestId" = stats.contest_id
+      AND progress."studyTopicId" = stats.topic_id
   `;
 
   console.log(

@@ -150,15 +150,16 @@ describe("QuestionsService", () => {
     ]);
   });
 
-  it("deriva o melhor status de cada disciplina pelo histórico de respostas", async () => {
+  it("deriva o status de cada disciplina pela cobertura acumulada de acertos", async () => {
     const answer = (
       attemptId: string,
+      questionId: number,
       discipline: string,
       isCorrect: boolean,
     ) => ({
       attemptId,
       isCorrect,
-      question: { annulled: false, discipline },
+      question: { id: questionId, annulled: false, discipline },
     });
     const prisma = {
       exam: {
@@ -174,18 +175,18 @@ describe("QuestionsService", () => {
       },
       attemptAnswer: {
         findMany: jest.fn().mockResolvedValue([
-          answer("attempt-1", "Português", true),
-          answer("attempt-1", "Português", true),
-          answer("attempt-1", "Segurança", true),
-          answer("attempt-1", "Segurança", true),
-          answer("attempt-1", "Segurança", true),
-          answer("attempt-1", "Segurança", false),
-          answer("attempt-2", "Segurança", true),
-          answer("attempt-2", "Segurança", true),
-          answer("attempt-2", "Segurança", true),
-          answer("attempt-2", "Segurança", true),
-          answer("attempt-2", "Segurança", false),
-          answer("attempt-2", "Governança", false),
+          answer("attempt-1", 1, "Português", true),
+          answer("attempt-1", 2, "Português", true),
+          answer("attempt-1", 3, "Segurança", true),
+          answer("attempt-1", 4, "Segurança", true),
+          answer("attempt-1", 5, "Segurança", true),
+          answer("attempt-1", 6, "Segurança", false),
+          answer("attempt-2", 3, "Segurança", true),
+          answer("attempt-2", 4, "Segurança", true),
+          answer("attempt-2", 5, "Segurança", true),
+          answer("attempt-2", 6, "Segurança", true),
+          answer("attempt-2", 7, "Segurança", false),
+          answer("attempt-2", 8, "Governança", false),
         ]),
       },
     } as unknown as PrismaService;
@@ -223,6 +224,44 @@ describe("QuestionsService", () => {
     ]);
   });
 
+  it("não marca a disciplina como dominada por um simulado filtrado de uma questão", async () => {
+    const prisma = {
+      exam: {
+        findFirst: jest.fn().mockResolvedValue(cebraspeExam),
+      },
+      question: {
+        groupBy: jest.fn().mockResolvedValue([
+          {
+            discipline: "Língua Portuguesa",
+            _count: { id: 12 },
+          },
+        ]),
+      },
+      attemptAnswer: {
+        findMany: jest.fn().mockResolvedValue([
+          {
+            isCorrect: true,
+            question: {
+              id: 141,
+              annulled: false,
+              discipline: "Língua Portuguesa",
+            },
+          },
+        ]),
+      },
+    } as unknown as PrismaService;
+
+    const [result] = await new QuestionsService(prisma).listDisciplines(
+      cebraspeExam.id,
+      contestId,
+    );
+
+    expect(result).toMatchObject({
+      bestPercentage: 8.33,
+      progressStatus: "REVIEW",
+    });
+  });
+
   it("agrega as disciplinas de todas as edições de um concurso recorrente", async () => {
     const groupBy = jest.fn().mockResolvedValue([
       { discipline: "Física", _count: { id: 130 } },
@@ -246,7 +285,10 @@ describe("QuestionsService", () => {
 
     expect(groupBy).toHaveBeenCalledWith(
       expect.objectContaining({
-        where: { examId: { in: ["enem-2016", "enem-2025"] } },
+        where: {
+          examId: { in: ["enem-2016", "enem-2025"] },
+          annulled: false,
+        },
       }),
     );
     expect(result).toEqual([
@@ -263,6 +305,554 @@ describe("QuestionsService", () => {
         progressStatus: "NOT_STARTED",
       },
     ]);
+  });
+
+  it("lista assuntos com o total disponível e desconta questões já acertadas", async () => {
+    const prisma = {
+      contest: {
+        findUnique: jest.fn().mockResolvedValue({
+          exams: [{ examId: "enem-2024" }, { examId: "enem-2025" }],
+        }),
+      },
+      question: {
+        findMany: jest.fn().mockResolvedValue([
+          {
+            id: 1,
+            studyTopic: {
+              id: 11202,
+              subject: "Movimento, forças e equilíbrio",
+              detail: "Mecânica.",
+              topicCode: "CN-FIS2",
+              topicTitle: "Movimento, equilíbrio e leis físicas",
+              competencyCodes: ["CN-C6"],
+              skillCodes: ["CN-H20"],
+              sortOrder: 1,
+            },
+          },
+          {
+            id: 2,
+            studyTopic: {
+              id: 11202,
+              subject: "Movimento, forças e equilíbrio",
+              detail: "Mecânica.",
+              topicCode: "CN-FIS2",
+              topicTitle: "Movimento, equilíbrio e leis físicas",
+              competencyCodes: ["CN-C6"],
+              skillCodes: ["CN-H20"],
+              sortOrder: 1,
+            },
+          },
+          {
+            id: 3,
+            studyTopic: {
+              id: 11207,
+              subject: "Calor e fenômenos térmicos",
+              detail: "Termologia.",
+              topicCode: "CN-FIS7",
+              topicTitle: "Calor e fenômenos térmicos",
+              competencyCodes: ["CN-C6"],
+              skillCodes: ["CN-H21"],
+              sortOrder: 1,
+            },
+          },
+        ]),
+      },
+      attemptAnswer: {
+        findMany: jest.fn().mockResolvedValue([{ questionId: 1 }]),
+      },
+    } as unknown as PrismaService;
+
+    const result = await new QuestionsService(prisma).listSubjects(
+      "Física",
+      contestId,
+    );
+
+    expect(result).toMatchObject([
+      {
+        id: 11202,
+        name: "Movimento, forças e equilíbrio",
+        questionCount: 2,
+        correctQuestionCount: 1,
+        unmasteredQuestionCount: 1,
+      },
+      {
+        id: 11207,
+        name: "Calor e fenômenos térmicos",
+        questionCount: 1,
+        correctQuestionCount: 0,
+        unmasteredQuestionCount: 1,
+      },
+    ]);
+  });
+
+  it("limita os assuntos à prova selecionada quando o filtro é específico", async () => {
+    const questionFindMany = jest.fn(
+      async (query: { where: { examId: { in: string[] } } }) => {
+        void query;
+        return [];
+      },
+    );
+    const prisma = {
+      exam: {
+        findFirst: jest.fn().mockResolvedValue(cebraspeExam),
+      },
+      question: {
+        findMany: questionFindMany,
+      },
+      attemptAnswer: {
+        findMany: jest.fn().mockResolvedValue([]),
+      },
+    } as unknown as PrismaService;
+
+    await new QuestionsService(prisma).listSubjects(
+      "Língua Portuguesa",
+      contestId,
+      cebraspeExam.id,
+    );
+
+    expect(questionFindMany.mock.calls[0]?.[0].where.examId).toEqual({
+      in: [cebraspeExam.id],
+    });
+  });
+
+  it("limita o cronômetro do treino DATAPREV ao total de questões da disciplina", async () => {
+    const dataprevExam = {
+      ...cebraspeExam,
+      id: "dataprev-2024",
+      name: "DATAPREV 2024",
+      organization: "DATAPREV",
+      answerOptions: ["A", "B", "C", "D", "E"],
+      defaultDurationMinutes: 210,
+      extendedDurationMinutes: 270,
+    };
+    const disciplineQuestions = Array.from({ length: 12 }, (_, index) => ({
+      id: index + 1,
+      examId: dataprevExam.id,
+      number: index + 1,
+      examDay: null,
+      variant: "",
+      discipline: "Língua Portuguesa",
+      subject: "Interpretação de texto",
+      weight: 1,
+      sourcePage: 1,
+      sourceImage: `/questions/q-${index + 1}.png`,
+      contextImage: null,
+      exam: dataprevExam,
+    }));
+    let attemptData:
+      | {
+          timeLimitSeconds: number;
+          targetSecondsPerQuestion: number;
+          totalQuestions: number;
+        }
+      | undefined;
+    const transactionClient = {
+      attempt: {
+        create: jest.fn(
+          async (input: {
+            data: NonNullable<typeof attemptData> & {
+              mode: AttemptMode;
+              discipline?: string;
+            };
+          }) => {
+            attemptData = input.data;
+            return {
+              id: "attempt-discipline",
+              mode: AttemptMode.DISCIPLINE,
+              examDay: null,
+              discipline: input.data.discipline,
+              foreignLanguage: null,
+              startedAt: new Date(),
+              timeLimitSeconds: input.data.timeLimitSeconds,
+              targetSecondsPerQuestion: input.data.targetSecondsPerQuestion,
+            };
+          },
+        ),
+      },
+      attemptQuestion: {
+        createMany: jest.fn().mockResolvedValue({ count: 12 }),
+      },
+    };
+    const prisma = {
+      contest: {
+        findUnique: jest.fn().mockResolvedValue({
+          name: "DATAPREV 2026",
+          type: ContestType.STANDARD,
+          exams: [{ exam: dataprevExam }],
+        }),
+      },
+      question: {
+        count: jest.fn().mockResolvedValueOnce(0).mockResolvedValueOnce(70),
+        findMany: jest.fn().mockResolvedValue(disciplineQuestions),
+      },
+      $transaction: jest.fn(
+        async <T>(
+          callback: (client: typeof transactionClient) => Promise<T>,
+        ) => callback(transactionClient),
+      ),
+    } as unknown as PrismaService;
+
+    await new QuestionsService(prisma).start(
+      {
+        examId: dataprevExam.id,
+        mode: AttemptMode.DISCIPLINE,
+        discipline: "Língua Portuguesa",
+        durationMinutes: 210,
+      },
+      contestId,
+    );
+
+    expect(attemptData).toMatchObject({
+      totalQuestions: 12,
+      targetSecondsPerQuestion: 180,
+      timeLimitSeconds: 2160,
+    });
+  });
+
+  it("sorteia 10 questões de um assunto sem reutilizar as já acertadas", async () => {
+    const enem2025 = {
+      ...cebraspeExam,
+      id: "enem-2025",
+      name: "ENEM 2025",
+      organization: "INEP",
+      year: 2025,
+      answerOptions: ["A", "B", "C", "D", "E"],
+      defaultDurationMinutes: 630,
+      extendedDurationMinutes: 750,
+    };
+    const availableQuestions = Array.from({ length: 12 }, (_, index) => ({
+      id: index + 1,
+      examId: enem2025.id,
+      number: index + 91,
+      examDay: 2,
+      variant: "",
+      discipline: "Física",
+      subject: "Movimento, forças e equilíbrio",
+      weight: 1,
+      sourcePage: 2,
+      sourceImage: `/questions/enem-2025/q-${index + 91}.png`,
+      contextImage: null,
+      exam: enem2025,
+    }));
+    const attemptCreate = jest.fn(
+      async (input: {
+        data: {
+          trainingTopicId?: number;
+          includeCorrectAnswers?: boolean;
+          totalQuestions: number;
+          timeLimitSeconds: number;
+        };
+      }) => {
+        void input;
+        return {
+          id: "attempt-topic",
+          mode: AttemptMode.ALL_YEARS,
+          examDay: null,
+          discipline: "Física",
+          foreignLanguage: null,
+          startedAt: new Date(),
+          timeLimitSeconds: 1800,
+          targetSecondsPerQuestion: 180,
+        };
+      },
+    );
+    const attemptQuestionCreateMany = jest.fn(
+      async (input: {
+        data: Array<{
+          attemptId: string;
+          questionId: number;
+          position: number;
+        }>;
+      }) => {
+        void input;
+        return { count: 10 };
+      },
+    );
+    const transactionClient = {
+      attempt: { create: attemptCreate },
+      attemptQuestion: { createMany: attemptQuestionCreateMany },
+    };
+    const prisma = {
+      contest: {
+        findUnique: jest.fn().mockResolvedValue({
+          name: "ENEM",
+          type: ContestType.RECURRING,
+          exams: [{ exam: enem2025 }],
+        }),
+      },
+      studyTopic: {
+        findFirst: jest.fn().mockResolvedValue({
+          id: 11202,
+          discipline: "Física",
+          subject: "Movimento, forças e equilíbrio",
+          topicCode: "CN-FIS2",
+          topicTitle: "Movimento, equilíbrio e leis físicas",
+        }),
+      },
+      question: {
+        findMany: jest.fn().mockResolvedValue(availableQuestions),
+      },
+      attemptAnswer: {
+        findMany: jest
+          .fn()
+          .mockResolvedValue([{ questionId: 1 }, { questionId: 2 }]),
+      },
+      $transaction: jest.fn(
+        async <T>(
+          callback: (client: typeof transactionClient) => Promise<T>,
+        ) => callback(transactionClient),
+      ),
+    } as unknown as PrismaService;
+
+    const result = await new QuestionsService(prisma).start(
+      {
+        mode: AttemptMode.ALL_YEARS,
+        discipline: "Física",
+        studyTopicId: 11202,
+        includeCorrectAnswers: false,
+        durationMinutes: 30,
+      },
+      contestId,
+    );
+
+    expect(result.questions).toHaveLength(10);
+    expect(result.questions.map((question) => question.id)).not.toContain(1);
+    expect(result.questions.map((question) => question.id)).not.toContain(2);
+    expect(attemptCreate.mock.calls.at(0)?.at(0)?.data).toMatchObject({
+        trainingTopicId: 11202,
+        includeCorrectAnswers: false,
+        totalQuestions: 10,
+        timeLimitSeconds: 1800,
+    });
+    expect(
+      attemptQuestionCreateMany.mock.calls.at(0)?.at(0)?.data,
+    ).toHaveLength(10);
+    expect(
+      attemptQuestionCreateMany.mock.calls.at(0)?.at(0)?.data.at(0),
+    ).toMatchObject({
+      attemptId: "attempt-topic",
+      position: 1,
+    });
+  });
+
+  it("reúne questões do assunto em todas as provas no treino padrão", async () => {
+    const enem2025 = {
+      ...cebraspeExam,
+      id: "enem-2025",
+      name: "ENEM 2025",
+      organization: "INEP",
+      year: 2025,
+      answerOptions: ["A", "B", "C", "D", "E"],
+      defaultDurationMinutes: 630,
+      extendedDurationMinutes: 750,
+    };
+    const enem2024 = {
+      ...enem2025,
+      id: "enem-2024",
+      name: "ENEM 2024",
+      year: 2024,
+    };
+    const availableQuestions = Array.from({ length: 3 }, (_, index) => ({
+      exam: index === 0 ? enem2024 : enem2025,
+      id: index + 1,
+      examId: index === 0 ? enem2024.id : enem2025.id,
+      number: index + 1,
+      examDay: 1,
+      variant: "",
+      discipline: "Língua Portuguesa",
+      subject: "Interpretação de texto",
+      weight: 1,
+      sourcePage: 2,
+      sourceImage: `/questions/enem-2025/q-${index + 1}.png`,
+      contextImage: null,
+    }));
+    let attemptData:
+      | { totalQuestions: number; examId?: string | null }
+      | undefined;
+    const attemptQuestionCreateMany = jest.fn(
+      async (input: {
+        data: Array<{
+          attemptId: string;
+          questionId: number;
+          position: number;
+        }>;
+      }) => {
+        void input;
+        return { count: 3 };
+      },
+    );
+    const transactionClient = {
+      attempt: {
+        create: jest.fn(async (input: {
+          data: { totalQuestions: number; examId?: string | null };
+        }) => {
+          attemptData = input.data;
+          return {
+            id: "attempt-small-topic",
+            mode: AttemptMode.DISCIPLINE,
+            examDay: null,
+            discipline: "Língua Portuguesa",
+            foreignLanguage: null,
+            startedAt: new Date(),
+            timeLimitSeconds: 540,
+            targetSecondsPerQuestion: 180,
+          };
+        }),
+      },
+      attemptQuestion: {
+        createMany: attemptQuestionCreateMany,
+      },
+    };
+    const prisma = {
+      contest: {
+        findUnique: jest.fn().mockResolvedValue({
+          name: "ENEM",
+          type: ContestType.STANDARD,
+          exams: [{ exam: enem2025 }, { exam: enem2024 }],
+        }),
+      },
+      studyTopic: {
+        findFirst: jest.fn().mockResolvedValue({
+          id: 1,
+          discipline: "Língua Portuguesa",
+          subject: "Interpretação de texto",
+          topicCode: "LC-PORT1",
+          topicTitle: "Leitura e interpretação",
+        }),
+      },
+      question: {
+        findMany: jest.fn().mockResolvedValue(availableQuestions),
+        count: jest.fn().mockResolvedValue(0),
+      },
+      $transaction: jest.fn(
+        async <T>(
+          callback: (client: typeof transactionClient) => Promise<T>,
+        ) => callback(transactionClient),
+      ),
+    } as unknown as PrismaService;
+
+    const result = await new QuestionsService(prisma).start(
+      {
+        mode: AttemptMode.DISCIPLINE,
+        allExams: true,
+        discipline: "Língua Portuguesa",
+        studyTopicId: 1,
+        includeCorrectAnswers: true,
+        durationMinutes: 9,
+      },
+      contestId,
+    );
+
+    expect(result.questions).toHaveLength(3);
+    expect(result.questions.map((question) => question.id).sort()).toEqual([
+      1, 2, 3,
+    ]);
+    expect(attemptData).toMatchObject({ totalQuestions: 3, examId: null });
+    expect(
+      attemptQuestionCreateMany.mock.calls.at(0)?.at(0)?.data,
+    ).toHaveLength(3);
+    expect(
+      attemptQuestionCreateMany.mock.calls.at(0)?.at(0)?.data.at(0),
+    ).toMatchObject({ attemptId: "attempt-small-topic" });
+  });
+
+  it("sorteia 10 questões ainda não acertadas entre todos os assuntos", async () => {
+    const enem2025 = {
+      ...cebraspeExam,
+      id: "enem-2025",
+      name: "ENEM 2025",
+      organization: "INEP",
+      year: 2025,
+      answerOptions: ["A", "B", "C", "D", "E"],
+      defaultDurationMinutes: 630,
+      extendedDurationMinutes: 750,
+    };
+    const availableQuestions = Array.from({ length: 18 }, (_, index) => ({
+      id: index + 1,
+      examId: enem2025.id,
+      number: index + 91,
+      examDay: 2,
+      variant: "",
+      discipline: "Física",
+      subject: index % 2 === 0 ? "Mecânica" : "Termologia",
+      weight: 1,
+      sourcePage: 2,
+      sourceImage: `/questions/enem-2025/q-${index + 91}.png`,
+      contextImage: null,
+      exam: enem2025,
+    }));
+    let attemptData:
+      | {
+          trainingTopicId?: number;
+          totalQuestions: number;
+          timeLimitSeconds: number;
+          targetSecondsPerQuestion: number;
+        }
+      | undefined;
+    const transactionClient = {
+      attempt: {
+        create: jest.fn(
+          async (input: { data: NonNullable<typeof attemptData> }) => {
+            attemptData = input.data;
+            return {
+              id: "attempt-random-all-subjects",
+              mode: AttemptMode.ALL_YEARS,
+              examDay: null,
+              discipline: "Física",
+              foreignLanguage: null,
+              startedAt: new Date(),
+              timeLimitSeconds: input.data.timeLimitSeconds,
+              targetSecondsPerQuestion: input.data.targetSecondsPerQuestion,
+            };
+          },
+        ),
+      },
+      attemptQuestion: {
+        createMany: jest.fn().mockResolvedValue({ count: 10 }),
+      },
+    };
+    const prisma = {
+      contest: {
+        findUnique: jest.fn().mockResolvedValue({
+          name: "ENEM",
+          type: ContestType.RECURRING,
+          exams: [{ exam: enem2025 }],
+        }),
+      },
+      question: {
+        findMany: jest.fn().mockResolvedValue(availableQuestions),
+      },
+      attemptAnswer: {
+        findMany: jest
+          .fn()
+          .mockResolvedValue([{ questionId: 1 }, { questionId: 2 }]),
+      },
+      $transaction: jest.fn(
+        async <T>(
+          callback: (client: typeof transactionClient) => Promise<T>,
+        ) => callback(transactionClient),
+      ),
+    } as unknown as PrismaService;
+
+    const result = await new QuestionsService(prisma).start(
+      {
+        mode: AttemptMode.ALL_YEARS,
+        discipline: "Física",
+        randomizeQuestions: true,
+        durationMinutes: 30,
+      },
+      contestId,
+    );
+
+    expect(result.questions).toHaveLength(10);
+    expect(result.questions.map((question) => question.id)).not.toContain(1);
+    expect(result.questions.map((question) => question.id)).not.toContain(2);
+    expect(attemptData).toMatchObject({
+      totalQuestions: 10,
+      timeLimitSeconds: 1800,
+      targetSecondsPerQuestion: 180,
+    });
+    expect(attemptData?.trainingTopicId).toBeUndefined();
   });
 
   it("retorna apenas C e E nas questões de uma prova Cebraspe", async () => {
@@ -725,5 +1315,26 @@ describe("QuestionsService", () => {
         lastSavedAt: new Date("2026-07-28T11:00:00.000Z"),
       }),
     ]);
+  });
+
+  it("exclui somente um simulado não finalizado do concurso atual", async () => {
+    const deleteMany = jest.fn().mockResolvedValue({ count: 1 });
+    const prisma = {
+      attempt: { deleteMany },
+    } as unknown as PrismaService;
+
+    const result = await new QuestionsService(prisma).deleteDraft(
+      "attempt-draft",
+      contestId,
+    );
+
+    expect(deleteMany).toHaveBeenCalledWith({
+      where: {
+        id: "attempt-draft",
+        contestId,
+        completedAt: null,
+      },
+    });
+    expect(result).toEqual({ id: "attempt-draft" });
   });
 });

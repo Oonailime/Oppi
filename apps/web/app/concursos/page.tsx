@@ -203,7 +203,12 @@ export default function ContestsPage() {
                   </small>
                   <strong>{contest.name}</strong>
                   <span>
-                    {contest.type === "RECURRING" ? (
+                    {contest.targetDate ? (
+                      <>
+                        <CalendarDays size={15} />
+                        {examDateLabel(contest.targetDate)}
+                      </>
+                    ) : contest.type === "RECURRING" ? (
                       <>
                         <Repeat2 size={15} />
                         Realizado todos os anos
@@ -217,9 +222,11 @@ export default function ContestsPage() {
                   </span>
                 </span>
                 <span className="contest-card-countdown">
-                  {contest.type === "RECURRING"
-                    ? "10 edições"
-                    : countdownLabel(days)}
+                  {contest.targetDate
+                    ? countdownLabel(days)
+                    : contest.type === "RECURRING"
+                      ? "10 edições"
+                      : countdownLabel(days)}
                 </span>
                 <ArrowRight size={20} />
               </button>

@@ -74,6 +74,26 @@ export interface DisciplineOption {
   progressStatus: "NOT_STARTED" | "MASTERED" | "GOOD" | "REVIEW";
 }
 
+export interface TrainingSubjectOption {
+  id: number;
+  name: string;
+  detail: string | null;
+  topicCode: string | null;
+  topicTitle: string | null;
+  competencyCodes: string[];
+  skillCodes: string[];
+  questionCount: number;
+  correctQuestionCount: number;
+  unmasteredQuestionCount: number;
+}
+
+export interface TrainingTopicReference {
+  id: number;
+  subject: string;
+  topicCode: string | null;
+  topicTitle: string | null;
+}
+
 export interface Question {
   id: number;
   examId: string;
@@ -110,6 +130,8 @@ export interface StartedAttempt {
   mode: AttemptMode;
   examDay: number | null;
   discipline: string | null;
+  trainingTopic: TrainingTopicReference | null;
+  includeCorrectAnswers: boolean;
   foreignLanguage: ForeignLanguage | null;
   startedAt: string;
   timeLimitSeconds: number;
@@ -125,6 +147,8 @@ export interface DraftAttempt {
   mode: AttemptMode;
   examDay: number | null;
   discipline: string | null;
+  trainingTopic: TrainingTopicReference | null;
+  includeCorrectAnswers: boolean;
   foreignLanguage: ForeignLanguage | null;
   startedAt: string;
   lastSavedAt: string;
@@ -158,6 +182,8 @@ export interface AttemptResult {
   mode: AttemptMode;
   examDay: number | null;
   discipline: string | null;
+  trainingTopic: TrainingTopicReference | null;
+  includeCorrectAnswers: boolean;
   foreignLanguage: ForeignLanguage | null;
   startedAt: string;
   completedAt: string;
@@ -207,6 +233,12 @@ export interface StudyTopic {
   detail: string | null;
   page: string;
   suggestedPriority: string;
+  topicCode: string | null;
+  topicTitle: string | null;
+  isGroup: boolean;
+  competencyCodes: string[];
+  skillCodes: string[];
+  sortOrder: number;
   status: StudyStatus;
   progress: number;
   questionsCompleted: number;
@@ -215,6 +247,29 @@ export interface StudyTopic {
   videoLessons: Array<{
     label: string;
     url: string;
+  }>;
+}
+
+export interface StudyCatalog {
+  cognitiveAxes: Array<{
+    code: string;
+    title: string;
+    description: string;
+  }>;
+  modules: Array<{
+    name: string;
+    topics: Array<{
+      code: string;
+      title: string;
+      module: string;
+      page: string;
+      competencyCodes: string[];
+      skillCodes: string[];
+      completedSubjects: number;
+      totalSubjects: number;
+      progress: number;
+      subjects: StudyTopic[];
+    }>;
   }>;
 }
 
@@ -257,6 +312,8 @@ export interface HistoryItem {
   mode: AttemptMode;
   examDay: number | null;
   discipline: string | null;
+  trainingTopic: TrainingTopicReference | null;
+  includeCorrectAnswers: boolean;
   foreignLanguage: ForeignLanguage | null;
   completedAt: string;
   totalQuestions: number;

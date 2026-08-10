@@ -18,6 +18,7 @@ const standardFontDataUrl = path.join(
   "node_modules/pdfjs-dist/standard_fonts/",
 );
 const scale = 2;
+const auditOnly = process.argv.includes("--audit-only");
 
 const exams = [
   {
@@ -913,8 +914,10 @@ async function extractExam(exam) {
       segment,
       document,
     );
-    await renderQuestions(exam, segment, document, markers, imageDirectory);
-    if (exam.extraContexts) {
+    if (!auditOnly) {
+      await renderQuestions(exam, segment, document, markers, imageDirectory);
+    }
+    if (exam.extraContexts && !auditOnly) {
       extraContextByQuestion = await renderExtraContexts(
         exam,
         document,
@@ -977,11 +980,13 @@ async function extractExam(exam) {
       annulled,
     };
   });
-  fs.writeFileSync(
-    path.join(dataDirectory, `${exam.id}-questions.json`),
-    `${JSON.stringify(questions, null, 2)}\n`,
-  );
-  if (process.env.EXTRACTION_AUDIT === "1") {
+  if (!auditOnly) {
+    fs.writeFileSync(
+      path.join(dataDirectory, `${exam.id}-questions.json`),
+      `${JSON.stringify(questions, null, 2)}\n`,
+    );
+  }
+  if (process.env.EXTRACTION_AUDIT === "1" || auditOnly) {
     fs.writeFileSync(
       path.join("/tmp", `${exam.id}-classification-audit.json`),
       `${JSON.stringify(

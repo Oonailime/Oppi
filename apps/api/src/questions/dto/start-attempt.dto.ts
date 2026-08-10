@@ -1,5 +1,6 @@
 import { AttemptMode, ForeignLanguage } from "@prisma/client";
 import {
+  IsBoolean,
   IsEnum,
   IsInt,
   Max,
@@ -10,7 +11,10 @@ import {
 } from "class-validator";
 
 export class StartAttemptDto {
-  @ValidateIf((input: StartAttemptDto) => input.mode !== AttemptMode.ALL_YEARS)
+  @ValidateIf(
+    (input: StartAttemptDto) =>
+      input.mode !== AttemptMode.ALL_YEARS && !input.allExams,
+  )
   @IsString()
   examId?: string;
 
@@ -20,6 +24,10 @@ export class StartAttemptDto {
   @IsInt()
   @Min(1)
   durationMinutes!: number;
+
+  @IsOptional()
+  @IsBoolean()
+  allExams?: boolean;
 
   @IsOptional()
   @IsInt()
@@ -34,6 +42,19 @@ export class StartAttemptDto {
   )
   @IsString()
   discipline?: string;
+
+  @IsOptional()
+  @IsInt()
+  @Min(1)
+  studyTopicId?: number;
+
+  @IsOptional()
+  @IsBoolean()
+  includeCorrectAnswers?: boolean;
+
+  @IsOptional()
+  @IsBoolean()
+  randomizeQuestions?: boolean;
 
   @IsOptional()
   @IsEnum(ForeignLanguage)

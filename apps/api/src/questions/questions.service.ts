@@ -18,6 +18,7 @@ import { SubmitAttemptDto } from "./dto/submit-attempt.dto";
 import { calculateAttemptScore } from "./scoring";
 import {
   calculateTargetSecondsPerQuestion,
+  calculateTrainingTimeLimitSeconds,
   calculateTimePerformance,
 } from "./timing";
 
@@ -67,6 +68,18 @@ function formatDuration(minutes: number) {
 
 function languageVariant(language: ForeignLanguage | undefined) {
   return language ?? "";
+}
+
+function shuffled<T>(items: T[]) {
+  const result = [...items];
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [result[index], result[swapIndex]] = [
+      result[swapIndex]!,
+      result[index]!,
+    ];
+  }
+  return result;
 }
 
 type EnemDay = 1 | 2;
@@ -281,18 +294,13 @@ export class QuestionsService {
       if (!contest) {
         throw new NotFoundException("Concurso não encontrado.");
       }
-      if (contest.type !== ContestType.RECURRING) {
-        throw new BadRequestException(
-          "Selecione uma prova para listar suas disciplinas.",
-        );
-      }
       examIds = contest.exams.map(({ examId: assignedExamId }) => assignedExamId);
     }
 
     const [rows, answerHistory] = await Promise.all([
       this.prisma.question.groupBy({
         by: ["discipline"],
-        where: { examId: { in: examIds } },
+        where: { examId: { in: examIds }, annulled: false },
         _count: { id: true },
         orderBy: { discipline: "asc" },
       }),
@@ -300,7 +308,6 @@ export class QuestionsService {
         where: {
           attempt: {
             contestId,
-            examId: examId || undefined,
             completedAt: { not: null },
           },
           question: {
@@ -308,10 +315,10 @@ export class QuestionsService {
           },
         },
         select: {
-          attemptId: true,
           isCorrect: true,
           question: {
             select: {
+              id: true,
               annulled: true,
               discipline: true,
             },
@@ -320,39 +327,20 @@ export class QuestionsService {
       }),
     ]);
 
-    const statsByAttempt = new Map<
-      string,
-      Map<string, { correct: number; total: number }>
-    >();
+    const progressByDiscipline = new Map<string, Set<number>>();
     for (const answer of answerHistory) {
       if (answer.question.annulled) continue;
-      const disciplines =
-        statsByAttempt.get(answer.attemptId) ??
-        new Map<string, { correct: number; total: number }>();
-      const stats = disciplines.get(answer.question.discipline) ?? {
-        correct: 0,
-        total: 0,
-      };
-      stats.total += 1;
-      stats.correct += Number(answer.isCorrect);
-      disciplines.set(answer.question.discipline, stats);
-      statsByAttempt.set(answer.attemptId, disciplines);
-    }
-
-    const bestPercentageByDiscipline = new Map<string, number>();
-    for (const disciplines of statsByAttempt.values()) {
-      for (const [discipline, stats] of disciplines) {
-        if (stats.total === 0) continue;
-        const percentage = (stats.correct / stats.total) * 100;
-        bestPercentageByDiscipline.set(
-          discipline,
-          Math.max(bestPercentageByDiscipline.get(discipline) ?? 0, percentage),
-        );
-      }
+      const progress =
+        progressByDiscipline.get(answer.question.discipline) ?? new Set<number>();
+      if (answer.isCorrect) progress.add(answer.question.id);
+      progressByDiscipline.set(answer.question.discipline, progress);
     }
 
     return rows.map((row) => {
-      const bestPercentage = bestPercentageByDiscipline.get(row.discipline);
+      const progress = progressByDiscipline.get(row.discipline);
+      const bestPercentage = progress
+        ? (progress.size / row._count.id) * 100
+        : undefined;
       return {
         name: row.discipline,
         questionCount: row._count.id,
@@ -372,6 +360,133 @@ export class QuestionsService {
     });
   }
 
+  async listSubjects(
+    discipline: string | undefined,
+    contestId: string,
+    examId?: string,
+  ) {
+    if (!discipline?.trim()) {
+      throw new BadRequestException(
+        "Selecione uma disciplina para listar os assuntos.",
+      );
+    }
+    let examIds: string[];
+    if (examId) {
+      await this.getAssignedExam(examId, contestId);
+      examIds = [examId];
+    } else {
+      const contest = await this.prisma.contest.findUnique({
+        where: { id: contestId },
+        select: {
+          exams: { select: { examId: true } },
+        },
+      });
+      if (!contest) {
+        throw new NotFoundException("Concurso não encontrado.");
+      }
+      examIds = contest.exams.map(({ examId: assignedExamId }) => assignedExamId);
+    }
+    if (examIds.length === 0) return [];
+
+    const [questions, correctAnswers] = await Promise.all([
+      this.prisma.question.findMany({
+        where: {
+          examId: { in: examIds },
+          discipline,
+          annulled: false,
+          studyTopicId: { not: null },
+          studyTopic: { isGroup: false },
+        },
+        select: {
+          id: true,
+          studyTopic: {
+            select: {
+              id: true,
+              subject: true,
+              detail: true,
+              topicCode: true,
+              topicTitle: true,
+              competencyCodes: true,
+              skillCodes: true,
+              sortOrder: true,
+            },
+          },
+        },
+      }),
+      this.prisma.attemptAnswer.findMany({
+        where: {
+          isCorrect: true,
+          attempt: {
+            contestId,
+            completedAt: { not: null },
+          },
+          question: {
+            examId: { in: examIds },
+            discipline,
+            annulled: false,
+          },
+        },
+        select: { questionId: true },
+        distinct: ["questionId"],
+      }),
+    ]);
+
+    const correctQuestionIds = new Set(
+      correctAnswers.map(({ questionId }) => questionId),
+    );
+    const subjects = new Map<
+      number,
+      {
+        id: number;
+        name: string;
+        detail: string | null;
+        topicCode: string | null;
+        topicTitle: string | null;
+        competencyCodes: string[];
+        skillCodes: string[];
+        sortOrder: number;
+        questionCount: number;
+        correctQuestionCount: number;
+      }
+    >();
+    for (const question of questions) {
+      if (!question.studyTopic) continue;
+      const current = subjects.get(question.studyTopic.id) ?? {
+        id: question.studyTopic.id,
+        name: question.studyTopic.subject,
+        detail: question.studyTopic.detail,
+        topicCode: question.studyTopic.topicCode,
+        topicTitle: question.studyTopic.topicTitle,
+        competencyCodes: question.studyTopic.competencyCodes,
+        skillCodes: question.studyTopic.skillCodes,
+        sortOrder: question.studyTopic.sortOrder,
+        questionCount: 0,
+        correctQuestionCount: 0,
+      };
+      current.questionCount += 1;
+      current.correctQuestionCount += Number(
+        correctQuestionIds.has(question.id),
+      );
+      subjects.set(question.studyTopic.id, current);
+    }
+
+    return [...subjects.values()]
+      .map((subject) => ({
+        ...subject,
+        unmasteredQuestionCount:
+          subject.questionCount - subject.correctQuestionCount,
+      }))
+      .sort(
+        (left, right) =>
+          (left.topicCode ?? "").localeCompare(
+            right.topicCode ?? "",
+            "pt-BR",
+          ) ||
+          left.sortOrder - right.sortOrder ||
+          left.name.localeCompare(right.name, "pt-BR"),
+      );
+  }
+
   async start(dto: StartAttemptDto, contestId: string) {
     if (
       (dto.mode === AttemptMode.DISCIPLINE ||
@@ -380,6 +495,26 @@ export class QuestionsService {
     ) {
       throw new BadRequestException(
         "A disciplina é obrigatória para o treino por disciplina.",
+      );
+    }
+    if (dto.studyTopicId && dto.mode === AttemptMode.FULL) {
+      throw new BadRequestException(
+        "Selecione o modo de treino por disciplina para praticar um assunto.",
+      );
+    }
+    if (dto.randomizeQuestions && dto.mode !== AttemptMode.ALL_YEARS) {
+      throw new BadRequestException(
+        "O sorteio entre todos os assuntos só está disponível em concursos recorrentes.",
+      );
+    }
+    if (dto.randomizeQuestions && dto.studyTopicId) {
+      throw new BadRequestException(
+        "Escolha um assunto específico ou o sorteio entre todos os assuntos.",
+      );
+    }
+    if (dto.allExams && dto.mode !== AttemptMode.DISCIPLINE) {
+      throw new BadRequestException(
+        "A união de todas as provas só está disponível no treino por disciplina.",
       );
     }
 
@@ -391,6 +526,8 @@ export class QuestionsService {
           "O treino com questões de todos os anos só está disponível em concursos recorrentes.",
         );
       }
+      exams = contest.exams.map(({ exam }) => exam);
+    } else if (dto.allExams) {
       exams = contest.exams.map(({ exam }) => exam);
     } else {
       if (!dto.examId) {
@@ -405,6 +542,24 @@ export class QuestionsService {
         );
       }
       exams = [assignment.exam];
+    }
+
+    const trainingTopic = dto.studyTopicId
+      ? await this.prisma.studyTopic.findFirst({
+          where: {
+            id: dto.studyTopicId,
+            isGroup: false,
+            discipline: dto.discipline,
+            contestProgress: {
+              some: { contestId },
+            },
+          },
+        })
+      : null;
+    if (dto.studyTopicId && !trainingTopic) {
+      throw new BadRequestException(
+        "O assunto selecionado não pertence a esta disciplina ou concurso.",
+      );
     }
 
     if (exams.length === 0) {
@@ -429,7 +584,7 @@ export class QuestionsService {
 
     const examDay = requiresExamDay ? (dto.examDay as EnemDay) : undefined;
     const language = await this.resolveLanguage(dto, exams, examDay);
-    const questions = await this.prisma.question.findMany({
+    const availableQuestions = await this.prisma.question.findMany({
       where: {
         examId: { in: exams.map((exam) => exam.id) },
         examDay,
@@ -438,6 +593,8 @@ export class QuestionsService {
           dto.mode === AttemptMode.ALL_YEARS
             ? dto.discipline
             : undefined,
+        studyTopicId: trainingTopic?.id,
+        annulled: trainingTopic ? false : undefined,
         OR: [
           { variant: "" },
           { variant: languageVariant(language) },
@@ -451,6 +608,51 @@ export class QuestionsService {
       ],
     });
 
+    const filtersPreviouslyCorrectAnswers =
+      (trainingTopic !== null || dto.randomizeQuestions === true) &&
+      !dto.includeCorrectAnswers;
+    const correctlyAnsweredQuestionIds = filtersPreviouslyCorrectAnswers
+      ? new Set(
+          (
+            await this.prisma.attemptAnswer.findMany({
+              where: {
+                isCorrect: true,
+                attempt: {
+                  contestId,
+                  completedAt: { not: null },
+                },
+                question: {
+                  examId: { in: exams.map((exam) => exam.id) },
+                  discipline: dto.randomizeQuestions
+                    ? dto.discipline
+                    : undefined,
+                  studyTopicId: trainingTopic?.id,
+                },
+              },
+              select: { questionId: true },
+              distinct: ["questionId"],
+            })
+          ).map(({ questionId }) => questionId),
+        )
+      : new Set<number>();
+    const eligibleQuestions = availableQuestions.filter(
+      (question) => !correctlyAnsweredQuestionIds.has(question.id),
+    );
+    if (dto.randomizeQuestions && eligibleQuestions.length < 10) {
+      throw new BadRequestException(
+        dto.includeCorrectAnswers
+          ? `Esta disciplina possui somente ${eligibleQuestions.length} questões disponíveis; são necessárias 10.`
+          : `Restam somente ${eligibleQuestions.length} questões ainda não acertadas nesta disciplina. Ative a inclusão de questões já acertadas para completar o sorteio.`,
+      );
+    }
+    const questions = trainingTopic
+      ? dto.mode === AttemptMode.ALL_YEARS
+        ? shuffled(eligibleQuestions).slice(0, 10)
+        : shuffled(eligibleQuestions)
+      : dto.randomizeQuestions
+        ? shuffled(eligibleQuestions).slice(0, 10)
+        : eligibleQuestions;
+
     if (questions.length === 0) {
       throw new BadRequestException("Nenhuma questão encontrada para o filtro.");
     }
@@ -459,7 +661,9 @@ export class QuestionsService {
       examDay && selectedExam
         ? enemDaySchedule(selectedExam.year, examDay)
         : undefined;
-    const defaultDurationMinutes = daySchedule
+    const defaultDurationMinutes = trainingTopic
+      ? Math.max(1, questions.length * 3)
+      : daySchedule
       ? daySchedule.objectiveDurationMinutes
       : dto.mode === AttemptMode.ALL_YEARS
         ? Math.max(1, questions.length * 3)
@@ -467,7 +671,9 @@ export class QuestionsService {
             (total, exam) => total + exam.defaultDurationMinutes,
             0,
           );
-    const extendedDurationMinutes = daySchedule
+    const extendedDurationMinutes = trainingTopic
+      ? Math.max(1, questions.length * 4)
+      : daySchedule
       ? daySchedule.extendedObjectiveDurationMinutes
       : dto.mode === AttemptMode.ALL_YEARS
         ? Math.max(1, questions.length * 4)
@@ -484,7 +690,9 @@ export class QuestionsService {
     }
 
     const targetQuestionCount =
-      dto.mode === AttemptMode.ALL_YEARS || examDay !== undefined
+      trainingTopic !== null ||
+      dto.mode === AttemptMode.ALL_YEARS ||
+      examDay !== undefined
         ? questions.length
         : await this.prisma.question.count({
             where: {
@@ -495,22 +703,35 @@ export class QuestionsService {
               ],
             },
           });
+    const targetSecondsPerQuestion = calculateTargetSecondsPerQuestion(
+      dto.durationMinutes,
+      targetQuestionCount,
+    );
+    const timeLimitSeconds =
+      dto.mode === AttemptMode.DISCIPLINE
+        ? calculateTrainingTimeLimitSeconds(
+            dto.durationMinutes,
+            targetQuestionCount,
+            questions.length,
+          )
+        : dto.durationMinutes * 60;
 
     const attempt = await this.prisma.$transaction(async (tx) => {
       const created = await tx.attempt.create({
         data: {
           contestId,
           examId:
-            dto.mode === AttemptMode.ALL_YEARS ? null : exams.at(0)?.id,
+            dto.mode === AttemptMode.ALL_YEARS || dto.allExams
+              ? null
+              : exams.at(0)?.id,
+          trainingTopicId: trainingTopic?.id,
           examDay,
           mode: dto.mode,
           discipline: dto.discipline,
           foreignLanguage: language,
-          timeLimitSeconds: dto.durationMinutes * 60,
-          targetSecondsPerQuestion: calculateTargetSecondsPerQuestion(
-            dto.durationMinutes,
-            targetQuestionCount,
-          ),
+          includeCorrectAnswers: dto.includeCorrectAnswers ?? false,
+          timeLimitSeconds,
+          targetSecondsPerQuestion,
           totalQuestions: questions.length,
         },
       });
@@ -523,13 +744,31 @@ export class QuestionsService {
       });
       return created;
     });
+    const questionExamIds = new Set(
+      questions.map((question) => question.examId),
+    );
+    const attemptExams = exams.filter((exam) => questionExamIds.has(exam.id));
 
     return {
       attemptId: attempt.id,
-      exam: this.attemptExam(exams, contest.name, attempt.discipline),
+      exam: this.attemptExam(
+        attemptExams,
+        contest.name,
+        attempt.discipline,
+        trainingTopic?.subject,
+      ),
       mode: attempt.mode,
       examDay: attempt.examDay,
       discipline: attempt.discipline,
+      trainingTopic: trainingTopic
+        ? {
+            id: trainingTopic.id,
+            subject: trainingTopic.subject,
+            topicCode: trainingTopic.topicCode,
+            topicTitle: trainingTopic.topicTitle,
+          }
+        : null,
+      includeCorrectAnswers: dto.includeCorrectAnswers ?? false,
       foreignLanguage: attempt.foreignLanguage,
       startedAt: attempt.startedAt,
       timeLimitSeconds: attempt.timeLimitSeconds,
@@ -693,6 +932,7 @@ export class QuestionsService {
       include: {
         contest: true,
         exam: true,
+        trainingTopic: true,
         questions: {
           include: {
             question: {
@@ -722,6 +962,7 @@ export class QuestionsService {
       exams,
       attempt.contest.name,
       attempt.discipline,
+      attempt.trainingTopic?.subject,
     );
 
     if (!attempt.completedAt) {
@@ -732,6 +973,15 @@ export class QuestionsService {
         mode: attempt.mode,
         examDay: attempt.examDay,
         discipline: attempt.discipline,
+        trainingTopic: attempt.trainingTopic
+          ? {
+              id: attempt.trainingTopic.id,
+              subject: attempt.trainingTopic.subject,
+              topicCode: attempt.trainingTopic.topicCode,
+              topicTitle: attempt.trainingTopic.topicTitle,
+            }
+          : null,
+        includeCorrectAnswers: attempt.includeCorrectAnswers,
         foreignLanguage: attempt.foreignLanguage,
         startedAt: attempt.startedAt,
         timeLimitSeconds: attempt.timeLimitSeconds,
@@ -817,6 +1067,15 @@ export class QuestionsService {
       mode: attempt.mode,
       examDay: attempt.examDay,
       discipline: attempt.discipline,
+      trainingTopic: attempt.trainingTopic
+        ? {
+            id: attempt.trainingTopic.id,
+            subject: attempt.trainingTopic.subject,
+            topicCode: attempt.trainingTopic.topicCode,
+            topicTitle: attempt.trainingTopic.topicTitle,
+          }
+        : null,
+      includeCorrectAnswers: attempt.includeCorrectAnswers,
       foreignLanguage: attempt.foreignLanguage,
       startedAt: attempt.startedAt,
       completedAt: attempt.completedAt,
@@ -867,6 +1126,7 @@ export class QuestionsService {
       include: {
         contest: true,
         exam: true,
+        trainingTopic: true,
         questions: {
           include: {
             question: {
@@ -890,10 +1150,20 @@ export class QuestionsService {
           exams,
           attempt.contest.name,
           attempt.discipline,
+          attempt.trainingTopic?.subject,
         ),
         mode: attempt.mode,
         examDay: attempt.examDay,
         discipline: attempt.discipline,
+        trainingTopic: attempt.trainingTopic
+          ? {
+              id: attempt.trainingTopic.id,
+              subject: attempt.trainingTopic.subject,
+              topicCode: attempt.trainingTopic.topicCode,
+              topicTitle: attempt.trainingTopic.topicTitle,
+            }
+          : null,
+        includeCorrectAnswers: attempt.includeCorrectAnswers,
         foreignLanguage: attempt.foreignLanguage,
         completedAt: attempt.completedAt,
         totalQuestions: attempt.totalQuestions,
@@ -913,6 +1183,7 @@ export class QuestionsService {
       where: { contestId, completedAt: null },
       include: {
         contest: true,
+        trainingTopic: true,
         questions: {
           include: {
             question: {
@@ -939,10 +1210,20 @@ export class QuestionsService {
           exams,
           attempt.contest.name,
           attempt.discipline,
+          attempt.trainingTopic?.subject,
         ),
         mode: attempt.mode,
         examDay: attempt.examDay,
         discipline: attempt.discipline,
+        trainingTopic: attempt.trainingTopic
+          ? {
+              id: attempt.trainingTopic.id,
+              subject: attempt.trainingTopic.subject,
+              topicCode: attempt.trainingTopic.topicCode,
+              topicTitle: attempt.trainingTopic.topicTitle,
+            }
+          : null,
+        includeCorrectAnswers: attempt.includeCorrectAnswers,
         foreignLanguage: attempt.foreignLanguage,
         startedAt: attempt.startedAt,
         lastSavedAt: draft.savedAt ?? attempt.startedAt,
@@ -955,6 +1236,20 @@ export class QuestionsService {
         elapsedSeconds: draft.elapsedSeconds,
       };
     });
+  }
+
+  async deleteDraft(attemptId: string, contestId: string) {
+    const deleted = await this.prisma.attempt.deleteMany({
+      where: {
+        id: attemptId,
+        contestId,
+        completedAt: null,
+      },
+    });
+    if (deleted.count === 0) {
+      throw new NotFoundException("Simulado em andamento não encontrado.");
+    }
+    return { id: attemptId };
   }
 
   async saveDraft(
@@ -1070,6 +1365,9 @@ export class QuestionsService {
       where: {
         examId: { in: exams.map((exam) => exam.id) },
         examDay,
+        discipline:
+          dto.mode === AttemptMode.DISCIPLINE ? dto.discipline : undefined,
+        studyTopicId: dto.studyTopicId,
         variant: { not: "" },
       },
     });
@@ -1148,6 +1446,7 @@ export class QuestionsService {
     exams: SelectedExam[],
     contestName: string,
     discipline?: string | null,
+    subject?: string | null,
   ) {
     if (exams.length === 0) {
       throw new NotFoundException(
@@ -1161,7 +1460,7 @@ export class QuestionsService {
     const organizations = [...new Set(exams.map((exam) => exam.organization))];
     return {
       id: "all-years",
-      name: `${contestName} · treino de ${discipline ?? "disciplina"}`,
+      name: `${contestName} · treino de ${subject ?? discipline ?? "disciplina"}`,
       organization:
         organizations.length === 1 ? organizations[0] : "Múltiplas bancas",
       year: Math.max(...years),

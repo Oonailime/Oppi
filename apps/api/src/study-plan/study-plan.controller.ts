@@ -37,6 +37,11 @@ export class StudyPlanController {
     return this.studyPlanService.summary(contest.id);
   }
 
+  @Get("catalog")
+  catalog(@CurrentContest() contest: Contest) {
+    return this.studyPlanService.catalog(contest.id);
+  }
+
   @Patch(":id")
   update(
     @CurrentContest() contest: Contest,

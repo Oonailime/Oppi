@@ -249,7 +249,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 22,
@@ -261,7 +261,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 23,
@@ -273,7 +273,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 24,
@@ -285,7 +285,7 @@
     "contextImage": null,
     "correctAnswer": "A",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 25,
@@ -297,7 +297,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 26,
@@ -309,7 +309,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 175
   },
   {
     "id": 27,
@@ -321,7 +321,7 @@
     "contextImage": null,
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 42
   },
   {
     "id": 28,
@@ -333,7 +333,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 156
   },
   {
     "id": 29,
@@ -345,7 +345,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 30,
@@ -357,7 +357,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 31,
@@ -369,7 +369,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 32,
@@ -381,7 +381,7 @@
     "contextImage": null,
     "correctAnswer": "D",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 33,
@@ -405,7 +405,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 35,
@@ -417,7 +417,7 @@
     "contextImage": null,
     "correctAnswer": "B",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 36,
@@ -681,7 +681,7 @@
     "contextImage": null,
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 349
   },
   {
     "id": 58,

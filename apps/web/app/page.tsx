@@ -142,14 +142,18 @@ export default function DashboardPage() {
           <span>
             <small>
               {selectedContest?.name} ·{" "}
-              {selectedContest?.type === "RECURRING"
-                ? "realizado todos os anos"
-                : examDateLabel(selectedContest?.targetDate ?? null)}
+              {selectedContest?.targetDate
+                ? examDateLabel(selectedContest.targetDate)
+                : selectedContest?.type === "RECURRING"
+                  ? "realizado todos os anos"
+                  : examDateLabel(null)}
             </small>
             <strong>
-              {selectedContest?.type === "RECURRING"
-                ? "10 edições disponíveis"
-                : countdownLabel(daysLeft)}
+              {selectedContest?.targetDate
+                ? countdownLabel(daysLeft)
+                : selectedContest?.type === "RECURRING"
+                  ? "10 edições disponíveis"
+                  : countdownLabel(daysLeft)}
             </strong>
           </span>
         </div>
@@ -240,7 +244,9 @@ export default function DashboardPage() {
           <div className="topic-list compact-list">
             {data.nextTopics.map((topic, index) => (
               <div className="topic-row" key={topic.id}>
-                <span className="topic-index">{String(index + 1).padStart(2, "0")}</span>
+                <span className="topic-order">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <div>
                   <strong>{topic.subject}</strong>
                   <small>{topic.discipline}</small>

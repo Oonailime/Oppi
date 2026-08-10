@@ -18,6 +18,9 @@
     "source:extract": "node scripts/extract-source-data.mjs",
     "source:extract:stn": "node scripts/extract-stn-2024.mjs",
     "source:extract:added": "node scripts/extract-added-exams.mjs",
+    "source:audit:added": "node scripts/extract-added-exams.mjs --audit-only",
+    "source:categorize:dataprev": "node automacoes/categorizar-questoes-dataprev.mjs --apply",
+    "source:categorize:dataprev:audit": "node automacoes/categorizar-questoes-dataprev.mjs --force",
     "source:extract:enem": "node scripts/extract-enem.mjs",
     "source:categorize:enem": "node scripts/categorize-enem-questions.mjs",
     "source:study-plan:enem": "node scripts/build-enem-study-plan.mjs"

@@ -9,7 +9,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 1
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 1
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 5
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 15
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 17
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 4
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 12
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 18
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 12
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 19
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 11
   },
   {
     "id": 12,
@@ -141,7 +141,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 1
   },
   {
     "id": 13,
@@ -153,7 +153,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 1
   },
   {
     "id": 14,
@@ -165,7 +165,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 1
   },
   {
     "id": 15,
@@ -177,7 +177,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 1
   },
   {
     "id": 16,
@@ -189,7 +189,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 4
   },
   {
     "id": 17,
@@ -201,7 +201,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 5
   },
   {
     "id": 18,
@@ -213,7 +213,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 12
   },
   {
     "id": 19,
@@ -225,7 +225,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 20,
@@ -237,7 +237,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 21,
@@ -249,7 +249,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 22,
@@ -261,7 +261,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 23
   },
   {
     "id": 23,
@@ -273,7 +273,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 24,
@@ -285,7 +285,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 25,
@@ -297,7 +297,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 26,
@@ -309,7 +309,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 27,
@@ -321,7 +321,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 28,
@@ -333,7 +333,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 29,
@@ -345,7 +345,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 22
   },
   {
     "id": 30,
@@ -357,7 +357,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 23
   },
   {
     "id": 31,
@@ -369,7 +369,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 36
   },
   {
     "id": 32,
@@ -381,7 +381,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 36
   },
   {
     "id": 33,
@@ -393,7 +393,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 36
   },
   {
     "id": 34,
@@ -405,7 +405,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 36
   },
   {
     "id": 35,
@@ -417,7 +417,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 36
   },
   {
     "id": 36,
@@ -429,7 +429,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 33
   },
   {
     "id": 37,
@@ -441,7 +441,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 33
   },
   {
     "id": 38,
@@ -453,7 +453,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 32
   },
   {
     "id": 39,
@@ -465,7 +465,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 33
   },
   {
     "id": 40,
@@ -477,7 +477,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 25
   },
   {
     "id": 41,
@@ -489,7 +489,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 33
   },
   {
     "id": 42,
@@ -501,7 +501,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 33
   },
   {
     "id": 43,
@@ -513,7 +513,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 25
   },
   {
     "id": 44,
@@ -525,7 +525,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 37
   },
   {
     "id": 45,
@@ -537,7 +537,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 36
   },
   {
     "id": 46,
@@ -549,7 +549,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-04.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 64
   },
   {
     "id": 47,
@@ -561,7 +561,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-04.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 64
   },
   {
     "id": 48,
@@ -573,7 +573,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 64
   },
   {
     "id": 49,
@@ -585,7 +585,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 218
   },
   {
     "id": 50,
@@ -597,7 +597,7 @@
     "contextImage": "/questions/serpro-2023/context-basic-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 64
   },
   {
     "id": 51,
@@ -609,7 +609,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 217
   },
   {
     "id": 52,
@@ -621,7 +621,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 217
   },
   {
     "id": 53,
@@ -633,7 +633,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 218
   },
   {
     "id": 54,
@@ -645,7 +645,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 215
   },
   {
     "id": 55,
@@ -657,7 +657,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 215
   },
   {
     "id": 56,
@@ -669,7 +669,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 218
   },
   {
     "id": 57,
@@ -681,7 +681,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 218
   },
   {
     "id": 58,
@@ -693,7 +693,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 218
   },
   {
     "id": 59,
@@ -705,7 +705,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 220
   },
   {
     "id": 60,
@@ -717,7 +717,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 220
   },
   {
     "id": 61,
@@ -729,7 +729,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 127
   },
   {
     "id": 62,
@@ -741,7 +741,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 127
   },
   {
     "id": 63,
@@ -753,7 +753,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 128
   },
   {
     "id": 64,
@@ -765,7 +765,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 65,
@@ -777,7 +777,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 47
   },
   {
     "id": 66,
@@ -789,7 +789,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 109
   },
   {
     "id": 67,
@@ -801,7 +801,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 101
   },
   {
     "id": 68,
@@ -813,7 +813,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 105
   },
   {
     "id": 69,
@@ -825,7 +825,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 101
   },
   {
     "id": 70,
@@ -837,7 +837,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 392
   },
   {
     "id": 71,
@@ -849,7 +849,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 408
   },
   {
     "id": 72,
@@ -861,7 +861,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 288
   },
   {
     "id": 73,
@@ -873,7 +873,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-01.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 207
   },
   {
     "id": 74,
@@ -885,7 +885,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 381
   },
   {
     "id": 75,
@@ -897,7 +897,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 139
   },
   {
     "id": 76,
@@ -909,7 +909,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 212
   },
   {
     "id": 77,
@@ -921,7 +921,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 101
   },
   {
     "id": 78,
@@ -933,7 +933,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 381
   },
   {
     "id": 79,
@@ -945,7 +945,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 103
   },
   {
     "id": 80,
@@ -957,7 +957,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 103
   },
   {
     "id": 81,
@@ -969,7 +969,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 130
   },
   {
     "id": 82,
@@ -981,7 +981,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 130
   },
   {
     "id": 83,
@@ -993,7 +993,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 95
   },
   {
     "id": 84,
@@ -1005,7 +1005,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 194
   },
   {
     "id": 85,
@@ -1017,7 +1017,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 386
   },
   {
     "id": 86,
@@ -1029,7 +1029,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 127
   },
   {
     "id": 87,
@@ -1041,7 +1041,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 127
   },
   {
     "id": 88,
@@ -1053,7 +1053,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 127
   },
   {
     "id": 89,
@@ -1065,7 +1065,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-02.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 128
   },
   {
     "id": 90,
@@ -1077,7 +1077,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 128
   },
   {
     "id": 91,
@@ -1089,7 +1089,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 128
   },
   {
     "id": 92,
@@ -1101,7 +1101,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 101
   },
   {
     "id": 93,
@@ -1113,7 +1113,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 189
   },
   {
     "id": 94,
@@ -1125,7 +1125,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 174
   },
   {
     "id": 95,
@@ -1137,7 +1137,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 126
   },
   {
     "id": 96,
@@ -1149,7 +1149,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 151
   },
   {
     "id": 97,
@@ -1161,7 +1161,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 151
   },
   {
     "id": 98,
@@ -1173,7 +1173,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 151
   },
   {
     "id": 99,
@@ -1185,7 +1185,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 152
   },
   {
     "id": 100,
@@ -1197,7 +1197,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 388
   },
   {
     "id": 101,
@@ -1209,7 +1209,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 384
   },
   {
     "id": 102,
@@ -1221,7 +1221,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 162
   },
   {
     "id": 103,
@@ -1233,7 +1233,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 159
   },
   {
     "id": 104,
@@ -1245,7 +1245,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 147
   },
   {
     "id": 105,
@@ -1257,7 +1257,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 128
   },
   {
     "id": 106,
@@ -1269,7 +1269,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 132
   },
   {
     "id": 107,
@@ -1281,7 +1281,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-03.png",
     "correctAnswer": null,
     "annulled": true,
-    "studyTopicId": null
+    "studyTopicId": 125
   },
   {
     "id": 108,
@@ -1293,7 +1293,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 167
   },
   {
     "id": 109,
@@ -1305,7 +1305,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 168
   },
   {
     "id": 110,
@@ -1317,7 +1317,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 168
   },
   {
     "id": 111,
@@ -1329,7 +1329,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 299
   },
   {
     "id": 112,
@@ -1341,7 +1341,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 299
   },
   {
     "id": 113,
@@ -1353,7 +1353,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 303
   },
   {
     "id": 114,
@@ -1365,7 +1365,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 299
   },
   {
     "id": 115,
@@ -1377,7 +1377,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 299
   },
   {
     "id": 116,
@@ -1389,7 +1389,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 240
   },
   {
     "id": 117,
@@ -1401,7 +1401,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 302
   },
   {
     "id": 118,
@@ -1413,7 +1413,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 298
   },
   {
     "id": 119,
@@ -1425,7 +1425,7 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "E",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 250
   },
   {
     "id": 120,
@@ -1437,6 +1437,6 @@
     "contextImage": "/questions/serpro-2023/context-specific-p-04.png",
     "correctAnswer": "C",
     "annulled": false,
-    "studyTopicId": null
+    "studyTopicId": 298
   }
 ]

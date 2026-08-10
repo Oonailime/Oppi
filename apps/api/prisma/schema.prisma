@@ -62,10 +62,19 @@ model StudyTopic {
   detail            String?
   page              String
   suggestedPriority String
+  topicCode         String?
+  topicTitle        String?
+  isGroup           Boolean             @default(false)
+  competencyCodes   String[]            @default([])
+  skillCodes        String[]            @default([])
+  sortOrder         Int                 @default(0)
   questions         Question[]
   contestProgress   ContestStudyTopic[]
+  trainingAttempts  Attempt[]
 
   @@index([discipline])
+  @@index([topicCode])
+  @@index([isGroup])
 }
 
 model User {
@@ -188,10 +197,12 @@ model Attempt {
   id                       String            @id @default(uuid())
   contestId                String
   examId                   String?
+  trainingTopicId          Int?
   examDay                  Int?
   mode                     AttemptMode
   discipline               String?
   foreignLanguage          ForeignLanguage?
+  includeCorrectAnswers    Boolean           @default(false)
   startedAt                DateTime          @default(now())
   completedAt              DateTime?
   draftAnswers             Json?
@@ -212,12 +223,14 @@ model Attempt {
   weightedPercentage       Decimal?          @db.Decimal(5, 2)
   contest                  Contest           @relation(fields: [contestId], references: [id], onDelete: Cascade)
   exam                     Exam?             @relation(fields: [examId], references: [id])
+  trainingTopic            StudyTopic?       @relation(fields: [trainingTopicId], references: [id])
   answers                  AttemptAnswer[]
   questions                AttemptQuestion[]
 
   @@index([contestId])
   @@index([contestId, completedAt])
   @@index([examId])
+  @@index([trainingTopicId])
   @@index([completedAt])
   @@index([discipline])
 }
