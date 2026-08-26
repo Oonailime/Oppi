@@ -1,1 +1,78 @@
-[]
+[
+  {
+    "id": "47a136c5-ad9e-40ac-a6cf-9b9a5a2e80c3",
+    "reportedAt": "2026-08-23T16:43:01.719Z",
+    "status": "OPEN",
+    "issueType": "INCOMPLETE",
+    "description": "letra E cortada",
+    "question": {
+      "id": 18,
+      "number": 18,
+      "examDay": null,
+      "variant": "",
+      "discipline": "Língua Inglesa",
+      "subject": "Inferência de informação",
+      "studyTopicId": 22,
+      "studyTopic": "Compreensão de textos em língua inglesa",
+      "sourcePage": 5,
+      "sourceImage": "/questions/q-18.png",
+      "contextImage": "/questions/context-career-guide.png",
+      "correctAnswer": "E",
+      "annulled": false,
+      "exam": {
+        "id": "dataprev-2024",
+        "name": "DATAPREV 2024",
+        "year": 2024,
+        "organization": "DATAPREV"
+      }
+    },
+    "context": {
+      "contestId": "dataprev-2026-emiliano",
+      "contestName": "DATAPREV 2026",
+      "userId": "00000000-0000-0000-0000-000000000001",
+      "username": "Emiliano",
+      "attemptId": "e91d420e-51fc-40aa-ae75-d2bafc07054b",
+      "attemptCompleted": false,
+      "selectedAnswer": "E",
+      "screenUrl": "http://estuda.local:4000/simulado/e91d420e-51fc-40aa-ae75-d2bafc07054b"
+    }
+  },
+  {
+    "id": "21fb0356-930b-4491-8af1-8e99161adf73",
+    "reportedAt": "2026-08-23T17:31:25.766Z",
+    "status": "OPEN",
+    "issueType": "ANSWER_KEY",
+    "description": "o gabarito é letra D",
+    "question": {
+      "id": 6,
+      "number": 6,
+      "examDay": null,
+      "variant": "",
+      "discipline": "Língua Portuguesa",
+      "subject": "Adjetivos e locuções adjetivas",
+      "studyTopicId": 9,
+      "studyTopic": "Classes de palavras",
+      "sourcePage": 3,
+      "sourceImage": "/questions/q-06.png",
+      "contextImage": null,
+      "correctAnswer": "D",
+      "annulled": false,
+      "exam": {
+        "id": "dataprev-2024",
+        "name": "DATAPREV 2024",
+        "year": 2024,
+        "organization": "DATAPREV"
+      }
+    },
+    "context": {
+      "contestId": "dataprev-2026-emiliano",
+      "contestName": "DATAPREV 2026",
+      "userId": "00000000-0000-0000-0000-000000000001",
+      "username": "Emiliano",
+      "attemptId": "51ca3f55-68f7-4f68-ad8c-bd788eabc9cb",
+      "attemptCompleted": true,
+      "selectedAnswer": "B",
+      "screenUrl": "http://estuda.local:4000/resultados/51ca3f55-68f7-4f68-ad8c-bd788eabc9cb"
+    }
+  }
+]
