@@ -26,6 +26,7 @@ import {
   useApp,
 } from "@/components/app-context";
 import { LoadingState } from "@/components/loading-state";
+import { ErrorState } from "@/components/error-state";
 
 const links = [
   { href: "/", label: "Visão geral", icon: LayoutDashboard },
@@ -92,9 +93,9 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
     <div className="app-frame">
       <aside className={`sidebar ${menuOpen ? "is-open" : ""}`}>
         <div className="brand">
-          <span className="brand-mark">E</span>
+          <span className="brand-mark">O</span>
           <span>
-            <strong>Estuda</strong>
+            <strong>Oppi</strong>
             <small>{selectedContest.name}</small>
           </span>
         </div>
@@ -224,8 +225,8 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
             <Menu size={22} />
           </button>
           <div className="brand compact">
-            <span className="brand-mark">E</span>
-            <strong>Estuda</strong>
+            <span className="brand-mark">O</span>
+            <strong>Oppi</strong>
           </div>
         </header>
         <main className="page-content">{children}</main>
@@ -237,28 +238,39 @@ function AppShellContent({ children }: { children: React.ReactNode }) {
 function AppGate({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
-  const { loading, user, selectedContest } = useApp();
+  const { loading, sessionError, retrySession, user, selectedContest } =
+    useApp();
   const accessPage = pathname === "/login";
   const contestPage = pathname === "/concursos";
+  const onboardingPage = pathname === "/primeiro-acesso";
 
   useEffect(() => {
-    if (loading) return;
-    if (!user && !accessPage) {
-      router.replace("/login");
+    if (loading || sessionError) return;
+    if (!user) {
+      if (!accessPage) router.replace("/login");
       return;
     }
-    if (user && accessPage) {
+
+    if (!user.profileCompleted) {
+      if (!onboardingPage) router.replace("/primeiro-acesso");
+      return;
+    }
+
+    if (onboardingPage || accessPage) {
       router.replace("/concursos");
       return;
     }
-    if (user && !selectedContest && !contestPage) {
+
+    if (!selectedContest && !contestPage) {
       router.replace("/concursos");
     }
   }, [
     accessPage,
     contestPage,
     loading,
+    onboardingPage,
     router,
+    sessionError,
     selectedContest,
     user,
   ]);
@@ -270,10 +282,23 @@ function AppGate({ children }: { children: React.ReactNode }) {
       </div>
     );
   }
+  if (sessionError) {
+    return (
+      <div className="standalone-loading">
+        <ErrorState message={sessionError} onRetry={retrySession} />
+      </div>
+    );
+  }
   if (!user) {
     return accessPage ? children : null;
   }
+  if (!user.profileCompleted) {
+    return onboardingPage ? (
+      <main className="standalone-page">{children}</main>
+    ) : null;
+  }
   if (accessPage) return null;
+  if (onboardingPage) return null;
   if (contestPage) return <main className="standalone-page">{children}</main>;
   if (!selectedContest) return null;
   return <AppShellContent>{children}</AppShellContent>;

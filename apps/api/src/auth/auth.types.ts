@@ -1,9 +1,12 @@
-import type { Contest, User } from "@prisma/client";
+import type { Contest } from "@prisma/client";
 
-export type AuthenticatedUser = Pick<
-  User,
-  "id" | "username" | "displayName" | "createdAt"
->;
+export interface AuthenticatedUser {
+  id: string;
+  username: string;
+  displayName: string;
+  profileCompleted: boolean;
+  createdAt: Date;
+}
 
 export interface HttpRequest {
   headers: Record<string, string | string[] | undefined>;

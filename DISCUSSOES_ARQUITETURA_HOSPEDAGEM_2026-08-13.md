@@ -4,7 +4,7 @@ Data da conversa: **13 de agosto de 2026**
 
 Este documento consolida as discussões realizadas sobre hospedagem gratuita,
 requisitos mínimos, separação entre backend e banco de dados e adoção do padrão
-Backend for Frontend (BFF) no projeto Estuda.
+Backend for Frontend (BFF) no projeto Oppi.
 
 ## 1. É possível publicar o programa gratuitamente?
 
@@ -76,7 +76,7 @@ Em produção, a opção mais confiável é fazer o navegador acessar apenas cam
 do mesmo domínio:
 
 ```text
-https://estuda.exemplo.com/api/*
+https://oppi.exemplo.com/api/*
 ```
 
 Um rewrite ou proxy encaminharia internamente essas requisições para a API no

@@ -9,7 +9,7 @@ import { ContestsService } from "../src/contests/contests.service";
 import { PrismaService } from "../src/prisma/prisma.service";
 
 const userId = "user-1";
-const uploadRoot = path.join("/tmp", "estuda-contest-upload-tests");
+const uploadRoot = path.join("/tmp", "oppi-contest-upload-tests");
 const createdContest = {
   id: "contest-1",
   userId,
@@ -43,6 +43,19 @@ type ContestCreateCall = {
       create: Array<{ examId: string }>;
     };
   };
+};
+
+type CatalogUpsertCall = {
+  where: { id: string };
+  create: {
+    id: string;
+    userId: string;
+    name: string;
+    systemManaged: boolean;
+    exams: { create: Array<{ examId: string }> };
+    studyTopics: { create: Array<{ studyTopicId: number }> };
+  };
+  update: Record<string, never>;
 };
 
 function pdf(originalname: string) {
@@ -199,5 +212,103 @@ describe("ContestsService", () => {
         previousExam: documents.previousExam,
       }),
     ).rejects.toThrow("Envie o PDF de gabarito correspondente.");
+  });
+
+  it("lista os concursos do catálogo e informa quais já foram adicionados", async () => {
+    const template = {
+      id: "enem-template",
+      userId: "template-owner",
+      name: "ENEM",
+      targetDate: new Date("2026-11-08T00:00:00.000Z"),
+      type: ContestType.RECURRING,
+      description: null,
+      _count: { exams: 10, studyTopics: 30 },
+    };
+    const findMany = jest
+      .fn()
+      .mockResolvedValueOnce([template])
+      .mockResolvedValueOnce([]);
+    const prisma = {
+      contest: { findMany },
+    } as unknown as PrismaService;
+
+    await expect(
+      new ContestsService(prisma).listCatalog(userId),
+    ).resolves.toEqual([
+      {
+        id: "enem-template",
+        name: "ENEM",
+        targetDate: "2026-11-08",
+        type: ContestType.RECURRING,
+        description: null,
+        examCount: 10,
+        topicCount: 30,
+        attached: false,
+      },
+    ]);
+    expect(findMany).toHaveBeenNthCalledWith(
+      1,
+      expect.objectContaining({ where: { systemManaged: true } }),
+    );
+  });
+
+  it("adiciona um concurso do catálogo com provas e progresso zerado", async () => {
+    const template = {
+      id: "dataprev-template",
+      userId: "template-owner",
+      name: "DATAPREV 2026",
+      targetDate: new Date("2026-11-10T00:00:00.000Z"),
+      type: ContestType.STANDARD,
+      systemManaged: true,
+      desiredArea: null,
+      description: null,
+      storageDirectory: null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      exams: [{ examId: "dataprev-2024" }],
+      studyTopics: [{ studyTopicId: 1 }, { studyTopicId: 2 }],
+    };
+    const created = {
+      ...template,
+      id: "catalog-user-copy",
+      userId,
+      systemManaged: false,
+      exams: undefined,
+      studyTopics: undefined,
+    };
+    let upsertCall: CatalogUpsertCall | undefined;
+    const upsert = jest.fn(async (input: CatalogUpsertCall) => {
+      upsertCall = input;
+      return created;
+    });
+    const prisma = {
+      contest: {
+        findFirst: jest.fn().mockResolvedValue(template),
+        upsert,
+      },
+    } as unknown as PrismaService;
+
+    const result = await new ContestsService(prisma).addFromCatalog(
+      userId,
+      template.id,
+    );
+
+    expect(result).toMatchObject({
+      userId,
+      name: "DATAPREV 2026",
+      systemManaged: false,
+    });
+    expect(upsertCall?.where.id).toMatch(/^catalog-[a-f0-9]{32}$/);
+    expect(upsertCall?.create.id).toMatch(/^catalog-[a-f0-9]{32}$/);
+    expect(upsertCall?.create).toMatchObject({
+      userId,
+      name: "DATAPREV 2026",
+      systemManaged: false,
+      exams: { create: [{ examId: "dataprev-2024" }] },
+      studyTopics: {
+        create: [{ studyTopicId: 1 }, { studyTopicId: 2 }],
+      },
+    });
+    expect(upsertCall?.update).toEqual({});
   });
 });

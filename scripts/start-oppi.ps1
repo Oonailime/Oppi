@@ -6,7 +6,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $projectRoot = Split-Path -Parent $PSScriptRoot
-$localDomain = "estuda.local"
+$localDomain = "oppi.local"
 $hostsPath = Join-Path $env:SystemRoot "System32\drivers\etc\hosts"
 
 function Test-LocalDomain {
@@ -20,7 +20,7 @@ function Install-LocalDomain {
     return
   }
 
-  Add-Content -Path $hostsPath -Value "`r`n127.0.0.1 $localDomain #Estuda Local Site" -Encoding ASCII
+  Add-Content -Path $hostsPath -Value "`r`n127.0.0.1 $localDomain #Oppi Local Site" -Encoding ASCII
   & ipconfig.exe /flushdns | Out-Null
 }
 
@@ -98,12 +98,12 @@ try {
     $relativeProject = $Matches[2].Replace("\", "/")
     $wslProject = "/mnt/$drive/$relativeProject"
     $escapedProject = $wslProject.Replace("'", "'\''")
-    $command = ". `"`$HOME/.nvm/nvm.sh`" && cd '$escapedProject' && node scripts/start-estuda.mjs --host=$localDomain --web-port=$webPortValue --api-port=$apiPortValue --open"
+    $command = ". `"`$HOME/.nvm/nvm.sh`" && cd '$escapedProject' && node scripts/start-oppi.mjs --host=$localDomain --web-port=$webPortValue --api-port=$apiPortValue --open"
     & wsl.exe bash -lc $command
   } else {
     Push-Location $projectRoot
     try {
-      & node scripts/start-estuda.mjs `
+      & node scripts/start-oppi.mjs `
         "--host=$localDomain" `
         "--web-port=$webPortValue" `
         "--api-port=$apiPortValue" `
@@ -118,6 +118,6 @@ try {
   }
 } catch {
   Write-Host ""
-  Write-Host "[Estuda] $($_.Exception.Message)" -ForegroundColor Red
+  Write-Host "[Oppi] $($_.Exception.Message)" -ForegroundColor Red
   exit 1
 }

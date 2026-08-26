@@ -118,7 +118,12 @@ async function waitForServices(urls, timeoutMs = 300_000) {
 }
 
 async function main() {
-  const host = validateHost(argument("host", "estuda.local"));
+  const rootEnvPath = path.join(root, ".env");
+  if (fs.existsSync(rootEnvPath)) {
+    process.loadEnvFile(rootEnvPath);
+  }
+
+  const host = validateHost(argument("host", "localhost"));
   const webPort = validatePort(argument("web-port", "4000"), "Porta do site");
   const apiPort = validatePort(argument("api-port", "4001"), "Porta da API");
   const skipDocker = process.argv.includes("--skip-docker");
@@ -148,7 +153,7 @@ async function main() {
   }
 
   if (!skipDocker) {
-    console.log("\n[Estuda] Iniciando o banco de dados...");
+    console.log("\n[Oppi] Iniciando o banco de dados...");
     const docker = spawnSync("docker", ["compose", "up", "-d"], {
       cwd: root,
       stdio: "inherit",
@@ -191,10 +196,10 @@ async function main() {
   const children = [api, web];
   let stopping = false;
 
-  console.log("\n[Estuda] Frontend e API iniciados juntos.");
-  console.log(`[Estuda] Site: ${webUrl}`);
-  console.log(`[Estuda] API:  ${apiUrl}`);
-  console.log("[Estuda] Pressione Ctrl+C para encerrar os dois.\n");
+  console.log("\n[Oppi] Frontend e API iniciados juntos.");
+  console.log(`[Oppi] Site: ${webUrl}`);
+  console.log(`[Oppi] API:  ${apiUrl}`);
+  console.log("[Oppi] Pressione Ctrl+C para encerrar os dois.\n");
 
   function shutdown(code) {
     if (stopping) return;
@@ -208,7 +213,7 @@ async function main() {
 
   for (const child of children) {
     child.on("error", (error) => {
-      console.error(`[Estuda] Falha ao iniciar: ${error.message}`);
+      console.error(`[Oppi] Falha ao iniciar: ${error.message}`);
       shutdown(1);
     });
     child.on("exit", (code) => {
@@ -216,24 +221,24 @@ async function main() {
     });
   }
 
-  console.log("[Estuda] Aguardando frontend e API ficarem prontos...");
+  console.log("[Oppi] Aguardando frontend e API ficarem prontos...");
   const ready = await waitForServices([
     `http://127.0.0.1:${webPort}`,
     `http://127.0.0.1:${apiPort}/api/simulations/exams`,
   ]);
   if (ready && !stopping) {
-    console.log("[Estuda] Serviços prontos.\n");
+    console.log("[Oppi] Serviços prontos.\n");
     if (shouldOpenBrowser) {
       openBrowser(webUrl);
     }
   } else if (!stopping) {
     console.error(
-      "[Estuda] Os serviços não ficaram prontos em 5 minutos. Verifique as mensagens acima.",
+      "[Oppi] Os serviços não ficaram prontos em 5 minutos. Verifique as mensagens acima.",
     );
   }
 }
 
 main().catch((error) => {
-  console.error(`\n[Estuda] ${error instanceof Error ? error.message : error}`);
+  console.error(`\n[Oppi] ${error instanceof Error ? error.message : error}`);
   process.exitCode = 1;
 });

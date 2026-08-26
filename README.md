@@ -1,14 +1,21 @@
-# Estuda
+# Oppi
 
 Aplicação de preparação para concursos com:
 
 - `apps/web`: frontend Next.js
 - `apps/api`: API NestJS
 - `postgres`: banco usado pela API
-- autenticação por usuário e senha;
+- autenticação com Google e acesso temporário por usuário e senha;
 - espaços de estudo separados por concurso.
 
-## Acesso inicial
+## Login e acesso inicial
+
+O acesso principal usa Google Identity Services. No primeiro login, a API
+valida o ID token emitido pelo Google, registra a conta na tabela `User` e cria
+a mesma sessão HTTP-only usada pelo restante da aplicação. Contas existentes
+com o mesmo e-mail verificado são vinculadas em vez de duplicadas.
+
+Durante os testes humanos, o acesso legado continua disponível:
 
 Os dados que já existiam foram migrados para:
 
@@ -64,6 +71,7 @@ DATABASE_URL="postgresql://dataprev:dataprev@localhost:5433/dataprev?schema=publ
 PORT=3001
 WEB_ORIGIN="http://localhost:3000"
 NEXT_PUBLIC_API_URL="http://localhost:3001/api"
+GOOGLE_CLIENT_ID="seu-client-id.apps.googleusercontent.com"
 ```
 
 API, arquivo `apps/api/.env`:
@@ -72,13 +80,31 @@ API, arquivo `apps/api/.env`:
 DATABASE_URL="postgresql://dataprev:dataprev@localhost:5433/dataprev?schema=public"
 PORT=3001
 WEB_ORIGIN="http://localhost:3000"
+GOOGLE_CLIENT_ID="seu-client-id.apps.googleusercontent.com"
 ```
 
 Web, arquivo `apps/web/.env.local`:
 
 ```env
 NEXT_PUBLIC_API_URL="http://localhost:3001/api"
+NEXT_PUBLIC_GOOGLE_CLIENT_ID="seu-client-id.apps.googleusercontent.com"
 ```
+
+## Configurar o Google
+
+No Google Cloud Console, registre o aplicativo como `Oppi`, crie um OAuth
+Client ID do tipo `Aplicativo da Web` e
+adicione `http://localhost`, `http://localhost:3000` e
+`http://localhost:4000` em
+`Origens JavaScript autorizadas`. Use o
+mesmo Client ID em `GOOGLE_CLIENT_ID` na API e em
+`NEXT_PUBLIC_GOOGLE_CLIENT_ID` no frontend. Em produção, cadastre a origem HTTPS
+real do site. Este fluxo de autenticação não precisa de Client Secret.
+
+Para o teste local do Google, use `npm run dev` e abra
+`http://localhost:3000`, ou use `npm run dev:oppi` e abra
+`http://localhost:4000`. O Google só isenta `localhost` da exigência de HTTPS;
+o domínio HTTP `oppi.local` só deve ser usado após configurar HTTPS.
 
 ## Instalar dependencias
 
@@ -117,12 +143,12 @@ Esse comando sobe:
 - Next.js em `http://localhost:3000`
 - NestJS em `http://localhost:3001/api`
 
-### Inicializador Estuda
+### Inicializador Oppi
 
 No Windows, execute com duplo clique:
 
 ```text
-Iniciar Estuda.cmd
+Iniciar Oppi.cmd
 ```
 
 O inicializador pergunta a porta do site e a porta da API, inicia o Postgres,
@@ -130,23 +156,23 @@ frontend e backend e abre o navegador somente quando os dois servicos estiverem
 prontos. A primeira compilacao da API pode levar cerca de dois minutos. Os
 valores padrao sao:
 
-- site: `http://estuda.local:4000`;
-- API: `http://estuda.local:4001/api`.
+- site: `http://localhost:4000`;
+- API: `http://localhost:4001/api`.
 
 Tambem e possivel informar as portas sem perguntas:
 
 ```bat
-"Iniciar Estuda.cmd" 4500 4501
+"Iniciar Oppi.cmd" 4500 4501
 ```
 
 Pelo terminal Linux ou WSL, use:
 
 ```bash
-npm run dev:estuda -- --web-port=4500 --api-port=4501
+npm run dev:oppi -- --web-port=4500 --api-port=4501
 ```
 
 Na primeira execucao, o Windows solicita permissao de administrador para
-adicionar `127.0.0.1 estuda.local` ao arquivo `hosts`. Essa configuracao e
+adicionar `127.0.0.1 oppi.local` ao arquivo `hosts`. Essa configuracao e
 feita uma unica vez, pelo mesmo mecanismo usado pelo Local para os sites
 WordPress com dominio `.local`. O dominio `.dev` nao e usado porque os
 navegadores exigem HTTPS para ele, o que tambem exigiria instalar um

@@ -22,6 +22,19 @@ export class ContestsController {
     return this.contestsService.list(user.id);
   }
 
+  @Get("catalog")
+  listCatalog(@CurrentUser() user: AuthenticatedUser) {
+    return this.contestsService.listCatalog(user.id);
+  }
+
+  @Post("catalog/:id")
+  addFromCatalog(
+    @CurrentUser() user: AuthenticatedUser,
+    @Param("id") id: string,
+  ) {
+    return this.contestsService.addFromCatalog(user.id, id);
+  }
+
   @Get("reusable-exams")
   listReusableExams(@Query("search") search?: string) {
     return this.contestsService.listReusableExams(search);

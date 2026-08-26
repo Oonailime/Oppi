@@ -6,6 +6,7 @@ import {
   FileUp,
   LogOut,
   Mail,
+  Plus,
   Repeat2,
   Search,
   Target,
@@ -25,7 +26,7 @@ import {
   useApp,
 } from "@/components/app-context";
 import { apiFetch } from "@/lib/api";
-import type { ReusableExam } from "@/lib/types";
+import type { CatalogContest, ReusableExam } from "@/lib/types";
 
 export default function ContestsPage() {
   const router = useRouter();
@@ -34,8 +35,14 @@ export default function ContestsPage() {
     contests,
     selectedContest,
     selectContest,
+    addContestFromCatalog,
     logout,
   } = useApp();
+  const [catalog, setCatalog] = useState<CatalogContest[]>([]);
+  const [loadingCatalog, setLoadingCatalog] = useState(true);
+  const [addingContestId, setAddingContestId] = useState<string | null>(null);
+  const [catalogMessage, setCatalogMessage] = useState<string | null>(null);
+  const [catalogError, setCatalogError] = useState<string | null>(null);
   const [requesting, setRequesting] = useState(false);
   const [name, setName] = useState("");
   const [targetDate, setTargetDate] = useState("");
@@ -53,6 +60,29 @@ export default function ContestsPage() {
   const [loadingExams, setLoadingExams] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [emailOpened, setEmailOpened] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    apiFetch<CatalogContest[]>("/contests/catalog")
+      .then((response) => {
+        if (active) setCatalog(response);
+      })
+      .catch((reason: unknown) => {
+        if (active) {
+          setCatalogError(
+            reason instanceof Error
+              ? reason.message
+              : "Não foi possível carregar os concursos disponíveis.",
+          );
+        }
+      })
+      .finally(() => {
+        if (active) setLoadingCatalog(false);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   function openRequestDialog() {
     setLoadingExams(true);
@@ -91,6 +121,29 @@ export default function ContestsPage() {
   function enter(contestId: string) {
     selectContest(contestId);
     router.push("/");
+  }
+
+  async function addCatalogContest(contest: CatalogContest) {
+    setCatalogError(null);
+    setCatalogMessage(null);
+    setAddingContestId(contest.id);
+    try {
+      await addContestFromCatalog(contest.id);
+      setCatalog((current) =>
+        current.map((item) =>
+          item.id === contest.id ? { ...item, attached: true } : item,
+        ),
+      );
+      setCatalogMessage(`${contest.name} foi adicionado aos seus concursos.`);
+    } catch (reason) {
+      setCatalogError(
+        reason instanceof Error
+          ? reason.message
+          : "Não foi possível adicionar o concurso.",
+      );
+    } finally {
+      setAddingContestId(null);
+    }
   }
 
   function submit(event: React.FormEvent<HTMLFormElement>) {
@@ -151,9 +204,9 @@ export default function ContestsPage() {
     <div className="contest-picker-page">
       <header className="contest-picker-topbar">
         <div className="brand">
-          <span className="brand-mark">E</span>
+          <span className="brand-mark">O</span>
           <span>
-            <strong>Estuda</strong>
+            <strong>Oppi</strong>
             <small>Seus objetivos</small>
           </span>
         </div>
@@ -175,6 +228,67 @@ export default function ContestsPage() {
             simulados e tempo de estudo.
           </p>
         </header>
+
+        <section className="contest-catalog-section">
+          <header>
+            <div>
+              <span className="eyebrow">Catálogo Oppi</span>
+              <h2>Concursos disponíveis</h2>
+            </div>
+            <p>Adicione os objetivos que deseja acompanhar nesta conta.</p>
+          </header>
+
+          {catalogMessage && (
+            <p className="contest-catalog-success">{catalogMessage}</p>
+          )}
+          {catalogError && <p className="auth-error">{catalogError}</p>}
+
+          <div className="contest-card-grid">
+            {loadingCatalog && (
+              <p className="contest-catalog-empty">Carregando catálogo...</p>
+            )}
+            {!loadingCatalog && catalog.every(({ attached }) => attached) && (
+              <p className="contest-catalog-empty">
+                Todos os concursos disponíveis já estão na sua conta.
+              </p>
+            )}
+            {catalog
+              .filter(({ attached }) => !attached)
+              .map((contest) => (
+                <button
+                  className="contest-card catalog-contest-card"
+                  type="button"
+                  key={contest.id}
+                  disabled={addingContestId !== null}
+                  onClick={() => addCatalogContest(contest)}
+                >
+                  <span className="contest-card-icon">
+                    {contest.type === "RECURRING" ? (
+                      <Repeat2 size={23} />
+                    ) : (
+                      <Target size={23} />
+                    )}
+                  </span>
+                  <span className="contest-card-copy">
+                    <small>Disponível no Oppi</small>
+                    <strong>{contest.name}</strong>
+                    <span>
+                      {contest.examCount} prova
+                      {contest.examCount === 1 ? "" : "s"} ·{" "}
+                      {contest.topicCount} tópico
+                      {contest.topicCount === 1 ? "" : "s"}
+                    </span>
+                  </span>
+                  <span className="contest-card-countdown">
+                    {addingContestId === contest.id
+                      ? "Adicionando..."
+                      : "Adicionar"}
+                  </span>
+                  <Plus size={20} />
+                </button>
+              ))}
+          </div>
+        </section>
 
         <div className="contest-card-grid">
           {contests.map((contest) => {

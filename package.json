@@ -1,5 +1,5 @@
 {
-  "name": "dataprev-2026-study",
+  "name": "oppi",
   "version": "1.0.0",
   "private": true,
   "workspaces": [
@@ -8,7 +8,7 @@
   "scripts": {
     "build": "npm run build --workspace @dataprev/api && npm run build --workspace @dataprev/web",
     "dev": "concurrently -n api,web -c blue,green \"npm run start:dev --workspace @dataprev/api\" \"npm run dev --workspace @dataprev/web\"",
-    "dev:estuda": "node scripts/start-estuda.mjs",
+    "dev:oppi": "node scripts/start-oppi.mjs",
     "lint": "npm run lint --workspace @dataprev/api && npm run lint --workspace @dataprev/web",
     "test": "npm run test --workspace @dataprev/api",
     "db:generate": "npm run db:generate --workspace @dataprev/api",

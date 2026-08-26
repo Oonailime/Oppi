@@ -10,7 +10,7 @@
 
 **Secondary:**
 - CSS - global web styling in `apps/web/app/globals.css`
-- PowerShell and Windows batch - local launcher scripts in `scripts/start-estuda.ps1` and `Iniciar Estuda.cmd`
+- PowerShell and Windows batch - local launcher scripts in `scripts/start-oppi.ps1` and `Iniciar Oppi.cmd`
 - Prisma schema DSL - relational model in `apps/api/prisma/schema.prisma`
 
 ## Runtime

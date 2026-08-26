@@ -1,125 +1,120 @@
 "use client";
 
-import {
-  ArrowRight,
-  BookOpenCheck,
-  Eye,
-  EyeOff,
-  LockKeyhole,
-  UserRound,
-} from "lucide-react";
+import { BookOpenCheck, ChartNoAxesCombined, ShieldCheck } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { useApp } from "@/components/app-context";
+import { GoogleSignInButton } from "@/components/google-sign-in-button";
 
 export default function LoginPage() {
   const router = useRouter();
-  const { login } = useApp();
-  const [username, setUsername] = useState("Emiliano");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  const { loginWithGoogle } = useApp();
   const [error, setError] = useState<string | null>(null);
-  const [isPending, startTransition] = useTransition();
+  const [googlePending, setGooglePending] = useState(false);
 
-  function submit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  async function submitGoogle(credential: string) {
     setError(null);
-    startTransition(async () => {
-      try {
-        await login(username, password);
-        router.replace("/concursos");
-      } catch (reason) {
-        setError(
-          reason instanceof Error ? reason.message : "Não foi possível entrar.",
-        );
-      }
-    });
+    setGooglePending(true);
+    try {
+      const authenticatedUser = await loginWithGoogle(credential);
+      router.replace(
+        authenticatedUser.profileCompleted
+          ? "/concursos"
+          : "/primeiro-acesso",
+      );
+    } catch (reason) {
+      setError(
+        reason instanceof Error
+          ? reason.message
+          : "Não foi possível entrar com o Google.",
+      );
+    } finally {
+      setGooglePending(false);
+    }
   }
 
   return (
-    <main className="auth-page">
-      <section className="auth-intro">
+    <main className="auth-page google-login-page">
+      <section className="auth-intro google-login-intro">
         <div className="brand auth-brand">
-          <span className="brand-mark">E</span>
+          <span className="brand-mark">O</span>
           <span>
-            <strong>Estuda</strong>
+            <strong>Oppi</strong>
             <small>Preparação com direção</small>
           </span>
         </div>
-        <div>
-          <span className="eyebrow light">Seu estudo, em um só lugar</span>
-          <h1>Organize a preparação para cada concurso.</h1>
+
+        <div className="google-login-hero">
+          <span className="eyebrow light">Seu estudo continua aqui</span>
+          <h1>Preparação com foco. Evolução com clareza.</h1>
           <p>
-            Seus planos, simulados, estatísticas e horas de estudo ficam
-            vinculados à sua conta e separados por objetivo.
+            Entre no Oppi para acompanhar cada etapa da sua preparação, do
+            primeiro plano de estudos até o dia da prova.
           </p>
         </div>
-        <div className="auth-feature">
-          <BookOpenCheck size={21} />
-          <span>
-            <strong>Continue exatamente de onde parou</strong>
-            <small>Todo o histórico atual está preservado.</small>
-          </span>
+
+        <div className="google-login-benefits" aria-label="Recursos do Oppi">
+          <article>
+            <BookOpenCheck size={20} />
+            <span>
+              <strong>Estudo organizado</strong>
+              <small>Concursos e planos reunidos em um só lugar.</small>
+            </span>
+          </article>
+          <article>
+            <ChartNoAxesCombined size={20} />
+            <span>
+              <strong>Evolução visível</strong>
+              <small>Simulados, horas e desempenho sempre à mão.</small>
+            </span>
+          </article>
         </div>
       </section>
 
-      <section className="auth-form-column">
-        <form className="auth-card" onSubmit={submit}>
+      <section className="google-login-panel">
+        <div className="google-login-card">
+          <span className="google-login-card-mark" aria-hidden="true">O</span>
           <header>
-            <span className="eyebrow">Acesso pessoal</span>
-            <h2>Boas-vindas de volta.</h2>
-            <p>Entre para escolher o concurso que você vai estudar.</p>
+            <span className="eyebrow">Acesso ao Oppi</span>
+            <h2>Boas-vindas.</h2>
+            <p>
+              Use sua conta Google para entrar com segurança e continuar de
+              onde parou.
+            </p>
           </header>
 
-          <label className="auth-field">
-            <span>Usuário</span>
-            <div>
-              <UserRound size={18} />
-              <input
-                required
-                autoComplete="username"
-                value={username}
-                onChange={(event) => setUsername(event.target.value)}
-              />
-            </div>
-          </label>
+          <GoogleSignInButton
+            disabled={googlePending}
+            onCredential={submitGoogle}
+            onError={setError}
+          />
 
-          <label className="auth-field">
-            <span>Senha</span>
-            <div>
-              <LockKeyhole size={18} />
-              <input
-                required
-                type={showPassword ? "text" : "password"}
-                autoComplete="current-password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword((value) => !value)}
-                aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}
-              >
-                {showPassword ? <EyeOff size={17} /> : <Eye size={17} />}
-              </button>
-            </div>
-          </label>
+          {googlePending && (
+            <p className="google-signin-status" aria-live="polite">
+              Validando sua conta...
+            </p>
+          )}
+          {error && (
+            <p className="auth-error" role="alert">
+              {error}
+            </p>
+          )}
 
-          {error && <p className="auth-error">{error}</p>}
+          <div className="google-login-trust">
+            <ShieldCheck size={19} />
+            <p>
+              <strong>Acesso protegido</strong>
+              <small>
+                O Oppi não recebe sua senha do Google. Sua sessão permanece
+                conectada neste navegador por até 30 dias.
+              </small>
+            </p>
+          </div>
+        </div>
 
-          <button
-            className="button primary auth-submit"
-            type="submit"
-            disabled={isPending}
-          >
-            {isPending ? "Entrando..." : "Entrar"}
-            {!isPending && <ArrowRight size={18} />}
-          </button>
-
-          <small className="auth-security-note">
-            Sua sessão permanece conectada neste navegador por até 30 dias.
-          </small>
-        </form>
+        <small className="google-login-footnote">
+          Uma conta para todos os seus concursos.
+        </small>
       </section>
     </main>
   );

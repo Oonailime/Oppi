@@ -92,7 +92,6 @@ async function main() {
       systemManaged: true,
     },
     update: {
-      userId: EMILIANO_USER_ID,
       systemManaged: true,
       type: ContestType.STANDARD,
     },
@@ -109,7 +108,6 @@ async function main() {
       systemManaged: true,
     },
     update: {
-      userId: EMILIANO_USER_ID,
       name: "ENEM",
       targetDate: new Date("2026-11-08T00:00:00.000Z"),
       type: ContestType.RECURRING,

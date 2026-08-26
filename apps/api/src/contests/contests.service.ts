@@ -60,6 +60,14 @@ function serializeContest(contest: Contest) {
   };
 }
 
+function catalogContestId(userId: string, sourceContestId: string) {
+  const digest = createHash("sha256")
+    .update(`${userId}:${sourceContestId}`)
+    .digest("hex")
+    .slice(0, 32);
+  return `catalog-${digest}`;
+}
+
 @Injectable()
 export class ContestsService {
   constructor(private readonly prisma: PrismaService) {}
@@ -70,6 +78,94 @@ export class ContestsService {
       orderBy: [{ targetDate: "asc" }, { createdAt: "asc" }],
     });
     return contests.map(serializeContest);
+  }
+
+  async listCatalog(userId: string) {
+    const templates = await this.prisma.contest.findMany({
+      where: { systemManaged: true },
+      select: {
+        id: true,
+        userId: true,
+        name: true,
+        targetDate: true,
+        type: true,
+        description: true,
+        _count: {
+          select: {
+            exams: true,
+            studyTopics: true,
+          },
+        },
+      },
+      orderBy: [{ type: "asc" }, { name: "asc" }],
+    });
+    const attachedIds = templates.map((template) =>
+      catalogContestId(userId, template.id),
+    );
+    const attached = await this.prisma.contest.findMany({
+      where: {
+        userId,
+        id: { in: attachedIds },
+      },
+      select: { id: true },
+    });
+    const attachedSet = new Set(attached.map(({ id }) => id));
+
+    return templates.map((template) => ({
+      id: template.id,
+      name: template.name,
+      targetDate: template.targetDate?.toISOString().slice(0, 10) ?? null,
+      type: template.type,
+      description: template.description,
+      examCount: template._count.exams,
+      topicCount: template._count.studyTopics,
+      attached:
+        template.userId === userId ||
+        attachedSet.has(catalogContestId(userId, template.id)),
+    }));
+  }
+
+  async addFromCatalog(userId: string, sourceContestId: string) {
+    const template = await this.prisma.contest.findFirst({
+      where: {
+        id: sourceContestId,
+        systemManaged: true,
+      },
+      include: {
+        exams: { select: { examId: true } },
+        studyTopics: { select: { studyTopicId: true } },
+      },
+    });
+    if (!template) {
+      throw new NotFoundException("Concurso não encontrado no catálogo.");
+    }
+    if (template.userId === userId) {
+      return serializeContest(template);
+    }
+
+    const contest = await this.prisma.contest.upsert({
+      where: { id: catalogContestId(userId, template.id) },
+      create: {
+        id: catalogContestId(userId, template.id),
+        userId,
+        name: template.name,
+        targetDate: template.targetDate,
+        type: template.type,
+        systemManaged: false,
+        desiredArea: template.desiredArea,
+        description: template.description,
+        exams: {
+          create: template.exams.map(({ examId }) => ({ examId })),
+        },
+        studyTopics: {
+          create: template.studyTopics.map(({ studyTopicId }) => ({
+            studyTopicId,
+          })),
+        },
+      },
+      update: {},
+    });
+    return serializeContest(contest);
   }
 
   async create(

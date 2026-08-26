@@ -20,14 +20,25 @@ type UpdateContestInput = {
   targetDate?: string;
 };
 
+type CompleteProfileInput = {
+  username: string;
+  birthDate: string;
+  cpf: string;
+};
+
 type AppContextValue = {
   loading: boolean;
+  sessionError: string | null;
   user: User | null;
   contests: Contest[];
   selectedContest: Contest | null;
-  login: (username: string, password: string) => Promise<void>;
+  login: (username: string, password: string) => Promise<User>;
+  loginWithGoogle: (credential: string) => Promise<User>;
   logout: () => Promise<void>;
+  completeProfile: (input: CompleteProfileInput) => Promise<User>;
+  retrySession: () => void;
   selectContest: (contestId: string | null) => void;
+  addContestFromCatalog: (sourceContestId: string) => Promise<Contest>;
   updateContest: (
     contestId: string,
     input: UpdateContestInput,
@@ -38,6 +49,8 @@ const AppContext = createContext<AppContextValue | null>(null);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
+  const [sessionError, setSessionError] = useState<string | null>(null);
+  const [sessionAttempt, setSessionAttempt] = useState(0);
   const [user, setUser] = useState<User | null>(null);
   const [contests, setContests] = useState<Contest[]>([]);
   const [selectedContestId, setSelectedContestId] = useState<string | null>(
@@ -56,22 +69,40 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     return result;
   }, []);
 
+  const clearContestState = useCallback(() => {
+    setContests([]);
+    setSelectedContestId(null);
+    storeSelectedContestId(null);
+  }, []);
+
   useEffect(() => {
     let active = true;
     apiFetch<{ user: User }>("/auth/me")
       .then(async ({ user: currentUser }) => {
         if (!active) return;
         setUser(currentUser);
-        await loadContests();
+        if (!currentUser.profileCompleted) {
+          clearContestState();
+          return;
+        }
+        try {
+          await loadContests();
+        } catch {
+          if (active) clearContestState();
+        }
       })
       .catch((reason: unknown) => {
         if (!active) return;
-        if (!(reason instanceof ApiError) || reason.status === 401) {
+        if (reason instanceof ApiError && reason.status === 401) {
           setUser(null);
-          setContests([]);
-          setSelectedContestId(null);
-          storeSelectedContestId(null);
+          clearContestState();
+          return;
         }
+        setSessionError(
+          reason instanceof Error
+            ? reason.message
+            : "Não foi possível verificar sua sessão.",
+        );
       })
       .finally(() => {
         if (active) setLoading(false);
@@ -79,7 +110,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     return () => {
       active = false;
     };
-  }, [loadContests]);
+  }, [clearContestState, loadContests, sessionAttempt]);
 
   const login = useCallback(
     async (username: string, password: string) => {
@@ -90,9 +121,27 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       storeSelectedContestId(null);
       setSelectedContestId(null);
       setUser(result.user);
-      await loadContests();
+      if (result.user.profileCompleted) await loadContests();
       storeSelectedContestId(null);
       setSelectedContestId(null);
+      return result.user;
+    },
+    [loadContests],
+  );
+
+  const loginWithGoogle = useCallback(
+    async (credential: string) => {
+      const result = await apiFetch<{ user: User }>("/auth/google", {
+        method: "POST",
+        body: JSON.stringify({ credential }),
+      });
+      storeSelectedContestId(null);
+      setSelectedContestId(null);
+      setUser(result.user);
+      if (result.user.profileCompleted) await loadContests();
+      storeSelectedContestId(null);
+      setSelectedContestId(null);
+      return result.user;
     },
     [loadContests],
   );
@@ -108,6 +157,29 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  const completeProfile = useCallback(
+    async (input: CompleteProfileInput) => {
+      const result = await apiFetch<{ user: User }>("/auth/profile", {
+        method: "PATCH",
+        body: JSON.stringify(input),
+      });
+      setUser(result.user);
+      try {
+        await loadContests();
+      } catch {
+        clearContestState();
+      }
+      return result.user;
+    },
+    [clearContestState, loadContests],
+  );
+
+  const retrySession = useCallback(() => {
+    setLoading(true);
+    setSessionError(null);
+    setSessionAttempt((current) => current + 1);
+  }, []);
+
   const selectContest = useCallback(
     (contestId: string | null) => {
       storeSelectedContestId(contestId);
@@ -115,6 +187,19 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     },
     [],
   );
+
+  const addContestFromCatalog = useCallback(async (sourceContestId: string) => {
+    const contest = await apiFetch<Contest>(
+      `/contests/catalog/${sourceContestId}`,
+      { method: "POST" },
+    );
+    setContests((current) =>
+      current.some(({ id }) => id === contest.id)
+        ? current
+        : [...current, contest],
+    );
+    return contest;
+  }, []);
 
   const updateContest = useCallback(
     async (contestId: string, input: UpdateContestInput) => {
@@ -135,22 +220,32 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const value = useMemo<AppContextValue>(
     () => ({
       loading,
+      sessionError,
       user,
       contests,
       selectedContest,
       login,
+      loginWithGoogle,
       logout,
+      completeProfile,
+      retrySession,
       selectContest,
+      addContestFromCatalog,
       updateContest,
     }),
     [
       loading,
+      sessionError,
       user,
       contests,
       selectedContest,
       login,
+      loginWithGoogle,
       logout,
+      completeProfile,
+      retrySession,
       selectContest,
+      addContestFromCatalog,
       updateContest,
     ],
   );

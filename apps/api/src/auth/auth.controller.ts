@@ -4,6 +4,7 @@ import {
   Get,
   HttpCode,
   HttpStatus,
+  Patch,
   Post,
   Req,
   Res,
@@ -11,6 +12,8 @@ import {
 import { SESSION_COOKIE, SESSION_DURATION_MS } from "./auth.constants";
 import { AuthService } from "./auth.service";
 import { CurrentUser } from "./current-user.decorator";
+import { CompleteProfileDto } from "./dto/complete-profile.dto";
+import { GoogleLoginDto } from "./dto/google-login.dto";
 import { LoginDto } from "./dto/login.dto";
 import { Public } from "./public.decorator";
 import type { AuthenticatedUser, HttpRequest } from "./auth.types";
@@ -44,6 +47,17 @@ interface CookieResponse {
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
+  private setSessionCookie(
+    response: CookieResponse,
+    session: { token: string; expiresAt: Date },
+  ) {
+    response.cookie(SESSION_COOKIE, session.token, {
+      ...cookieOptions(),
+      maxAge: SESSION_DURATION_MS,
+      expires: session.expiresAt,
+    });
+  }
+
   @Public()
   @Post("login")
   @HttpCode(HttpStatus.OK)
@@ -52,17 +66,33 @@ export class AuthController {
     @Res({ passthrough: true }) response: CookieResponse,
   ) {
     const result = await this.authService.login(dto.username, dto.password);
-    response.cookie(SESSION_COOKIE, result.token, {
-      ...cookieOptions(),
-      maxAge: SESSION_DURATION_MS,
-      expires: result.expiresAt,
-    });
+    this.setSessionCookie(response, result);
+    return { user: result.user };
+  }
+
+  @Public()
+  @Post("google")
+  @HttpCode(HttpStatus.OK)
+  async googleLogin(
+    @Body() dto: GoogleLoginDto,
+    @Res({ passthrough: true }) response: CookieResponse,
+  ) {
+    const result = await this.authService.loginWithGoogle(dto.credential);
+    this.setSessionCookie(response, result);
     return { user: result.user };
   }
 
   @Get("me")
   me(@CurrentUser() user: AuthenticatedUser) {
     return { user };
+  }
+
+  @Patch("profile")
+  async completeProfile(
+    @CurrentUser() user: AuthenticatedUser,
+    @Body() dto: CompleteProfileDto,
+  ) {
+    return { user: await this.authService.completeProfile(user.id, dto) };
   }
 
   @Post("logout")

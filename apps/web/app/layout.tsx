@@ -5,7 +5,7 @@ import { AppShell } from "@/components/app-shell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Estuda",
+  title: "Oppi",
   description:
     "Plano de estudos, simulados e estatísticas para concursos.",
 };

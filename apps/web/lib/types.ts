@@ -8,6 +8,7 @@ export interface User {
   id: string;
   username: string;
   displayName: string;
+  profileCompleted: boolean;
   createdAt: string;
 }
 
@@ -23,6 +24,17 @@ export interface Contest {
   storageDirectory: string | null;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface CatalogContest {
+  id: string;
+  name: string;
+  targetDate: string | null;
+  type: ContestType;
+  description: string | null;
+  examCount: number;
+  topicCount: number;
+  attached: boolean;
 }
 
 export interface Exam {
